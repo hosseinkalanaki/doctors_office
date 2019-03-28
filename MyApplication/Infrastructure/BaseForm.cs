@@ -6,9 +6,5 @@
 		{
 			InitializeComponent();
 		}
-
-		private void BaseForm_Load(object sender, System.EventArgs e)
-		{
-		}
 	}
 }

@@ -16,18 +16,30 @@ namespace MyApplication
 
         public void ResetForm()
         {
+            firstNameTextBox.Text = string.Empty;
+            lastNameTextBox.Text = string.Empty;
+            maleRadioButton.Checked = false;
+            femaleRadioButton.Checked = false;
+            ageTextBox.Text = string.Empty;
+            marridCheckBox.Checked = false;
+            singleCheckBox.Checked = false;
+            addressTextBox.Text = string.Empty;
+            mobileTextBox.Text = string.Empty;
+            phoneTextBox.Text = string.Empty;
+            postalCodeTextBox.Text = string.Empty;
+            descriptionTextBox.Text = string.Empty;
             usernameTextBox.Text = string.Empty;
             passwordTextBox.Text = string.Empty;
-            fullNameTextBox.Text = string.Empty;
+            confirmPasswordTextBox.Text = string.Empty;
 
-            usernameTextBox.Focus();
+            firstNameTextBox.Focus();
 
             return;
         }
 
         private void ExitButton_Click(object sender, System.EventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            Close();
         }
 
         private void RegisterButton_Click(object sender, System.EventArgs e)
@@ -79,7 +91,7 @@ namespace MyApplication
 
                 errorMessages +=
                     "Password Lenght Should Be At Least 8 Characters!";
-            }         
+            }
 
             if (errorMessages != string.Empty)
             {
@@ -111,7 +123,7 @@ namespace MyApplication
 
                 user = new Models.User
                 {
-                    FullName = fullNameTextBox.Text,
+                    //FullName = fullNameTextBox.Text,
                     Password = passwordTextBox.Text,
                     Username = usernameTextBox.Text,
 

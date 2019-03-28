@@ -28,133 +28,133 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.oldPasswrodTextBox = new System.Windows.Forms.TextBox();
-            this.confirmNewPasswordTextBox = new System.Windows.Forms.TextBox();
-            this.newPasswrodTextBox = new System.Windows.Forms.TextBox();
-            this.saveButton = new System.Windows.Forms.Button();
-            this.exitButton = new System.Windows.Forms.Button();
-            this.confirmNewPasswordLabel = new Hkx.Windows.Form.Label();
-            this.newPasswrodLabel = new Hkx.Windows.Form.Label();
             this.oldPasswrodLabel = new Hkx.Windows.Form.Label();
+            this.newPasswrodLabel = new Hkx.Windows.Form.Label();
+            this.confirmNewPasswordLabel = new Hkx.Windows.Form.Label();
+            this.oldPasswrodTextBox = new Hkx.Windows.Form.TextBox();
+            this.newPasswrodTextBox = new Hkx.Windows.Form.TextBox();
+            this.confirmNewPasswordTextBox = new Hkx.Windows.Form.TextBox();
+            this.exitButton = new Hkx.Windows.Form.Button2();
+            this.saveButton = new Hkx.Windows.Form.Button2();
             this.SuspendLayout();
-            // 
-            // oldPasswrodTextBox
-            // 
-            this.oldPasswrodTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.oldPasswrodTextBox.Location = new System.Drawing.Point(124, 6);
-            this.oldPasswrodTextBox.MaxLength = 50;
-            this.oldPasswrodTextBox.Name = "oldPasswrodTextBox";
-            this.oldPasswrodTextBox.Size = new System.Drawing.Size(195, 21);
-            this.oldPasswrodTextBox.TabIndex = 1;
-            this.oldPasswrodTextBox.UseSystemPasswordChar = true;
-            // 
-            // confirmNewPasswordTextBox
-            // 
-            this.confirmNewPasswordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.confirmNewPasswordTextBox.Location = new System.Drawing.Point(124, 60);
-            this.confirmNewPasswordTextBox.MaxLength = 50;
-            this.confirmNewPasswordTextBox.Name = "confirmNewPasswordTextBox";
-            this.confirmNewPasswordTextBox.Size = new System.Drawing.Size(195, 21);
-            this.confirmNewPasswordTextBox.TabIndex = 5;
-            this.confirmNewPasswordTextBox.UseSystemPasswordChar = true;
-            // 
-            // newPasswrodTextBox
-            // 
-            this.newPasswrodTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.newPasswrodTextBox.Location = new System.Drawing.Point(124, 33);
-            this.newPasswrodTextBox.MaxLength = 50;
-            this.newPasswrodTextBox.Name = "newPasswrodTextBox";
-            this.newPasswrodTextBox.Size = new System.Drawing.Size(195, 21);
-            this.newPasswrodTextBox.TabIndex = 3;
-            this.newPasswrodTextBox.UseSystemPasswordChar = true;
-            // 
-            // saveButton
-            // 
-            this.saveButton.Location = new System.Drawing.Point(124, 87);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(75, 23);
-            this.saveButton.TabIndex = 6;
-            this.saveButton.Text = "&Save";
-            this.saveButton.UseVisualStyleBackColor = true;
-            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
-            // 
-            // exitButton
-            // 
-            this.exitButton.Location = new System.Drawing.Point(205, 87);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(75, 23);
-            this.exitButton.TabIndex = 7;
-            this.exitButton.Text = "E&xit";
-            this.exitButton.UseVisualStyleBackColor = true;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
-            // 
-            // confirmNewPasswordLabel
-            // 
-            this.confirmNewPasswordLabel.AutoSize = true;
-            this.confirmNewPasswordLabel.BackColor = System.Drawing.Color.SteelBlue;
-            this.confirmNewPasswordLabel.Location = new System.Drawing.Point(7, 63);
-            this.confirmNewPasswordLabel.Name = "confirmNewPasswordLabel";
-            this.confirmNewPasswordLabel.Size = new System.Drawing.Size(111, 13);
-            this.confirmNewPasswordLabel.TabIndex = 10;
-            this.confirmNewPasswordLabel.Text = "&Confirm Passwrod";
-            // 
-            // newPasswrodLabel
-            // 
-            this.newPasswrodLabel.AutoSize = true;
-            this.newPasswrodLabel.BackColor = System.Drawing.Color.SteelBlue;
-            this.newPasswrodLabel.Location = new System.Drawing.Point(7, 36);
-            this.newPasswrodLabel.Name = "newPasswrodLabel";
-            this.newPasswrodLabel.Size = new System.Drawing.Size(89, 13);
-            this.newPasswrodLabel.TabIndex = 9;
-            this.newPasswrodLabel.Text = "&New Passwrod";
             // 
             // oldPasswrodLabel
             // 
             this.oldPasswrodLabel.AutoSize = true;
-            this.oldPasswrodLabel.BackColor = System.Drawing.Color.SteelBlue;
-            this.oldPasswrodLabel.Location = new System.Drawing.Point(7, 9);
+            this.oldPasswrodLabel.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.oldPasswrodLabel.Location = new System.Drawing.Point(12, 9);
             this.oldPasswrodLabel.Name = "oldPasswrodLabel";
-            this.oldPasswrodLabel.Size = new System.Drawing.Size(84, 13);
-            this.oldPasswrodLabel.TabIndex = 8;
-            this.oldPasswrodLabel.Text = "&Old Passwrod";
+            this.oldPasswrodLabel.Size = new System.Drawing.Size(72, 27);
+            this.oldPasswrodLabel.TabIndex = 1;
+            this.oldPasswrodLabel.Text = "پسورد قدیم :";
+            // 
+            // newPasswrodLabel
+            // 
+            this.newPasswrodLabel.AutoSize = true;
+            this.newPasswrodLabel.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.newPasswrodLabel.Location = new System.Drawing.Point(12, 45);
+            this.newPasswrodLabel.Name = "newPasswrodLabel";
+            this.newPasswrodLabel.Size = new System.Drawing.Size(70, 27);
+            this.newPasswrodLabel.TabIndex = 3;
+            this.newPasswrodLabel.Text = "پسورد جدید :";
+            // 
+            // confirmNewPasswordLabel
+            // 
+            this.confirmNewPasswordLabel.AutoSize = true;
+            this.confirmNewPasswordLabel.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.confirmNewPasswordLabel.Location = new System.Drawing.Point(12, 81);
+            this.confirmNewPasswordLabel.Name = "confirmNewPasswordLabel";
+            this.confirmNewPasswordLabel.Size = new System.Drawing.Size(94, 27);
+            this.confirmNewPasswordLabel.TabIndex = 5;
+            this.confirmNewPasswordLabel.Text = "ورود مجدد پسورد :";
+            // 
+            // oldPasswrodTextBox
+            // 
+            this.oldPasswrodTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.oldPasswrodTextBox.Location = new System.Drawing.Point(112, 9);
+            this.oldPasswrodTextBox.MaxLength = 20;
+            this.oldPasswrodTextBox.Name = "oldPasswrodTextBox";
+            this.oldPasswrodTextBox.Size = new System.Drawing.Size(139, 30);
+            this.oldPasswrodTextBox.TabIndex = 2;
+            // 
+            // newPasswrodTextBox
+            // 
+            this.newPasswrodTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.newPasswrodTextBox.Location = new System.Drawing.Point(112, 45);
+            this.newPasswrodTextBox.MaxLength = 20;
+            this.newPasswrodTextBox.Name = "newPasswrodTextBox";
+            this.newPasswrodTextBox.Size = new System.Drawing.Size(139, 30);
+            this.newPasswrodTextBox.TabIndex = 4;
+            // 
+            // confirmNewPasswordTextBox
+            // 
+            this.confirmNewPasswordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.confirmNewPasswordTextBox.Location = new System.Drawing.Point(112, 81);
+            this.confirmNewPasswordTextBox.MaxLength = 20;
+            this.confirmNewPasswordTextBox.Name = "confirmNewPasswordTextBox";
+            this.confirmNewPasswordTextBox.Size = new System.Drawing.Size(139, 30);
+            this.confirmNewPasswordTextBox.TabIndex = 6;
+            // 
+            // exitButton
+            // 
+            this.exitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.exitButton.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.exitButton.Location = new System.Drawing.Point(185, 117);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(66, 39);
+            this.exitButton.TabIndex = 0;
+            this.exitButton.Text = "خروج";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // saveButton
+            // 
+            this.saveButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.saveButton.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.saveButton.Location = new System.Drawing.Point(112, 117);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(66, 39);
+            this.saveButton.TabIndex = 7;
+            this.saveButton.Text = "ذخیره";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // ChangePasswrod
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AcceptButton = this.saveButton;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(331, 119);
-            this.ControlBox = false;
+            this.BackColor = System.Drawing.Color.Silver;
+            this.CancelButton = this.exitButton;
+            this.ClientSize = new System.Drawing.Size(267, 166);
+            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.confirmNewPasswordTextBox);
+            this.Controls.Add(this.newPasswrodTextBox);
+            this.Controls.Add(this.oldPasswrodTextBox);
             this.Controls.Add(this.confirmNewPasswordLabel);
             this.Controls.Add(this.newPasswrodLabel);
             this.Controls.Add(this.oldPasswrodLabel);
-            this.Controls.Add(this.exitButton);
-            this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.newPasswrodTextBox);
-            this.Controls.Add(this.confirmNewPasswordTextBox);
-            this.Controls.Add(this.oldPasswrodTextBox);
-            this.MaximumSize = new System.Drawing.Size(800, 158);
-            this.MinimumSize = new System.Drawing.Size(347, 158);
+            this.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            this.MaximumSize = new System.Drawing.Size(1024, 240);
             this.Name = "ChangePasswrod";
-            this.Text = "ChangePasswrod";
+            this.Text = "تغییر کلمه عبور";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox oldPasswrodTextBox;
-        private System.Windows.Forms.TextBox confirmNewPasswordTextBox;
-        private System.Windows.Forms.TextBox newPasswrodTextBox;
-        private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.Button exitButton;
         private Hkx.Windows.Form.Label oldPasswrodLabel;
         private Hkx.Windows.Form.Label newPasswrodLabel;
         private Hkx.Windows.Form.Label confirmNewPasswordLabel;
+        private Hkx.Windows.Form.TextBox oldPasswrodTextBox;
+        private Hkx.Windows.Form.TextBox newPasswrodTextBox;
+        private Hkx.Windows.Form.TextBox confirmNewPasswordTextBox;
+        private Hkx.Windows.Form.Button2 exitButton;
+        private Hkx.Windows.Form.Button2 saveButton;
     }
 }

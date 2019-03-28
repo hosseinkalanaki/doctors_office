@@ -91,9 +91,53 @@
 
         private void registeryUserToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            this.Hide();
 
             Infrastructure.Utility.RegisterForm.Show();
+        }
+
+        private AttendanceSearch attendanceSearch;
+        private void renameDoctorToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if ((attendanceSearch == null) || (attendanceSearch.IsDisposed))
+            {
+                attendanceSearch = new AttendanceSearch();
+
+                attendanceSearch.ShowDialog();
+            }
+
+            attendanceSearch.Dispose();
+
+            attendanceSearch = null;
+        }
+
+        private void settingToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void رزروبیمارToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void وقتدهیهToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private NewDoctor newDoctor;
+        private void addDoctorToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if ((newDoctor == null) || (newDoctor.IsDisposed))
+            {
+                newDoctor = new NewDoctor();
+
+                newDoctor.ShowDialog();
+            }
+
+            newDoctor.Dispose();
+
+            newDoctor = null;
         }
     }
 }

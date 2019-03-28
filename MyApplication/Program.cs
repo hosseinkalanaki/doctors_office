@@ -19,68 +19,68 @@ namespace MyApplication
 			// **************************************************
 			// **************************************************
 			// **************************************************
-			Models.DatabaseContext databaseContext = null;
+			//Models.DatabaseContext databaseContext = null;
 
-			try
-			{
-				databaseContext =
-					new Models.DatabaseContext();
+			//try
+			//{
+			//	databaseContext =
+			//		new Models.DatabaseContext();
 
-				// **************************************************
-				// **************************************************
+			//	// **************************************************
+			//	// **************************************************
 
-				// **************************************************
-				//var users =
-				//	databaseContext.Users
-				//	.ToList()
-				//	;
+			//	// **************************************************
+			//	//var users =
+			//	//	databaseContext.Users
+			//	//	.ToList()
+			//	//	;
 
-				//int userCount = users.Count;
-				// **************************************************
+			//	//int userCount = users.Count;
+			//	// **************************************************
 
-				// **************************************************
-				//int userCount =
-				//	databaseContext.Users
-				//	.Count();
-				// **************************************************
+			//	// **************************************************
+			//	//int userCount =
+			//	//	databaseContext.Users
+			//	//	.Count();
+			//	// **************************************************
 
-				// **************************************************
-				bool hasAnyUser =
-					databaseContext.Users
-					.Any();
-				// **************************************************
+			//	// **************************************************
+			//	bool hasAnyUser =
+			//		databaseContext.Users
+			//		.Any();
+			//	// **************************************************
 
-				if (hasAnyUser == false)
-				{
-					Models.User adminUser = new Models.User
-					{
-						IsAdmin = true,
-						IsActive = true,
+			//	if (hasAnyUser == false)
+			//	{
+			//		Models.User adminUser = new Models.User
+			//		{
+			//			IsAdmin = true,
+			//			IsActive = true,
 
-						Username = "Dariush",
-						Password = "1234512345",
-						FullName = "Mr. Dariush Tasdighi"
-					};
+			//			Username = "Dariush",
+			//			Password = "1234512345",
+			//			FullName = "Mr. Dariush Tasdighi"
+			//		};
 
-					databaseContext.Users.Add(adminUser);
+			//		databaseContext.Users.Add(adminUser);
 
-					databaseContext.SaveChanges();
-				}
-			}
-			catch (System.Exception ex)
-			{
-				System.Windows.Forms.MessageBox.Show(ex.Message);
+			//		databaseContext.SaveChanges();
+			//	}
+			//}
+			//catch (System.Exception ex)
+			//{
+			//	System.Windows.Forms.MessageBox.Show(ex.Message);
 
-				return;
-			}
-			finally
-			{
-				if (databaseContext != null)
-				{
-					databaseContext.Dispose();
-					databaseContext = null;
-				}
-			}
+			//	return;
+			//}
+			//finally
+			//{
+			//	if (databaseContext != null)
+			//	{
+			//		databaseContext.Dispose();
+			//		databaseContext = null;
+			//	}
+			//}
             // **************************************************
             // **************************************************
             // **************************************************

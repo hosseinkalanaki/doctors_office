@@ -28,166 +28,462 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.registerButton = new System.Windows.Forms.Button();
-            this.resetButton = new System.Windows.Forms.Button();
-            this.loginButton = new System.Windows.Forms.Button();
-            this.exitButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.fullNameTextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.usernameTextBox = new Hkx.Windows.Form.TextBox();
+            this.usernameLabel = new Hkx.Windows.Form.Label();
+            this.passwordLabel = new Hkx.Windows.Form.Label();
+            this.confirmPasswordLabel = new Hkx.Windows.Form.Label();
+            this.firstNameTextBox = new Hkx.Windows.Form.TextBox();
+            this.firtNameLabel = new Hkx.Windows.Form.Label();
+            this.lastNameTextBox = new Hkx.Windows.Form.TextBox();
+            this.lastNameLabel = new Hkx.Windows.Form.Label();
+            this.ageTextBox = new Hkx.Windows.Form.TextBox();
+            this.ageLabel = new Hkx.Windows.Form.Label();
+            this.genderLabel = new Hkx.Windows.Form.Label();
+            this.maleRadioButton = new Hkx.Windows.Form.RadioButton();
+            this.femaleRadioButton = new Hkx.Windows.Form.RadioButton();
+            this.maritalStatusLabel = new Hkx.Windows.Form.Label();
+            this.addressTextBox = new Hkx.Windows.Form.TextBox();
+            this.addressLabel = new Hkx.Windows.Form.Label();
+            this.phoneTextBox = new Hkx.Windows.Form.TextBox();
+            this.PhoneLabel = new Hkx.Windows.Form.Label();
+            this.mobileTextBox = new Hkx.Windows.Form.TextBox();
+            this.mobileLabel = new Hkx.Windows.Form.Label();
+            this.postalCodeTextBox = new Hkx.Windows.Form.TextBox();
+            this.postalCodeLabel = new Hkx.Windows.Form.Label();
+            this.descriptionTextBox = new Hkx.Windows.Form.TextBox();
+            this.descriptionLabel = new Hkx.Windows.Form.Label();
+            this.personGroupBox = new Hkx.Windows.Form.GroupBox();
+            this.singleCheckBox = new Hkx.Windows.Form.CheckBox();
+            this.marridCheckBox = new Hkx.Windows.Form.CheckBox();
+            this.usersGroupBox = new Hkx.Windows.Form.GroupBox();
+            this.passwordTextBox = new Hkx.Windows.Form.PasswordTextBox();
+            this.confirmPasswordTextBox = new Hkx.Windows.Form.PasswordTextBox();
+            this.completedGroupBox = new Hkx.Windows.Form.GroupBox();
+            this.exitButton = new Hkx.Windows.Form.Button2();
+            this.registerButton = new Hkx.Windows.Form.Button2();
+            this.resetButton = new Hkx.Windows.Form.Button2();
+            this.personGroupBox.SuspendLayout();
+            this.usersGroupBox.SuspendLayout();
+            this.completedGroupBox.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // usernameTextBox
+            // 
+            this.usernameTextBox.Location = new System.Drawing.Point(6, 29);
+            this.usernameTextBox.MaxLength = 20;
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(200, 30);
+            this.usernameTextBox.TabIndex = 1;
+            // 
+            // usernameLabel
+            // 
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.usernameLabel.Location = new System.Drawing.Point(238, 29);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(68, 27);
+            this.usernameLabel.TabIndex = 0;
+            this.usernameLabel.Text = "نام کاربری :";
+            // 
+            // passwordLabel
+            // 
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.passwordLabel.Location = new System.Drawing.Point(261, 65);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(45, 27);
+            this.passwordLabel.TabIndex = 2;
+            this.passwordLabel.Text = "پسورد :";
+            // 
+            // confirmPasswordLabel
+            // 
+            this.confirmPasswordLabel.AutoSize = true;
+            this.confirmPasswordLabel.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.confirmPasswordLabel.Location = new System.Drawing.Point(212, 101);
+            this.confirmPasswordLabel.Name = "confirmPasswordLabel";
+            this.confirmPasswordLabel.Size = new System.Drawing.Size(94, 27);
+            this.confirmPasswordLabel.TabIndex = 4;
+            this.confirmPasswordLabel.Text = "ورود مجدد پسورد :";
+            // 
+            // firstNameTextBox
+            // 
+            this.firstNameTextBox.Location = new System.Drawing.Point(6, 33);
+            this.firstNameTextBox.MaxLength = 20;
+            this.firstNameTextBox.Name = "firstNameTextBox";
+            this.firstNameTextBox.Size = new System.Drawing.Size(200, 34);
+            this.firstNameTextBox.TabIndex = 1;
+            // 
+            // firtNameLabel
+            // 
+            this.firtNameLabel.AutoSize = true;
+            this.firtNameLabel.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.firtNameLabel.Location = new System.Drawing.Point(272, 36);
+            this.firtNameLabel.Name = "firtNameLabel";
+            this.firtNameLabel.Size = new System.Drawing.Size(34, 27);
+            this.firtNameLabel.TabIndex = 0;
+            this.firtNameLabel.Text = "نام :";
+            // 
+            // lastNameTextBox
+            // 
+            this.lastNameTextBox.Location = new System.Drawing.Point(6, 73);
+            this.lastNameTextBox.MaxLength = 20;
+            this.lastNameTextBox.Name = "lastNameTextBox";
+            this.lastNameTextBox.Size = new System.Drawing.Size(200, 34);
+            this.lastNameTextBox.TabIndex = 3;
+            // 
+            // lastNameLabel
+            // 
+            this.lastNameLabel.AutoSize = true;
+            this.lastNameLabel.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.lastNameLabel.Location = new System.Drawing.Point(231, 76);
+            this.lastNameLabel.Name = "lastNameLabel";
+            this.lastNameLabel.Size = new System.Drawing.Size(75, 27);
+            this.lastNameLabel.TabIndex = 2;
+            this.lastNameLabel.Text = "نام خانوادگی :";
+            // 
+            // ageTextBox
+            // 
+            this.ageTextBox.Location = new System.Drawing.Point(6, 159);
+            this.ageTextBox.MaxLength = 20;
+            this.ageTextBox.Name = "ageTextBox";
+            this.ageTextBox.Size = new System.Drawing.Size(200, 34);
+            this.ageTextBox.TabIndex = 8;
+            // 
+            // ageLabel
+            // 
+            this.ageLabel.AutoSize = true;
+            this.ageLabel.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.ageLabel.Location = new System.Drawing.Point(267, 162);
+            this.ageLabel.Name = "ageLabel";
+            this.ageLabel.Size = new System.Drawing.Size(39, 27);
+            this.ageLabel.TabIndex = 7;
+            this.ageLabel.Text = "سن :";
+            // 
+            // genderLabel
+            // 
+            this.genderLabel.AutoSize = true;
+            this.genderLabel.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.genderLabel.Location = new System.Drawing.Point(252, 124);
+            this.genderLabel.Name = "genderLabel";
+            this.genderLabel.Size = new System.Drawing.Size(54, 27);
+            this.genderLabel.TabIndex = 4;
+            this.genderLabel.Text = "جنسیت :";
+            // 
+            // maleRadioButton
+            // 
+            this.maleRadioButton.AutoSize = true;
+            this.maleRadioButton.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.maleRadioButton.Location = new System.Drawing.Point(161, 122);
+            this.maleRadioButton.Name = "maleRadioButton";
+            this.maleRadioButton.Size = new System.Drawing.Size(45, 31);
+            this.maleRadioButton.TabIndex = 5;
+            this.maleRadioButton.Text = "مرد";
+            this.maleRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // femaleRadioButton
+            // 
+            this.femaleRadioButton.AutoSize = true;
+            this.femaleRadioButton.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.femaleRadioButton.Location = new System.Drawing.Point(110, 122);
+            this.femaleRadioButton.Name = "femaleRadioButton";
+            this.femaleRadioButton.Size = new System.Drawing.Size(45, 31);
+            this.femaleRadioButton.TabIndex = 6;
+            this.femaleRadioButton.Text = "زن";
+            this.femaleRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // maritalStatusLabel
+            // 
+            this.maritalStatusLabel.AutoSize = true;
+            this.maritalStatusLabel.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.maritalStatusLabel.Location = new System.Drawing.Point(221, 202);
+            this.maritalStatusLabel.Name = "maritalStatusLabel";
+            this.maritalStatusLabel.Size = new System.Drawing.Size(85, 27);
+            this.maritalStatusLabel.TabIndex = 9;
+            this.maritalStatusLabel.Text = "وضعیت تاهل :";
+            // 
+            // addressTextBox
+            // 
+            this.addressTextBox.Location = new System.Drawing.Point(6, 29);
+            this.addressTextBox.MaxLength = 20;
+            this.addressTextBox.Multiline = true;
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(409, 71);
+            this.addressTextBox.TabIndex = 1;
+            // 
+            // addressLabel
+            // 
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.addressLabel.Location = new System.Drawing.Point(448, 29);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(51, 27);
+            this.addressLabel.TabIndex = 0;
+            this.addressLabel.Text = "آدرس :";
+            // 
+            // phoneTextBox
+            // 
+            this.phoneTextBox.Location = new System.Drawing.Point(215, 106);
+            this.phoneTextBox.MaxLength = 20;
+            this.phoneTextBox.Name = "phoneTextBox";
+            this.phoneTextBox.Size = new System.Drawing.Size(200, 30);
+            this.phoneTextBox.TabIndex = 3;
+            // 
+            // PhoneLabel
+            // 
+            this.PhoneLabel.AutoSize = true;
+            this.PhoneLabel.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.PhoneLabel.Location = new System.Drawing.Point(450, 106);
+            this.PhoneLabel.Name = "PhoneLabel";
+            this.PhoneLabel.Size = new System.Drawing.Size(49, 27);
+            this.PhoneLabel.TabIndex = 2;
+            this.PhoneLabel.Text = "تلفن  :";
+            // 
+            // mobileTextBox
+            // 
+            this.mobileTextBox.Location = new System.Drawing.Point(215, 142);
+            this.mobileTextBox.MaxLength = 20;
+            this.mobileTextBox.Name = "mobileTextBox";
+            this.mobileTextBox.Size = new System.Drawing.Size(200, 30);
+            this.mobileTextBox.TabIndex = 5;
+            // 
+            // mobileLabel
+            // 
+            this.mobileLabel.AutoSize = true;
+            this.mobileLabel.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.mobileLabel.Location = new System.Drawing.Point(421, 142);
+            this.mobileLabel.Name = "mobileLabel";
+            this.mobileLabel.Size = new System.Drawing.Size(81, 27);
+            this.mobileLabel.TabIndex = 4;
+            this.mobileLabel.Text = "تلفن همراه  :";
+            // 
+            // postalCodeTextBox
+            // 
+            this.postalCodeTextBox.Location = new System.Drawing.Point(215, 178);
+            this.postalCodeTextBox.MaxLength = 20;
+            this.postalCodeTextBox.Name = "postalCodeTextBox";
+            this.postalCodeTextBox.Size = new System.Drawing.Size(200, 30);
+            this.postalCodeTextBox.TabIndex = 7;
+            // 
+            // postalCodeLabel
+            // 
+            this.postalCodeLabel.AutoSize = true;
+            this.postalCodeLabel.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.postalCodeLabel.Location = new System.Drawing.Point(437, 178);
+            this.postalCodeLabel.Name = "postalCodeLabel";
+            this.postalCodeLabel.Size = new System.Drawing.Size(62, 27);
+            this.postalCodeLabel.TabIndex = 6;
+            this.postalCodeLabel.Text = "کد پستی  :";
+            // 
+            // descriptionTextBox
+            // 
+            this.descriptionTextBox.Location = new System.Drawing.Point(6, 214);
+            this.descriptionTextBox.MaxLength = 20;
+            this.descriptionTextBox.Multiline = true;
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.Size = new System.Drawing.Size(409, 94);
+            this.descriptionTextBox.TabIndex = 9;
+            // 
+            // descriptionLabel
+            // 
+            this.descriptionLabel.AutoSize = true;
+            this.descriptionLabel.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.descriptionLabel.Location = new System.Drawing.Point(434, 214);
+            this.descriptionLabel.Name = "descriptionLabel";
+            this.descriptionLabel.Size = new System.Drawing.Size(65, 27);
+            this.descriptionLabel.TabIndex = 8;
+            this.descriptionLabel.Text = "توضیحات  :";
+            // 
+            // personGroupBox
+            // 
+            this.personGroupBox.Controls.Add(this.singleCheckBox);
+            this.personGroupBox.Controls.Add(this.marridCheckBox);
+            this.personGroupBox.Controls.Add(this.firstNameTextBox);
+            this.personGroupBox.Controls.Add(this.firtNameLabel);
+            this.personGroupBox.Controls.Add(this.lastNameLabel);
+            this.personGroupBox.Controls.Add(this.lastNameTextBox);
+            this.personGroupBox.Controls.Add(this.genderLabel);
+            this.personGroupBox.Controls.Add(this.ageLabel);
+            this.personGroupBox.Controls.Add(this.maritalStatusLabel);
+            this.personGroupBox.Controls.Add(this.ageTextBox);
+            this.personGroupBox.Controls.Add(this.maleRadioButton);
+            this.personGroupBox.Controls.Add(this.femaleRadioButton);
+            this.personGroupBox.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.personGroupBox.Location = new System.Drawing.Point(12, 12);
+            this.personGroupBox.Name = "personGroupBox";
+            this.personGroupBox.Size = new System.Drawing.Size(312, 252);
+            this.personGroupBox.TabIndex = 0;
+            this.personGroupBox.TabStop = false;
+            this.personGroupBox.Text = "مشخصات فردی";
+            // 
+            // singleCheckBox
+            // 
+            this.singleCheckBox.AutoSize = true;
+            this.singleCheckBox.Location = new System.Drawing.Point(90, 201);
+            this.singleCheckBox.Name = "singleCheckBox";
+            this.singleCheckBox.Size = new System.Drawing.Size(50, 31);
+            this.singleCheckBox.TabIndex = 11;
+            this.singleCheckBox.Text = "مجرد";
+            this.singleCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // marridCheckBox
+            // 
+            this.marridCheckBox.AutoSize = true;
+            this.marridCheckBox.Location = new System.Drawing.Point(146, 201);
+            this.marridCheckBox.Name = "marridCheckBox";
+            this.marridCheckBox.Size = new System.Drawing.Size(60, 31);
+            this.marridCheckBox.TabIndex = 10;
+            this.marridCheckBox.Text = "متاهل";
+            this.marridCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // usersGroupBox
+            // 
+            this.usersGroupBox.Controls.Add(this.passwordTextBox);
+            this.usersGroupBox.Controls.Add(this.confirmPasswordTextBox);
+            this.usersGroupBox.Controls.Add(this.usernameLabel);
+            this.usersGroupBox.Controls.Add(this.passwordLabel);
+            this.usersGroupBox.Controls.Add(this.confirmPasswordLabel);
+            this.usersGroupBox.Controls.Add(this.usernameTextBox);
+            this.usersGroupBox.Location = new System.Drawing.Point(12, 270);
+            this.usersGroupBox.Name = "usersGroupBox";
+            this.usersGroupBox.Size = new System.Drawing.Size(312, 153);
+            this.usersGroupBox.TabIndex = 1;
+            this.usersGroupBox.TabStop = false;
+            this.usersGroupBox.Text = "اطلاعات کاربری";
+            // 
+            // passwordTextBox
+            // 
+            this.passwordTextBox.Location = new System.Drawing.Point(6, 65);
+            this.passwordTextBox.MaxLength = 40;
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(200, 30);
+            this.passwordTextBox.TabIndex = 3;
+            this.passwordTextBox.UseSystemPasswordChar = true;
+            // 
+            // confirmPasswordTextBox
+            // 
+            this.confirmPasswordTextBox.Location = new System.Drawing.Point(6, 101);
+            this.confirmPasswordTextBox.MaxLength = 40;
+            this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
+            this.confirmPasswordTextBox.Size = new System.Drawing.Size(200, 30);
+            this.confirmPasswordTextBox.TabIndex = 5;
+            this.confirmPasswordTextBox.UseSystemPasswordChar = true;
+            // 
+            // completedGroupBox
+            // 
+            this.completedGroupBox.Controls.Add(this.addressLabel);
+            this.completedGroupBox.Controls.Add(this.PhoneLabel);
+            this.completedGroupBox.Controls.Add(this.mobileLabel);
+            this.completedGroupBox.Controls.Add(this.descriptionTextBox);
+            this.completedGroupBox.Controls.Add(this.postalCodeLabel);
+            this.completedGroupBox.Controls.Add(this.postalCodeTextBox);
+            this.completedGroupBox.Controls.Add(this.descriptionLabel);
+            this.completedGroupBox.Controls.Add(this.mobileTextBox);
+            this.completedGroupBox.Controls.Add(this.addressTextBox);
+            this.completedGroupBox.Controls.Add(this.phoneTextBox);
+            this.completedGroupBox.Location = new System.Drawing.Point(330, 12);
+            this.completedGroupBox.Name = "completedGroupBox";
+            this.completedGroupBox.Size = new System.Drawing.Size(521, 314);
+            this.completedGroupBox.TabIndex = 2;
+            this.completedGroupBox.TabStop = false;
+            this.completedGroupBox.Text = "اطاعات تکمیلی";
+            // 
+            // exitButton
+            // 
+            this.exitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.exitButton.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.exitButton.Location = new System.Drawing.Point(627, 350);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(66, 39);
+            this.exitButton.TabIndex = 5;
+            this.exitButton.Text = "خروج";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // registerButton
             // 
-            this.registerButton.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registerButton.Location = new System.Drawing.Point(96, 91);
+            this.registerButton.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.registerButton.Location = new System.Drawing.Point(483, 350);
             this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(87, 23);
-            this.registerButton.TabIndex = 6;
-            this.registerButton.Text = "Re&gister";
+            this.registerButton.Size = new System.Drawing.Size(66, 39);
+            this.registerButton.TabIndex = 3;
+            this.registerButton.Text = "ذخیره";
             this.registerButton.UseVisualStyleBackColor = true;
             this.registerButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
             // resetButton
             // 
-            this.resetButton.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetButton.Location = new System.Drawing.Point(189, 91);
+            this.resetButton.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.resetButton.Location = new System.Drawing.Point(555, 350);
             this.resetButton.Name = "resetButton";
-            this.resetButton.Size = new System.Drawing.Size(87, 23);
-            this.resetButton.TabIndex = 7;
-            this.resetButton.Text = "&Reset";
+            this.resetButton.Size = new System.Drawing.Size(66, 39);
+            this.resetButton.TabIndex = 4;
+            this.resetButton.Text = "ورود مجدد";
             this.resetButton.UseVisualStyleBackColor = true;
             this.resetButton.Click += new System.EventHandler(this.ResetButton_Click);
-            // 
-            // loginButton
-            // 
-            this.loginButton.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginButton.Location = new System.Drawing.Point(279, 91);
-            this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(87, 23);
-            this.loginButton.TabIndex = 8;
-            this.loginButton.Text = "&Login";
-            this.loginButton.UseVisualStyleBackColor = true;
-            this.loginButton.Click += new System.EventHandler(this.LoginButton_Click);
-            // 
-            // exitButton
-            // 
-            this.exitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.exitButton.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitButton.Location = new System.Drawing.Point(372, 91);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(87, 23);
-            this.exitButton.TabIndex = 9;
-            this.exitButton.Text = "E&xit";
-            this.exitButton.UseVisualStyleBackColor = true;
-            this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "&Username:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "&Password:";
-            // 
-            // usernameTextBox
-            // 
-            this.usernameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.usernameTextBox.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextBox.Location = new System.Drawing.Point(96, 12);
-            this.usernameTextBox.MaxLength = 40;
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(363, 21);
-            this.usernameTextBox.TabIndex = 1;
-            // 
-            // passwordTextBox
-            // 
-            this.passwordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.passwordTextBox.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextBox.Location = new System.Drawing.Point(96, 38);
-            this.passwordTextBox.MaxLength = 20;
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(363, 21);
-            this.passwordTextBox.TabIndex = 3;
-            this.passwordTextBox.UseSystemPasswordChar = true;
-            // 
-            // fullNameTextBox
-            // 
-            this.fullNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.fullNameTextBox.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fullNameTextBox.Location = new System.Drawing.Point(96, 64);
-            this.fullNameTextBox.MaxLength = 50;
-            this.fullNameTextBox.Name = "fullNameTextBox";
-            this.fullNameTextBox.Size = new System.Drawing.Size(363, 21);
-            this.fullNameTextBox.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 67);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "&FullName:";
             // 
             // RegisterForm
             // 
             this.AcceptButton = this.registerButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.BackColor = System.Drawing.Color.Silver;
             this.CancelButton = this.exitButton;
-            this.ClientSize = new System.Drawing.Size(471, 124);
-            this.ControlBox = false;
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.fullNameTextBox);
-            this.Controls.Add(this.passwordTextBox);
-            this.Controls.Add(this.usernameTextBox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.exitButton);
-            this.Controls.Add(this.loginButton);
-            this.Controls.Add(this.resetButton);
+            this.ClientSize = new System.Drawing.Size(867, 434);
             this.Controls.Add(this.registerButton);
-            this.MaximumSize = new System.Drawing.Size(564, 163);
-            this.MinimumSize = new System.Drawing.Size(487, 163);
+            this.Controls.Add(this.resetButton);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.completedGroupBox);
+            this.Controls.Add(this.usersGroupBox);
+            this.Controls.Add(this.personGroupBox);
+            this.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            this.MaximumSize = new System.Drawing.Size(883, 473);
+            this.MinimumSize = new System.Drawing.Size(883, 473);
             this.Name = "RegisterForm";
-            this.Text = "Register";
+            this.Text = "ثبت اطلاعات کاربران ";
+            this.personGroupBox.ResumeLayout(false);
+            this.personGroupBox.PerformLayout();
+            this.usersGroupBox.ResumeLayout(false);
+            this.usersGroupBox.PerformLayout();
+            this.completedGroupBox.ResumeLayout(false);
+            this.completedGroupBox.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button registerButton;
-        private System.Windows.Forms.Button resetButton;
-        private System.Windows.Forms.Button loginButton;
-        private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox usernameTextBox;
-        private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.TextBox fullNameTextBox;
-        private System.Windows.Forms.Label label3;
+        private Hkx.Windows.Form.TextBox usernameTextBox;
+        private Hkx.Windows.Form.Label usernameLabel;
+        private Hkx.Windows.Form.Label passwordLabel;
+        private Hkx.Windows.Form.Label confirmPasswordLabel;
+        private Hkx.Windows.Form.TextBox firstNameTextBox;
+        private Hkx.Windows.Form.Label firtNameLabel;
+        private Hkx.Windows.Form.TextBox lastNameTextBox;
+        private Hkx.Windows.Form.Label lastNameLabel;
+        private Hkx.Windows.Form.TextBox ageTextBox;
+        private Hkx.Windows.Form.Label ageLabel;
+        private Hkx.Windows.Form.Label genderLabel;
+        private Hkx.Windows.Form.RadioButton maleRadioButton;
+        private Hkx.Windows.Form.RadioButton femaleRadioButton;
+        private Hkx.Windows.Form.Label maritalStatusLabel;
+        private Hkx.Windows.Form.TextBox addressTextBox;
+        private Hkx.Windows.Form.Label addressLabel;
+        private Hkx.Windows.Form.TextBox phoneTextBox;
+        private Hkx.Windows.Form.Label PhoneLabel;
+        private Hkx.Windows.Form.TextBox mobileTextBox;
+        private Hkx.Windows.Form.Label mobileLabel;
+        private Hkx.Windows.Form.TextBox postalCodeTextBox;
+        private Hkx.Windows.Form.Label postalCodeLabel;
+        private Hkx.Windows.Form.TextBox descriptionTextBox;
+        private Hkx.Windows.Form.Label descriptionLabel;
+        private Hkx.Windows.Form.GroupBox personGroupBox;
+        private Hkx.Windows.Form.GroupBox usersGroupBox;
+        private Hkx.Windows.Form.GroupBox completedGroupBox;
+        private Hkx.Windows.Form.Button2 exitButton;
+        private Hkx.Windows.Form.Button2 registerButton;
+        private Hkx.Windows.Form.Button2 resetButton;
+        private Hkx.Windows.Form.PasswordTextBox passwordTextBox;
+        private Hkx.Windows.Form.PasswordTextBox confirmPasswordTextBox;
+        private Hkx.Windows.Form.CheckBox marridCheckBox;
+        private Hkx.Windows.Form.CheckBox singleCheckBox;
     }
 }

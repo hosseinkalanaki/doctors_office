@@ -9,27 +9,46 @@ namespace MyApplication
             InitializeComponent();
         }
 
+        public void ResetForm()
+        {
+            firstNameTextBox.Text = string.Empty;
+            lastNameTextBox.Text = string.Empty;
+            maleRadioButton.Checked = false;
+            femaleRadioButton.Checked = false;
+            ageTextBox.Text = string.Empty;
+            marridCheckBox.Checked = false;
+            singleCheckBox.Checked = false;
+            addressTextBox.Text = string.Empty;
+            mobileTextBox.Text = string.Empty;
+            phoneTextBox.Text = string.Empty;
+            postalCodeTextBox.Text = string.Empty;
+            descriptionTextBox.Text = string.Empty;
+
+            firstNameTextBox.Focus();
+
+            return;
+        }
         private void UpdateProfileForm_Load(object sender, System.EventArgs e)
         {
             Models.DatabaseContext databaseContext = null;
 
             try
             {
-                databaseContext =
-                    new Models.DatabaseContext();
+                //databaseContext =
+                //    new Models.DatabaseContext();
 
-                Models.User currentUser =
-                    databaseContext.Users
-                    .Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
-                    .FirstOrDefault();
+                //Models.User currentUser =
+                //    databaseContext.Users
+                //    .Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
+                //    .FirstOrDefault();
 
-                if (currentUser == null)
-                {
-                    System.Windows.Forms.Application.Exit();
-                }
+                //if (currentUser == null)
+                //{
+                //    System.Windows.Forms.Application.Exit();
+                //}
 
-                fullNameTextBox.Text = currentUser.FullName;
-                descriptionTextBox.Text = currentUser.Description;
+                //fullNameTextBox.Text = currentUser.FullName;
+                //descriptionTextBox.Text = currentUser.Description;
             }
             catch (System.Exception ex)
             {
@@ -51,30 +70,30 @@ namespace MyApplication
 
             try
             {
-                databaseContext =
-                    new Models.DatabaseContext();
+                //databaseContext =
+                //    new Models.DatabaseContext();
 
-                Models.User currentUser =
-                    databaseContext.Users
-                    .Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
-                    .FirstOrDefault();
+                //Models.User currentUser =
+                //    databaseContext.Users
+                //    .Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
+                //    .FirstOrDefault();
 
-                if (currentUser == null)
-                {
-                    System.Windows.Forms.Application.Exit();
-                }
+                //if (currentUser == null)
+                //{
+                //    System.Windows.Forms.Application.Exit();
+                //}
 
-                currentUser.FullName = fullNameTextBox.Text;
-                currentUser.Description = descriptionTextBox.Text;
+                //currentUser.FullName = fullNameTextBox.Text;
+                //currentUser.Description = descriptionTextBox.Text;
 
-                databaseContext.SaveChanges();
+                //databaseContext.SaveChanges();
 
-                Infrastructure.Utility.AuthenticatedUser = currentUser;
+                //Infrastructure.Utility.AuthenticatedUser = currentUser;
 
-                Infrastructure.Utility.MainForm.InitializeMainForm();
+                //Infrastructure.Utility.MainForm.InitializeMainForm();
 
-                System.Windows.Forms.MessageBox
-                    .Show("Your profile updated successfully...");
+                //System.Windows.Forms.MessageBox
+                //    .Show("Your profile updated successfully...");
 
                 Close();
             }
@@ -95,6 +114,11 @@ namespace MyApplication
         private void exitButton_Click(object sender, System.EventArgs e)
         {
             Close();
+        }
+
+        private void resetButton_Click(object sender, System.EventArgs e)
+        {
+            ResetForm();
         }
     }
 }

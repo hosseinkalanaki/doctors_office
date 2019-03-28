@@ -1,4 +1,5 @@
-﻿//namespace MyApplication.Infrastructure
+﻿using MyApplication;
+
 namespace Infrastructure
 {
 	public static class Utility 
@@ -66,5 +67,28 @@ namespace Infrastructure
                 return registerForm;
             }            
         }
-    }
+
+        // **************************************************
+
+        public static PersianDate ConvertMiladiToShamsi(System.DateTime time)
+        {
+            System.Globalization.PersianCalendar
+                persianCalendar = new System.Globalization.PersianCalendar();
+
+            int year =
+                persianCalendar.GetYear(time);
+
+            int month =
+                persianCalendar.GetMonth(time);
+
+            int day =
+                persianCalendar.GetDayOfMonth(time);
+
+            PersianDate persianDate =
+                new PersianDate(year: year, month: month, day: day);
+
+            return persianDate;
+        }
+
+}
 }

@@ -54,7 +54,13 @@
     <Compile Include="Windows\Form\Button.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Windows\Form\Button2.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Windows\Form\CheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Form\GroupBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Windows\Form\Label.cs">
@@ -64,6 +70,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Windows\Form\PasswordTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Form\RadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Windows\Form\TextBox.cs">
@@ -79,6 +88,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Windows\Form\Button2.resx">
+      <DependentUpon>Button2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\Form\Label.resx">
       <DependentUpon>Label.cs</DependentUpon>
     </EmbeddedResource>

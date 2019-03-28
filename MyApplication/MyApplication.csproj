@@ -62,11 +62,17 @@
     <Compile Include="Admin\UpdateProfileForm.Designer.cs">
       <DependentUpon>UpdateProfileForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="attendance.cs">
+    <Compile Include="Attendance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="attendance.Designer.cs">
-      <DependentUpon>attendance.cs</DependentUpon>
+    <Compile Include="Attendance.Designer.cs">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttendanceSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceSearch.Designer.cs">
+      <DependentUpon>AttendanceSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="ChangePasswrod.cs">
       <SubType>Form</SubType>
@@ -74,6 +80,7 @@
     <Compile Include="ChangePasswrod.Designer.cs">
       <DependentUpon>ChangePasswrod.cs</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\MountChange.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +107,19 @@
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\PersonReservation.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Infrastructure\PersianDate.cs" />
+    <Compile Include="NewDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewDoctor.Designer.cs">
+      <DependentUpon>NewDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonRefrence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonRefrence.Designer.cs">
+      <DependentUpon>PersonRefrence.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterForm.cs">
@@ -123,8 +143,11 @@
     <EmbeddedResource Include="Admin\UpdateProfileForm.resx">
       <DependentUpon>UpdateProfileForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="attendance.resx">
-      <DependentUpon>attendance.cs</DependentUpon>
+    <EmbeddedResource Include="Attendance.resx">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceSearch.resx">
+      <DependentUpon>AttendanceSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangePasswrod.resx">
       <DependentUpon>ChangePasswrod.cs</DependentUpon>
@@ -137,6 +160,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewDoctor.resx">
+      <DependentUpon>NewDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonRefrence.resx">
+      <DependentUpon>PersonRefrence.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -170,7 +199,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Hkx\Hkx.csproj">
       <Project>{1ea6d873-b37f-41c8-8894-187f4517234c}</Project>
