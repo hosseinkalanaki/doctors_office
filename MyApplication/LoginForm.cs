@@ -36,13 +36,6 @@ namespace MyApplication
 
         private void LoginButton_Click(object sender, System.EventArgs e)
         {
-            if (usernameTextBox.Text=="")
-            {
-                if (passwordTextBox.Text=="")
-                {
-                    Infrastructure.Utility.MainForm.Show();
-                }
-            }
             Models.DatabaseContext databaseContext = null;
 
             try

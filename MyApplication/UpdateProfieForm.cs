@@ -34,21 +34,45 @@ namespace MyApplication
 
             try
             {
-                //databaseContext =
-                //    new Models.DatabaseContext();
+                databaseContext =
+                    new Models.DatabaseContext();
 
-                //Models.User currentUser =
-                //    databaseContext.Users
-                //    .Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
-                //    .FirstOrDefault();
+                Models.User currentUser =
+                    databaseContext.Users
+                    .Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
+                    .FirstOrDefault();
 
-                //if (currentUser == null)
-                //{
-                //    System.Windows.Forms.Application.Exit();
-                //}
+                if (currentUser == null)
+                {
+                    System.Windows.Forms.Application.Exit();
+                }
 
-                //fullNameTextBox.Text = currentUser.FullName;
-                //descriptionTextBox.Text = currentUser.Description;
+                firstNameTextBox.Text = currentUser.FirstName;
+                lastNameTextBox.Text = currentUser.LastName;
+                ageTextBox.Text = currentUser.Age;
+                addressTextBox.Text = currentUser.Address;
+                phoneTextBox.Text = currentUser.Phone;
+                mobileTextBox.Text = currentUser.Mobile;
+                postalCodeTextBox.Text = currentUser.PostalCode;
+                descriptionTextBox.Text = currentUser.Description;
+                if (currentUser.IsMan==true)
+                {
+                    maleRadioButton.Checked = true;
+                }
+                else
+                {
+                    femaleRadioButton.Checked = true;
+                }
+                if (currentUser.IsMarried==true)
+                {
+                    marridCheckBox.Checked = true;
+                    singleCheckBox.Checked = false;
+                }
+                else
+                {
+                    singleCheckBox.Checked = true;
+                    marridCheckBox.Checked = false;
+                }
             }
             catch (System.Exception ex)
             {
@@ -70,30 +94,54 @@ namespace MyApplication
 
             try
             {
-                //databaseContext =
-                //    new Models.DatabaseContext();
+                databaseContext =
+                    new Models.DatabaseContext();
 
-                //Models.User currentUser =
-                //    databaseContext.Users
-                //    .Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
-                //    .FirstOrDefault();
+                Models.User currentUser =
+                    databaseContext.Users
+                    .Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
+                    .FirstOrDefault();
 
-                //if (currentUser == null)
-                //{
-                //    System.Windows.Forms.Application.Exit();
-                //}
+                if (currentUser == null)
+                {
+                    System.Windows.Forms.Application.Exit();
+                }
 
-                //currentUser.FullName = fullNameTextBox.Text;
-                //currentUser.Description = descriptionTextBox.Text;
+                currentUser.FirstName = firstNameTextBox.Text;
+                currentUser.LastName = lastNameTextBox.Text;
+                currentUser.Age = ageTextBox.Text;
+                currentUser.Address = addressTextBox.Text;
+                currentUser.Phone = phoneTextBox.Text;
+                currentUser.Mobile = mobileTextBox.Text;
+                currentUser.PostalCode = postalCodeTextBox.Text;
+                currentUser.Description = descriptionTextBox.Text;
+                if (maleRadioButton.Checked==true)
+                {
+                    currentUser.IsMan = true;
+                }
 
-                //databaseContext.SaveChanges();
+                if (femaleRadioButton.Checked==true)
+                {
+                    currentUser.IsMan = false;
+                }
 
-                //Infrastructure.Utility.AuthenticatedUser = currentUser;
+                if (marridCheckBox.Checked==true)
+                {
+                    currentUser.IsMarried = true;
+                }
 
-                //Infrastructure.Utility.MainForm.InitializeMainForm();
+                if (singleCheckBox.Checked==true)
+                {
+                    currentUser.IsMarried = false;
+                }
+                databaseContext.SaveChanges();
 
-                //System.Windows.Forms.MessageBox
-                //    .Show("Your profile updated successfully...");
+                Infrastructure.Utility.AuthenticatedUser = currentUser;
+
+                Infrastructure.Utility.MainForm.InitializeMainForm();
+
+                System.Windows.Forms.MessageBox
+                    .Show("Your profile updated successfully...");
 
                 Close();
             }
@@ -119,6 +167,22 @@ namespace MyApplication
         private void resetButton_Click(object sender, System.EventArgs e)
         {
             ResetForm();
+        }
+
+        private void marridCheckBox_CheckedChanged(object sender, System.EventArgs e)
+        {
+            if (marridCheckBox.Checked==true)
+            {
+                singleCheckBox.Checked = false;
+            }
+        }
+
+        private void singleCheckBox_CheckedChanged(object sender, System.EventArgs e)
+        {
+            if (singleCheckBox.Checked==true)
+            {
+                marridCheckBox.Checked = false;
+            }
         }
     }
 }

@@ -41,7 +41,77 @@
 
         [System.ComponentModel.DataAnnotations.Schema.Index
             (IsUnique = false)]
-        public string FullName { get; set; }
+        public string FirstName { get; set; }
+        // **********
+
+        // **********
+        [System.ComponentModel.DataAnnotations.StringLength
+            (maximumLength: 50)]
+
+        [System.ComponentModel.DataAnnotations.Schema.Index
+            (IsUnique = false)]
+        public string LastName { get; set; }
+        // **********
+
+        // **********
+        public bool IsMan { get; set; }
+
+        // **********
+
+        [System.ComponentModel.DataAnnotations.StringLength
+            (maximumLength: 50)]
+
+        [System.ComponentModel.DataAnnotations.Schema.Index
+            (IsUnique = false)]
+        public string Age { get; set; }
+
+        // **********
+        public bool IsMarried { get; set; }
+
+        // **********
+
+        // **********
+
+        [System.ComponentModel.DataAnnotations.StringLength
+            (maximumLength: 500)]
+
+        [System.ComponentModel.DataAnnotations.Schema.Index
+            (IsUnique = false)]
+        public string Address { get; set; }
+
+        // **********
+
+        // **********
+
+        [System.ComponentModel.DataAnnotations.StringLength
+            (maximumLength: 11)]
+
+        [System.ComponentModel.DataAnnotations.Schema.Index
+            (IsUnique = false)]
+        public string Phone { get; set; }
+
+        // **********
+
+        // **********
+
+        [System.ComponentModel.DataAnnotations.StringLength
+            (maximumLength: 11)]
+
+        [System.ComponentModel.DataAnnotations.Schema.Index
+            (IsUnique = false)]
+        public string Mobile { get; set; }
+
+        // **********
+
+        // **********
+
+        [System.ComponentModel.DataAnnotations.StringLength
+            (maximumLength: 10)]
+
+        [System.ComponentModel.DataAnnotations.Schema.Index
+            (IsUnique = false)]
+        public string PostalCode { get; set; }
+
         // **********
 
         // **********
@@ -52,19 +122,7 @@
         {
             get
             {
-                string result = string.Empty;
-
-                if (string.IsNullOrEmpty(FullName) == false)
-                {
-                    result = FullName;
-                }
-
-                if (result != string.Empty)
-                {
-                    result += "-";
-                }
-
-                result += $"[{Username}]";
+                string result = FirstName + LastName;
 
                 if (IsActive)
                 {

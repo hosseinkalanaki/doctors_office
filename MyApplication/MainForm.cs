@@ -36,7 +36,7 @@
             adminToolStripMenuItem.Visible =
                 Infrastructure.Utility.AuthenticatedUser.IsAdmin;
 
-            if (Infrastructure.Utility.AuthenticatedUser.FullName == string.Empty)
+            if (Infrastructure.Utility.AuthenticatedUser.FirstName == string.Empty)
             {
                 welcomeToolStripStatusLabel.Text =
                     $"Welcome { Infrastructure.Utility.AuthenticatedUser.Username }!";
@@ -44,7 +44,7 @@
             else
             {
                 welcomeToolStripStatusLabel.Text =
-                    $"Welcome { Infrastructure.Utility.AuthenticatedUser.FullName }!";
+                    $"Welcome { Infrastructure.Utility.AuthenticatedUser.FirstName }!";
             }
         }
 

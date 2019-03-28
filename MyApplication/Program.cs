@@ -14,73 +14,61 @@ namespace MyApplication
 			// **************************************************
 			System.Windows.Forms.Application.EnableVisualStyles();
 			System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
-			// **************************************************
+            // **************************************************
 
-			// **************************************************
-			// **************************************************
-			// **************************************************
-			//Models.DatabaseContext databaseContext = null;
+            // **************************************************
+            // **************************************************
+            // **************************************************
 
-			//try
-			//{
-			//	databaseContext =
-			//		new Models.DatabaseContext();
+            #region createuserdatabase
 
-			//	// **************************************************
-			//	// **************************************************
+            Models.DatabaseContext databaseContext = null;
 
-			//	// **************************************************
-			//	//var users =
-			//	//	databaseContext.Users
-			//	//	.ToList()
-			//	//	;
+            try
+            {
+                databaseContext =
+                    new Models.DatabaseContext();
 
-			//	//int userCount = users.Count;
-			//	// **************************************************
+                bool hasAnyUser =
+                    databaseContext.Users
+                    .Any();
+                // **************************************************
 
-			//	// **************************************************
-			//	//int userCount =
-			//	//	databaseContext.Users
-			//	//	.Count();
-			//	// **************************************************
+                if (hasAnyUser == false)
+                {
+                    Models.User adminUser = new Models.User
+                    {
+                        IsAdmin = true,
+                        IsActive = true,
 
-			//	// **************************************************
-			//	bool hasAnyUser =
-			//		databaseContext.Users
-			//		.Any();
-			//	// **************************************************
+                        Username = "Admin1",
+                        Password = "123456789",
+                        FirstName = "hossein",
+                        LastName="kalanaki",
+                    };
 
-			//	if (hasAnyUser == false)
-			//	{
-			//		Models.User adminUser = new Models.User
-			//		{
-			//			IsAdmin = true,
-			//			IsActive = true,
+                    databaseContext.Users.Add(adminUser);
 
-			//			Username = "Dariush",
-			//			Password = "1234512345",
-			//			FullName = "Mr. Dariush Tasdighi"
-			//		};
+                    databaseContext.SaveChanges();
+                }
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
 
-			//		databaseContext.Users.Add(adminUser);
+                return;
+            }
+            finally
+            {
+                if (databaseContext != null)
+                {
+                    databaseContext.Dispose();
+                    databaseContext = null;
+                }
+            }
 
-			//		databaseContext.SaveChanges();
-			//	}
-			//}
-			//catch (System.Exception ex)
-			//{
-			//	System.Windows.Forms.MessageBox.Show(ex.Message);
+            #endregion /createuserdatabase
 
-			//	return;
-			//}
-			//finally
-			//{
-			//	if (databaseContext != null)
-			//	{
-			//		databaseContext.Dispose();
-			//		databaseContext = null;
-			//	}
-			//}
             // **************************************************
             // **************************************************
             // **************************************************
@@ -95,32 +83,32 @@ namespace MyApplication
 
             //if (startupForm != null)
             //{
-            //	if (startupForm.IsDisposed == false)
-            //	{
-            //		startupForm.Dispose();
-            //	}
+            //    if (startupForm.IsDisposed == false)
+            //    {
+            //        startupForm.Dispose();
+            //    }
 
-            //	startupForm = null;
+            //    startupForm = null;
             //}
             //#endregion /Runing Startup Form and then Disposing!
 
             // **************************************************
 
-            //#region Runing Login Form and then Disposing!
-            //LoginForm loginForm = new LoginForm();
+            #region Runing Login Form and then Disposing!
+            LoginForm loginForm = new LoginForm();
 
-            //System.Windows.Forms.Application.Run(loginForm);
+            System.Windows.Forms.Application.Run(loginForm);
 
-            //if (loginForm != null)
-            //{
-            //    if (loginForm.IsDisposed == false)
-            //    {
-            //        loginForm.Dispose();
-            //    }
+            if (loginForm != null)
+            {
+                if (loginForm.IsDisposed == false)
+                {
+                    loginForm.Dispose();
+                }
 
-            //    loginForm = null;
-            //}
-            //#endregion /Runing Login Form and then Disposing!
+                loginForm = null;
+            }
+            #endregion /Runing Login Form and then Disposing!
 
             // **************************************************
 

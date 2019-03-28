@@ -77,6 +77,7 @@
             this.oldPasswrodTextBox.Name = "oldPasswrodTextBox";
             this.oldPasswrodTextBox.Size = new System.Drawing.Size(139, 30);
             this.oldPasswrodTextBox.TabIndex = 2;
+            this.oldPasswrodTextBox.UseSystemPasswordChar = true;
             // 
             // newPasswrodTextBox
             // 
@@ -87,6 +88,7 @@
             this.newPasswrodTextBox.Name = "newPasswrodTextBox";
             this.newPasswrodTextBox.Size = new System.Drawing.Size(139, 30);
             this.newPasswrodTextBox.TabIndex = 4;
+            this.newPasswrodTextBox.UseSystemPasswordChar = true;
             // 
             // confirmNewPasswordTextBox
             // 
@@ -97,6 +99,7 @@
             this.confirmNewPasswordTextBox.Name = "confirmNewPasswordTextBox";
             this.confirmNewPasswordTextBox.Size = new System.Drawing.Size(139, 30);
             this.confirmNewPasswordTextBox.TabIndex = 6;
+            this.confirmNewPasswordTextBox.UseSystemPasswordChar = true;
             // 
             // exitButton
             // 

@@ -33,7 +33,7 @@ namespace MyApplication.Admin
                     Close();
                 }
 
-                fullNmaeTextBox.Text = foundeduser.FullName;
+                //fullNmaeTextBox.Text = foundeduser.FullName;
 
                 descriptionTextBox.Text = foundeduser.Description;
 
@@ -80,7 +80,7 @@ namespace MyApplication.Admin
                     Close();
                 }
 
-                foundeduser.FullName = fullNmaeTextBox.Text;
+                foundeduser.FirstName = fullNmaeTextBox.Text;
 
                 foundeduser.Description = descriptionTextBox.Text;
 

@@ -90,6 +90,7 @@
             this.singleCheckBox.TabIndex = 11;
             this.singleCheckBox.Text = "مجرد";
             this.singleCheckBox.UseVisualStyleBackColor = true;
+            this.singleCheckBox.CheckedChanged += new System.EventHandler(this.singleCheckBox_CheckedChanged);
             // 
             // marridCheckBox
             // 
@@ -100,6 +101,7 @@
             this.marridCheckBox.TabIndex = 10;
             this.marridCheckBox.Text = "متاهل";
             this.marridCheckBox.UseVisualStyleBackColor = true;
+            this.marridCheckBox.CheckedChanged += new System.EventHandler(this.marridCheckBox_CheckedChanged);
             // 
             // firstNameTextBox
             // 
@@ -170,7 +172,7 @@
             // ageTextBox
             // 
             this.ageTextBox.Location = new System.Drawing.Point(6, 159);
-            this.ageTextBox.MaxLength = 20;
+            this.ageTextBox.MaxLength = 3;
             this.ageTextBox.Name = "ageTextBox";
             this.ageTextBox.Size = new System.Drawing.Size(200, 34);
             this.ageTextBox.TabIndex = 8;
@@ -249,7 +251,7 @@
             // descriptionTextBox
             // 
             this.descriptionTextBox.Location = new System.Drawing.Point(6, 214);
-            this.descriptionTextBox.MaxLength = 20;
+            this.descriptionTextBox.MaxLength = 500;
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(409, 94);
@@ -268,7 +270,7 @@
             // postalCodeTextBox
             // 
             this.postalCodeTextBox.Location = new System.Drawing.Point(215, 178);
-            this.postalCodeTextBox.MaxLength = 20;
+            this.postalCodeTextBox.MaxLength = 10;
             this.postalCodeTextBox.Name = "postalCodeTextBox";
             this.postalCodeTextBox.Size = new System.Drawing.Size(200, 30);
             this.postalCodeTextBox.TabIndex = 7;
@@ -286,7 +288,7 @@
             // mobileTextBox
             // 
             this.mobileTextBox.Location = new System.Drawing.Point(215, 142);
-            this.mobileTextBox.MaxLength = 20;
+            this.mobileTextBox.MaxLength = 11;
             this.mobileTextBox.Name = "mobileTextBox";
             this.mobileTextBox.Size = new System.Drawing.Size(200, 30);
             this.mobileTextBox.TabIndex = 5;
@@ -294,7 +296,7 @@
             // addressTextBox
             // 
             this.addressTextBox.Location = new System.Drawing.Point(6, 29);
-            this.addressTextBox.MaxLength = 20;
+            this.addressTextBox.MaxLength = 500;
             this.addressTextBox.Multiline = true;
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(409, 71);
@@ -303,7 +305,7 @@
             // phoneTextBox
             // 
             this.phoneTextBox.Location = new System.Drawing.Point(215, 106);
-            this.phoneTextBox.MaxLength = 20;
+            this.phoneTextBox.MaxLength = 11;
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(200, 30);
             this.phoneTextBox.TabIndex = 3;

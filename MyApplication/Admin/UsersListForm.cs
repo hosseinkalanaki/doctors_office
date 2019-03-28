@@ -42,15 +42,15 @@ namespace MyApplication
                 {
                     users =
                         databaseContext.Users
-                        .OrderBy(current => current.FullName)
+                        .OrderBy(current => current.FirstName)
                         .ToList();
                 }
                 else
                 {
                     users =
                         databaseContext.Users
-                        .Where(current => current.FullName.Contains(fullNameTextBox.Text))
-                        .OrderBy(current => current.FullName)
+                        .Where(current => current.FirstName.Contains(fullNameTextBox.Text))
+                        .OrderBy(current => current.FirstName)
                         .ToList();
                 }
 
@@ -133,22 +133,22 @@ namespace MyApplication
 
                                     databaseContext.SaveChanges();
 
-                                    System.Windows.Forms.MessageBox.Show($"{foundeduser.FullName} Is Deleted");
+                                    System.Windows.Forms.MessageBox.Show($"{foundeduser.FirstName} Is Deleted");
                                 }
                                 else
                                 {
-                                    System.Windows.Forms.MessageBox.Show($"{foundeduser.FullName} Not Found in Database !");
+                                    System.Windows.Forms.MessageBox.Show($"{foundeduser.FirstName} Not Found in Database !");
                                 }
 
                             }
                             else
                             {
-                                System.Windows.Forms.MessageBox.Show($"{foundeduser.FullName} User Is Admin And Can Not Deleted!");
+                                System.Windows.Forms.MessageBox.Show($"{foundeduser.FirstName} User Is Admin And Can Not Deleted!");
                             }
                         }
                         else
                         {
-                            System.Windows.Forms.MessageBox.Show($"{foundeduser.FullName} User Befor This Has Deleted!");
+                            System.Windows.Forms.MessageBox.Show($"{foundeduser.FirstName} User Befor This Has Deleted!");
                         }
                     }
                     else

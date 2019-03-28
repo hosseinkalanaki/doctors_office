@@ -46,7 +46,11 @@ namespace MyApplication
         {
             //clear space input 
             if (string.IsNullOrWhiteSpace(usernameTextBox.Text) ||
-                string.IsNullOrWhiteSpace(passwordTextBox.Text))
+                string.IsNullOrWhiteSpace(passwordTextBox.Text)||
+                string.IsNullOrWhiteSpace(confirmPasswordTextBox.Text)||
+                string.IsNullOrWhiteSpace(firstNameTextBox.Text)||
+                string.IsNullOrWhiteSpace(lastNameTextBox.Text)
+                )
 
             {
                 usernameTextBox.Text =
@@ -55,6 +59,15 @@ namespace MyApplication
                 passwordTextBox.Text =
                     passwordTextBox.Text.Replace(" ", string.Empty);
 
+                confirmPasswordTextBox.Text =
+                    confirmPasswordTextBox.Text.Replace(" ", string.Empty);
+
+                firstNameTextBox.Text =
+                    firstNameTextBox.Text.Replace(" ", string.Empty);
+
+                lastNameTextBox.Text =
+                    lastNameTextBox.Text.Replace(" ", string.Empty);
+
 
                 //cheking null usernmae textbox
                 if (usernameTextBox.Text == string.Empty)
@@ -62,10 +75,34 @@ namespace MyApplication
                     usernameTextBox.Focus();
                 }
 
-                else
+                //cheking null password textbox
+
+                if (passwordTextBox.Text==string.Empty)
                 {
                     passwordTextBox.Focus();
                 }
+
+                //cheking null confirm password textbox
+
+                if (confirmPasswordTextBox.Text == string.Empty)
+                {
+                    confirmPasswordTextBox.Focus();
+                }
+
+                //cheking null firstname textbox
+
+                if (firstNameTextBox.Text == string.Empty)
+                {
+                    firstNameTextBox.Focus();
+                }
+
+                //cheking null lastname textbox
+
+                if (lastNameTextBox.Text == string.Empty)
+                {
+                    lastNameTextBox.Focus();
+                }
+
 
                 return;
             }
@@ -91,6 +128,20 @@ namespace MyApplication
 
                 errorMessages +=
                     "Password Lenght Should Be At Least 8 Characters!";
+            }
+
+            //cheking password confirm
+
+            if (passwordTextBox.Text!=confirmPasswordTextBox.Text)
+            {
+                if (errorMessages != string.Empty)
+                {
+                    errorMessages +=
+                        System.Environment.NewLine;
+                }
+
+                errorMessages +=
+                    "passrod confirm in incorrect!";
             }
 
             if (errorMessages != string.Empty)
@@ -123,7 +174,7 @@ namespace MyApplication
 
                 user = new Models.User
                 {
-                    //FullName = fullNameTextBox.Text,
+                    
                     Password = passwordTextBox.Text,
                     Username = usernameTextBox.Text,
 
