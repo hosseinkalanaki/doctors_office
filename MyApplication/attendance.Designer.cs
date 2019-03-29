@@ -171,7 +171,7 @@
             this.time8TextBox.Name = "time8TextBox";
             this.time8TextBox.Size = new System.Drawing.Size(74, 30);
             this.time8TextBox.TabIndex = 40;
-            this.time8TextBox.Text = "آزاد";
+            this.time8TextBox.Text = "حضور ندارند";
             this.time8TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.time8TextBox.Leave += new System.EventHandler(this.time8TextBox_Leave);
             // 
@@ -502,6 +502,7 @@
             // time8checkBox
             // 
             this.time8checkBox.AutoSize = true;
+            this.time8checkBox.Enabled = false;
             this.time8checkBox.Location = new System.Drawing.Point(42, 405);
             this.time8checkBox.Name = "time8checkBox";
             this.time8checkBox.Size = new System.Drawing.Size(15, 14);
@@ -512,6 +513,7 @@
             // time9checkBox
             // 
             this.time9checkBox.AutoSize = true;
+            this.time9checkBox.Enabled = false;
             this.time9checkBox.Location = new System.Drawing.Point(122, 405);
             this.time9checkBox.Name = "time9checkBox";
             this.time9checkBox.Size = new System.Drawing.Size(15, 14);
@@ -522,6 +524,7 @@
             // time10checkBox
             // 
             this.time10checkBox.AutoSize = true;
+            this.time10checkBox.Enabled = false;
             this.time10checkBox.Location = new System.Drawing.Point(201, 405);
             this.time10checkBox.Name = "time10checkBox";
             this.time10checkBox.Size = new System.Drawing.Size(15, 14);
@@ -532,6 +535,7 @@
             // time11checkBox
             // 
             this.time11checkBox.AutoSize = true;
+            this.time11checkBox.Enabled = false;
             this.time11checkBox.Location = new System.Drawing.Point(279, 405);
             this.time11checkBox.Name = "time11checkBox";
             this.time11checkBox.Size = new System.Drawing.Size(15, 14);
@@ -542,6 +546,7 @@
             // time15checkBox
             // 
             this.time15checkBox.AutoSize = true;
+            this.time15checkBox.Enabled = false;
             this.time15checkBox.Location = new System.Drawing.Point(279, 483);
             this.time15checkBox.Name = "time15checkBox";
             this.time15checkBox.Size = new System.Drawing.Size(15, 14);
@@ -552,6 +557,7 @@
             // time14checkBox
             // 
             this.time14checkBox.AutoSize = true;
+            this.time14checkBox.Enabled = false;
             this.time14checkBox.Location = new System.Drawing.Point(201, 483);
             this.time14checkBox.Name = "time14checkBox";
             this.time14checkBox.Size = new System.Drawing.Size(15, 14);
@@ -562,6 +568,7 @@
             // time13checkBox
             // 
             this.time13checkBox.AutoSize = true;
+            this.time13checkBox.Enabled = false;
             this.time13checkBox.Location = new System.Drawing.Point(122, 483);
             this.time13checkBox.Name = "time13checkBox";
             this.time13checkBox.Size = new System.Drawing.Size(15, 14);
@@ -572,6 +579,7 @@
             // time12checkBox
             // 
             this.time12checkBox.AutoSize = true;
+            this.time12checkBox.Enabled = false;
             this.time12checkBox.Location = new System.Drawing.Point(42, 483);
             this.time12checkBox.Name = "time12checkBox";
             this.time12checkBox.Size = new System.Drawing.Size(15, 14);
@@ -582,6 +590,7 @@
             // time19checkBox
             // 
             this.time19checkBox.AutoSize = true;
+            this.time19checkBox.Enabled = false;
             this.time19checkBox.Location = new System.Drawing.Point(279, 565);
             this.time19checkBox.Name = "time19checkBox";
             this.time19checkBox.Size = new System.Drawing.Size(15, 14);
@@ -592,6 +601,7 @@
             // time18checkBox
             // 
             this.time18checkBox.AutoSize = true;
+            this.time18checkBox.Enabled = false;
             this.time18checkBox.Location = new System.Drawing.Point(201, 565);
             this.time18checkBox.Name = "time18checkBox";
             this.time18checkBox.Size = new System.Drawing.Size(15, 14);
@@ -602,6 +612,7 @@
             // time17checkBox
             // 
             this.time17checkBox.AutoSize = true;
+            this.time17checkBox.Enabled = false;
             this.time17checkBox.Location = new System.Drawing.Point(122, 565);
             this.time17checkBox.Name = "time17checkBox";
             this.time17checkBox.Size = new System.Drawing.Size(15, 14);
@@ -612,6 +623,7 @@
             // time16checkBox
             // 
             this.time16checkBox.AutoSize = true;
+            this.time16checkBox.Enabled = false;
             this.time16checkBox.Location = new System.Drawing.Point(42, 565);
             this.time16checkBox.Name = "time16checkBox";
             this.time16checkBox.Size = new System.Drawing.Size(15, 14);
@@ -622,6 +634,7 @@
             // time21checkBox
             // 
             this.time21checkBox.AutoSize = true;
+            this.time21checkBox.Enabled = false;
             this.time21checkBox.Location = new System.Drawing.Point(122, 648);
             this.time21checkBox.Name = "time21checkBox";
             this.time21checkBox.Size = new System.Drawing.Size(15, 14);
@@ -632,6 +645,7 @@
             // time20checkBox
             // 
             this.time20checkBox.AutoSize = true;
+            this.time20checkBox.Enabled = false;
             this.time20checkBox.Location = new System.Drawing.Point(42, 648);
             this.time20checkBox.Name = "time20checkBox";
             this.time20checkBox.Size = new System.Drawing.Size(15, 14);

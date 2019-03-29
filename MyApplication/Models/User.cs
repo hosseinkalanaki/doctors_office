@@ -1,6 +1,6 @@
 ﻿namespace Models
 {
-    public class User : BaseEntity
+    public class User : Person
     {
         public User() : base()
         {
@@ -33,89 +33,6 @@
         [System.ComponentModel.DataAnnotations.StringLength
             (maximumLength: 40, MinimumLength = 8)]
         public string Password { get; set; }
-        // **********
-
-        // **********
-        [System.ComponentModel.DataAnnotations.StringLength
-            (maximumLength: 50)]
-
-        [System.ComponentModel.DataAnnotations.Schema.Index
-            (IsUnique = false)]
-        public string FirstName { get; set; }
-        // **********
-
-        // **********
-        [System.ComponentModel.DataAnnotations.StringLength
-            (maximumLength: 50)]
-
-        [System.ComponentModel.DataAnnotations.Schema.Index
-            (IsUnique = false)]
-        public string LastName { get; set; }
-        // **********
-
-        // **********
-        public bool IsMan { get; set; }
-
-        // **********
-
-        [System.ComponentModel.DataAnnotations.StringLength
-            (maximumLength: 50)]
-
-        [System.ComponentModel.DataAnnotations.Schema.Index
-            (IsUnique = false)]
-        public string Age { get; set; }
-
-        // **********
-        public bool IsMarried { get; set; }
-
-        // **********
-
-        // **********
-
-        [System.ComponentModel.DataAnnotations.StringLength
-            (maximumLength: 500)]
-
-        [System.ComponentModel.DataAnnotations.Schema.Index
-            (IsUnique = false)]
-        public string Address { get; set; }
-
-        // **********
-
-        // **********
-
-        [System.ComponentModel.DataAnnotations.StringLength
-            (maximumLength: 11)]
-
-        [System.ComponentModel.DataAnnotations.Schema.Index
-            (IsUnique = false)]
-        public string Phone { get; set; }
-
-        // **********
-
-        // **********
-
-        [System.ComponentModel.DataAnnotations.StringLength
-            (maximumLength: 11)]
-
-        [System.ComponentModel.DataAnnotations.Schema.Index
-            (IsUnique = false)]
-        public string Mobile { get; set; }
-
-        // **********
-
-        // **********
-
-        [System.ComponentModel.DataAnnotations.StringLength
-            (maximumLength: 10)]
-
-        [System.ComponentModel.DataAnnotations.Schema.Index
-            (IsUnique = false)]
-        public string PostalCode { get; set; }
-
-        // **********
-
-        // **********
-        public string Description { get; set; }
         // **********
 
         public string DisplayName

@@ -26,7 +26,7 @@ namespace MyApplication.Admin
                     .Where(current => current.Id == SelectUser.Id)
                     .FirstOrDefault();
 
-                if (foundeduser==null)
+                if (foundeduser == null)
                 {
                     System.Windows.Forms.MessageBox.Show("There Is No Such A User Anymore!");
 

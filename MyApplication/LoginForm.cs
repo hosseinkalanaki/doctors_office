@@ -21,7 +21,7 @@ namespace MyApplication
         private void ResetButton_Click_1(object sender, System.EventArgs e)
         {
             ResetForm();
-        }        
+        }
         public void ResetForm()
         {
             Infrastructure.Utility.AuthenticatedUser = null;
@@ -29,7 +29,7 @@ namespace MyApplication
             passwordTextBox.Text = string.Empty;
             usernameTextBox.Text = string.Empty;
 
-            usernameTextBox.Focus();            
+            usernameTextBox.Focus();
         }
 
         //**************************************************
@@ -118,6 +118,6 @@ namespace MyApplication
 
         private void usernameTextBox_TextChanged(object sender, System.EventArgs e)
         {
-                    }
+        }
     }
 }

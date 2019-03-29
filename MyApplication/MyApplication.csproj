@@ -102,18 +102,14 @@
     </Compile>
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
-    <Compile Include="Models\DoctorReservation.cs" />
-    <Compile Include="Models\Doktor.cs" />
+    <Compile Include="Models\DoctorsReservation.cs" />
+    <Compile Include="Models\Doctors.cs" />
+    <Compile Include="Models\Patients.cs" />
     <Compile Include="Models\Person.cs" />
-    <Compile Include="Models\PersonReservation.cs" />
+    <Compile Include="Models\PatientsReservation.cs" />
+    <Compile Include="Models\Reservations.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Infrastructure\PersianDate.cs" />
-    <Compile Include="NewDoctor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NewDoctor.Designer.cs">
-      <DependentUpon>NewDoctor.cs</DependentUpon>
-    </Compile>
     <Compile Include="PersonRefrence.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,9 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NewDoctor.resx">
-      <DependentUpon>NewDoctor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonRefrence.resx">
       <DependentUpon>PersonRefrence.cs</DependentUpon>

@@ -1,10 +1,10 @@
 ﻿namespace Models
 {
-    public class DoctorReservation : BaseEntity
+    public class PatientsReservation : BaseEntity
     {
-        public DoctorReservation()
+        public PatientsReservation(): base()
         {
-
+                
         }
 
         // **********
@@ -26,6 +26,24 @@
         public string TimeReservation { get; set; }
         // **********
 
+        // **********
+        [System.ComponentModel.DataAnnotations.StringLength
+            (maximumLength: 500)]
+
+        [System.ComponentModel.DataAnnotations.Required
+            (AllowEmptyStrings = false)]
+        public string Description { get; set; }
+        // **********
+
+        // **********
+        [System.ComponentModel.DataAnnotations.StringLength
+            (maximumLength: 500)]
+
+        [System.ComponentModel.DataAnnotations.Required
+            (AllowEmptyStrings = false)]
+        public string Prescription { get; set; }
+        // **********
+
 
         // **********
         [System.ComponentModel.DataAnnotations.StringLength
@@ -33,7 +51,7 @@
 
         [System.ComponentModel.DataAnnotations.Required
            (AllowEmptyStrings = false)]
-        public string DoctorId { get; set; }
+        public string PatientsCode { get; set; }
         // **********
     }
 }

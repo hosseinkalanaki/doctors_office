@@ -8,7 +8,9 @@ namespace MyApplication
             InitializeComponent();
         }
 
-        private static string checkchange(string day,string mounth, string year)
+        public Models.Doctors SelectUser { get; set; }
+
+        private static string checkchange(string day, string mounth, string year)
         {
             int yearnumber, mounthnumber, daynumber;
 
@@ -19,15 +21,15 @@ namespace MyApplication
             PersianDate persianDate =
                 Infrastructure.Utility.ConvertMiladiToShamsi(System.DateTime.Now);
 
-            if (persianDate.Year>yearnumber)
+            if (persianDate.Year > yearnumber)
             {
                 return "Cancel";
             }
             else
             {
-                if (persianDate.Year==yearnumber)
+                if (persianDate.Year == yearnumber)
                 {
-                    if (persianDate.Month>mounthnumber)
+                    if (persianDate.Month > mounthnumber)
                     {
                         return "Cancel";
                     }
@@ -37,7 +39,7 @@ namespace MyApplication
                         {
                             return "Cancel";
                         }
-                        if (persianDate.Month==mounthnumber)
+                        if (persianDate.Month == mounthnumber)
                         {
                             if (persianDate.Day > daynumber)
                             {
@@ -85,7 +87,7 @@ namespace MyApplication
             #endregion /time9-10
 
             #region time10-11
-            if (time10checkBox.Checked==true)
+            if (time10checkBox.Checked == true)
             {
                 time10TextBox.Text = "آزاد";
                 time10TextBox.BackColor = System.Drawing.Color.Khaki;
@@ -101,7 +103,7 @@ namespace MyApplication
             #endregion /time10-11
 
             #region time11-12
-            if (time11checkBox.Checked==true)
+            if (time11checkBox.Checked == true)
             {
                 time11TextBox.Text = "آزاد";
                 time11TextBox.BackColor = System.Drawing.Color.Khaki;
@@ -117,7 +119,7 @@ namespace MyApplication
             #endregion /time11-12
 
             #region time12-13
-            if (time12checkBox.Checked==true)
+            if (time12checkBox.Checked == true)
             {
                 time12TextBox.Text = "آزاد";
                 time12TextBox.BackColor = System.Drawing.Color.Khaki;
@@ -133,7 +135,7 @@ namespace MyApplication
             #endregion /time12-13
 
             #region time13-14
-            if (time13checkBox.Checked==true)
+            if (time13checkBox.Checked == true)
             {
                 time13TextBox.Text = "آزاد";
                 time13TextBox.BackColor = System.Drawing.Color.Khaki;
@@ -149,7 +151,7 @@ namespace MyApplication
             #endregion /time13-14
 
             #region time14-15
-            if (time14checkBox.Checked==true)
+            if (time14checkBox.Checked == true)
             {
                 time14TextBox.Text = "آزاد";
                 time14TextBox.BackColor = System.Drawing.Color.Khaki;
@@ -165,7 +167,7 @@ namespace MyApplication
             #endregion /time14-15
 
             #region time15-16
-            if (time15checkBox.Checked==true)
+            if (time15checkBox.Checked == true)
             {
                 time15TextBox.Text = "آزاد";
                 time15TextBox.BackColor = System.Drawing.Color.Khaki;
@@ -181,7 +183,7 @@ namespace MyApplication
             #endregion /time15-16
 
             #region time16-17
-            if (time16checkBox.Checked==true)
+            if (time16checkBox.Checked == true)
             {
                 time16TextBox.Text = "آزاد";
                 time16TextBox.BackColor = System.Drawing.Color.Khaki;
@@ -197,7 +199,7 @@ namespace MyApplication
             #endregion /time16-17
 
             #region time17-18
-            if (time17checkBox.Checked==true)
+            if (time17checkBox.Checked == true)
             {
                 time17TextBox.Text = "آزاد";
                 time17TextBox.BackColor = System.Drawing.Color.Khaki;
@@ -213,7 +215,7 @@ namespace MyApplication
             #endregion /time17-18
 
             #region time18-19
-            if (time18checkBox.Checked==true)
+            if (time18checkBox.Checked == true)
             {
                 time18TextBox.Text = "آزاد";
                 time18TextBox.BackColor = System.Drawing.Color.Khaki;
@@ -229,7 +231,7 @@ namespace MyApplication
             #endregion /time18-19
 
             #region time19-20
-            if (time19checkBox.Checked==true)
+            if (time19checkBox.Checked == true)
             {
                 time19TextBox.Text = "آزاد";
                 time19TextBox.BackColor = System.Drawing.Color.Khaki;
@@ -245,7 +247,7 @@ namespace MyApplication
             #endregion /time19-20
 
             #region time20-21
-            if (time20checkBox.Checked==true)
+            if (time20checkBox.Checked == true)
             {
                 time20TextBox.Text = "آزاد";
                 time20TextBox.BackColor = System.Drawing.Color.Khaki;
@@ -261,7 +263,7 @@ namespace MyApplication
             #endregion /time20-21
 
             #region time21-22
-            if (time21checkBox.Checked==true)
+            if (time21checkBox.Checked == true)
             {
                 time21TextBox.Text = "آزاد";
                 time21TextBox.BackColor = System.Drawing.Color.Khaki;
@@ -276,9 +278,51 @@ namespace MyApplication
             }
             #endregion /time21-22
         }
-       
+
+        public void DoctorTime(Models.Reservations doctorVisitDay)
+        {
+
+            time8checkBox.Checked = doctorVisitDay.Am8;
+            time8checkBox.Enabled = doctorVisitDay.Am8;
+            time9checkBox.Checked = doctorVisitDay.Am9;
+            time9checkBox.Enabled = doctorVisitDay.Am9;
+            time10checkBox.Checked = doctorVisitDay.Am10;
+            time10checkBox.Enabled = doctorVisitDay.Am10;
+            time11checkBox.Checked = doctorVisitDay.Am11;
+            time11checkBox.Enabled = doctorVisitDay.Am11;
+            time12checkBox.Checked = doctorVisitDay.Am12;
+            time12checkBox.Enabled = doctorVisitDay.Am12;
+
+            time13checkBox.Checked = doctorVisitDay.Pm1;
+            time13checkBox.Enabled = doctorVisitDay.Pm1;
+            time14checkBox.Checked = doctorVisitDay.Pm2;
+            time14checkBox.Enabled = doctorVisitDay.Pm2;
+            time15checkBox.Checked = doctorVisitDay.Pm3;
+            time15checkBox.Enabled = doctorVisitDay.Pm3;
+            time16checkBox.Checked = doctorVisitDay.Pm4;
+            time16checkBox.Enabled = doctorVisitDay.Pm4;
+            time17checkBox.Checked = doctorVisitDay.Pm5;
+            time17checkBox.Enabled = doctorVisitDay.Pm5;
+            time18checkBox.Checked = doctorVisitDay.Pm6;
+            time18checkBox.Enabled = doctorVisitDay.Pm6;
+            time19checkBox.Checked = doctorVisitDay.Pm7;
+            time19checkBox.Enabled = doctorVisitDay.Pm7;
+            time20checkBox.Checked = doctorVisitDay.Pm8;
+            time20checkBox.Enabled = doctorVisitDay.Pm8;
+            time21checkBox.Checked = doctorVisitDay.Pm9;
+            time21checkBox.Enabled = doctorVisitDay.Pm9;
+
+        }
+
+        public void PatientsVisit(Models.Reservations pantientsVisitDay)
+        {
+            //pantientsVisitDay
+        }
+
         private void attendance_Load(object sender, System.EventArgs e)
         {
+            doctorNameLabel.Text = SelectUser.DisplayName;
+
             int minDay, minMounth, minYeaer;
 
             PersianDate persianDate =
@@ -294,6 +338,60 @@ namespace MyApplication
             mounthLabel.Text = Infrastructure.MountChange.numbertoname(minMounth);
 
             ChangeTime();
+
+            string date = minYeaer + "/" + minMounth + "/" + minDay;
+
+            string doctor = SelectUser.Id.ToString();
+
+            Models.DatabaseContext databaseContext = null;
+
+            try
+            {
+                databaseContext = new Models.DatabaseContext();
+
+                Models.Reservations foundedUser =
+                    databaseContext.Reservation
+                    .Where(Current => string.Compare(Current.DateVisit, date, true) == 0 &&
+                    string.Compare(Current.doctorId, doctor, true) == 0 &&
+                    string.Compare(Current.PatientId, "", true) == 0)
+                    .FirstOrDefault();
+
+                DoctorTime(foundedUser);
+
+                System.Collections.Generic.List<Models.Reservations> users = null;
+
+                users =
+                        databaseContext.Reservation
+                        .OrderBy(current => current.DateVisit.Contains(date)&&
+                        current.doctorId.Contains(doctor))
+                        .ToList();
+
+
+                //foundedUser =
+                //    databaseContext.Reservation
+                //    .Where(current => string.Compare(current.DateVisit, date, true) == 0 &&
+                //    string.Compare(current.doctorId, doctor, true) == 0 &&
+                //    string.Compare(current.PatientId, "", true) != 0)
+                //    .OrderBy(current=>current.)
+
+                PatientsVisit(foundedUser);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+
+                return;
+            }
+            finally
+            {
+                if (databaseContext != null)
+                {
+                    databaseContext.Dispose();
+
+                    databaseContext = null;
+                }
+            }
+
 
         }
 
@@ -321,7 +419,7 @@ namespace MyApplication
 
             string result =
                 checkchange(dayLabel.Text, mounthLabel.Text, year.ToString());
-            if (result!="Ok")
+            if (result != "Ok")
             {
                 priviosYearButton.Enabled = false;
                 return;
@@ -337,7 +435,7 @@ namespace MyApplication
 
             day = System.Convert.ToInt32(dayLabel.Text);
 
-            if (day>29)
+            if (day > 29)
             {
                 if (mounthLabel.Text == "فروردین" ||
                     mounthLabel.Text == "اردیبهشت" ||
@@ -346,7 +444,7 @@ namespace MyApplication
                     mounthLabel.Text == "مرداد" ||
                     mounthLabel.Text == "شهریور")
                 {
-                    if (day==31)
+                    if (day == 31)
                     {
                         day = 1;
 

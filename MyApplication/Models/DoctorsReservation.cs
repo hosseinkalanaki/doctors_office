@@ -1,10 +1,10 @@
 ﻿namespace Models
 {
-    public class PersonReservation : DatabaseContext
+    public class DoctorsReservation : BaseEntity
     {
-        public PersonReservation(): base()
+        public DoctorsReservation()
         {
-                
+
         }
 
         // **********
@@ -14,7 +14,7 @@
         [System.ComponentModel.DataAnnotations.Required
             (AllowEmptyStrings = false)]
 
-        public string DateReservation { get; set; }
+        public string WorkingHour { get; set; }
         // **********
 
         // **********
@@ -23,7 +23,7 @@
 
         [System.ComponentModel.DataAnnotations.Required
             (AllowEmptyStrings = false)]
-        public string TimeReservation { get; set; }
+        public string WorkingDate { get; set; }
         // **********
 
 
@@ -33,7 +33,7 @@
 
         [System.ComponentModel.DataAnnotations.Required
            (AllowEmptyStrings = false)]
-        public string PersonId { get; set; }
+        public string DoctorId { get; set; }
         // **********
     }
 }

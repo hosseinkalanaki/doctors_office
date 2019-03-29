@@ -16,10 +16,6 @@ namespace MyApplication
 			System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
             // **************************************************
 
-            // **************************************************
-            // **************************************************
-            // **************************************************
-
             #region createuserdatabase
 
             Models.DatabaseContext databaseContext = null;
@@ -69,6 +65,8 @@ namespace MyApplication
 
             #endregion /createuserdatabase
 
+            #region Comment code
+
             // **************************************************
             // **************************************************
             // **************************************************
@@ -94,7 +92,10 @@ namespace MyApplication
 
             // **************************************************
 
+            #endregion /Comment code
+
             #region Runing Login Form and then Disposing!
+
             LoginForm loginForm = new LoginForm();
 
             System.Windows.Forms.Application.Run(loginForm);

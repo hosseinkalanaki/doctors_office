@@ -1,10 +1,9 @@
 ﻿namespace Models
 {
-    public class Doktor : Person
+    public class Doctors : Person
     {
-        public Doktor() : base()
+        public Doctors() : base()
         {
-            DoctorId = System.Guid.NewGuid();
         }
 
         [System.ComponentModel.DataAnnotations.StringLength
@@ -14,10 +13,6 @@
             (AllowEmptyStrings = false)]
 
         public string Expertise { get; set; }
-        // **********
 
-        // **********
-        public System.Guid DoctorId { get; set; }
-        // **********
     }
 }

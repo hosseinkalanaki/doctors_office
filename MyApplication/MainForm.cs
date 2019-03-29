@@ -125,19 +125,19 @@
 
         }
 
-        private NewDoctor newDoctor;
+        //private NewDoctor newDoctor;
         private void addDoctorToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            if ((newDoctor == null) || (newDoctor.IsDisposed))
-            {
-                newDoctor = new NewDoctor();
+            //    if ((newDoctor == null) || (newDoctor.IsDisposed))
+            //    {
+            //        newDoctor = new NewDoctor();
 
-                newDoctor.ShowDialog();
-            }
+            //        newDoctor.ShowDialog();
+            //    }
 
-            newDoctor.Dispose();
+            //    newDoctor.Dispose();
 
-            newDoctor = null;
+            //    newDoctor = null;
         }
     }
 }
