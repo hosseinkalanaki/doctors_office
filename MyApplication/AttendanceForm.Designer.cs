@@ -1,6 +1,6 @@
 ﻿namespace MyApplication
 {
-    partial class Attendance
+    partial class AttendanceForm
     {
         /// <summary>
         /// Required designer variable.
@@ -87,27 +87,23 @@
             // 
             // time21TextBox
             // 
-            this.time21TextBox.BackColor = System.Drawing.Color.Red;
+            this.time21TextBox.BackColor = System.Drawing.SystemColors.Window;
             this.time21TextBox.Location = new System.Drawing.Point(92, 612);
             this.time21TextBox.MaxLength = 20;
             this.time21TextBox.Name = "time21TextBox";
             this.time21TextBox.Size = new System.Drawing.Size(73, 30);
             this.time21TextBox.TabIndex = 47;
-            this.time21TextBox.Text = "حضور ندارند";
             this.time21TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.time21TextBox.Leave += new System.EventHandler(this.time21TextBox_Leave);
             // 
             // time20TextBox
             // 
-            this.time20TextBox.BackColor = System.Drawing.Color.Red;
+            this.time20TextBox.BackColor = System.Drawing.SystemColors.Window;
             this.time20TextBox.Location = new System.Drawing.Point(13, 612);
             this.time20TextBox.MaxLength = 20;
             this.time20TextBox.Name = "time20TextBox";
             this.time20TextBox.Size = new System.Drawing.Size(73, 30);
             this.time20TextBox.TabIndex = 46;
-            this.time20TextBox.Text = "حضور ندارند";
             this.time20TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.time20TextBox.Leave += new System.EventHandler(this.time20TextBox_Leave);
             // 
             // time21Label
             // 
@@ -129,49 +125,42 @@
             // 
             // time19TextBox
             // 
-            this.time19TextBox.BackColor = System.Drawing.Color.Red;
+            this.time19TextBox.BackColor = System.Drawing.SystemColors.Window;
             this.time19TextBox.Location = new System.Drawing.Point(250, 529);
             this.time19TextBox.MaxLength = 20;
             this.time19TextBox.Name = "time19TextBox";
             this.time19TextBox.Size = new System.Drawing.Size(73, 30);
             this.time19TextBox.TabIndex = 43;
-            this.time19TextBox.Text = "حضور ندارند";
             this.time19TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.time19TextBox.Leave += new System.EventHandler(this.time19TextBox_Leave);
             // 
             // time17TextBox
             // 
-            this.time17TextBox.BackColor = System.Drawing.Color.Red;
+            this.time17TextBox.BackColor = System.Drawing.SystemColors.Window;
             this.time17TextBox.Location = new System.Drawing.Point(92, 529);
             this.time17TextBox.MaxLength = 20;
             this.time17TextBox.Name = "time17TextBox";
             this.time17TextBox.Size = new System.Drawing.Size(73, 30);
             this.time17TextBox.TabIndex = 42;
-            this.time17TextBox.Text = "حضور ندارند";
             this.time17TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.time17TextBox.Leave += new System.EventHandler(this.time17TextBox_Leave);
             // 
             // time16TextBox
             // 
-            this.time16TextBox.BackColor = System.Drawing.Color.Red;
+            this.time16TextBox.BackColor = System.Drawing.SystemColors.Window;
             this.time16TextBox.Location = new System.Drawing.Point(13, 529);
             this.time16TextBox.MaxLength = 20;
             this.time16TextBox.Name = "time16TextBox";
             this.time16TextBox.Size = new System.Drawing.Size(73, 30);
             this.time16TextBox.TabIndex = 41;
-            this.time16TextBox.Text = "حضور ندارند";
             this.time16TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.time16TextBox.Leave += new System.EventHandler(this.time16TextBox_Leave);
             // 
             // time8TextBox
             // 
-            this.time8TextBox.BackColor = System.Drawing.Color.Red;
+            this.time8TextBox.BackColor = System.Drawing.SystemColors.Window;
             this.time8TextBox.Location = new System.Drawing.Point(12, 369);
             this.time8TextBox.MaxLength = 20;
             this.time8TextBox.Name = "time8TextBox";
             this.time8TextBox.Size = new System.Drawing.Size(74, 30);
             this.time8TextBox.TabIndex = 40;
-            this.time8TextBox.Text = "حضور ندارند";
             this.time8TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.time8TextBox.Leave += new System.EventHandler(this.time8TextBox_Leave);
             // 
@@ -222,15 +211,13 @@
             // 
             // time15TextBox
             // 
-            this.time15TextBox.BackColor = System.Drawing.Color.Red;
+            this.time15TextBox.BackColor = System.Drawing.SystemColors.Window;
             this.time15TextBox.Location = new System.Drawing.Point(250, 447);
             this.time15TextBox.MaxLength = 20;
             this.time15TextBox.Name = "time15TextBox";
             this.time15TextBox.Size = new System.Drawing.Size(73, 30);
             this.time15TextBox.TabIndex = 34;
-            this.time15TextBox.Text = "حضور ندارند";
             this.time15TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.time15TextBox.Leave += new System.EventHandler(this.time15TextBox_Leave);
             // 
             // time15Label
             // 
@@ -243,15 +230,13 @@
             // 
             // time14TextBox
             // 
-            this.time14TextBox.BackColor = System.Drawing.Color.Red;
+            this.time14TextBox.BackColor = System.Drawing.SystemColors.Window;
             this.time14TextBox.Location = new System.Drawing.Point(171, 447);
             this.time14TextBox.MaxLength = 20;
             this.time14TextBox.Name = "time14TextBox";
             this.time14TextBox.Size = new System.Drawing.Size(73, 30);
             this.time14TextBox.TabIndex = 32;
-            this.time14TextBox.Text = "حضور ندارند";
             this.time14TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.time14TextBox.Leave += new System.EventHandler(this.time14TextBox_Leave);
             // 
             // time14Label
             // 
@@ -264,15 +249,13 @@
             // 
             // time13TextBox
             // 
-            this.time13TextBox.BackColor = System.Drawing.Color.Red;
+            this.time13TextBox.BackColor = System.Drawing.SystemColors.Window;
             this.time13TextBox.Location = new System.Drawing.Point(92, 447);
             this.time13TextBox.MaxLength = 20;
             this.time13TextBox.Name = "time13TextBox";
             this.time13TextBox.Size = new System.Drawing.Size(73, 30);
             this.time13TextBox.TabIndex = 30;
-            this.time13TextBox.Text = "حضور ندارند";
             this.time13TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.time13TextBox.Leave += new System.EventHandler(this.time13TextBox_Leave);
             // 
             // time13Label
             // 
@@ -285,15 +268,13 @@
             // 
             // time12TextBox
             // 
-            this.time12TextBox.BackColor = System.Drawing.Color.Red;
+            this.time12TextBox.BackColor = System.Drawing.SystemColors.Window;
             this.time12TextBox.Location = new System.Drawing.Point(12, 447);
             this.time12TextBox.MaxLength = 20;
             this.time12TextBox.Name = "time12TextBox";
             this.time12TextBox.Size = new System.Drawing.Size(74, 30);
             this.time12TextBox.TabIndex = 28;
-            this.time12TextBox.Text = "حضور ندارند";
             this.time12TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.time12TextBox.Leave += new System.EventHandler(this.time12TextBox_Leave);
             // 
             // time11Label
             // 
@@ -306,15 +287,13 @@
             // 
             // time11TextBox
             // 
-            this.time11TextBox.BackColor = System.Drawing.Color.Red;
+            this.time11TextBox.BackColor = System.Drawing.SystemColors.Window;
             this.time11TextBox.Location = new System.Drawing.Point(250, 369);
             this.time11TextBox.MaxLength = 20;
             this.time11TextBox.Name = "time11TextBox";
             this.time11TextBox.Size = new System.Drawing.Size(73, 30);
             this.time11TextBox.TabIndex = 26;
-            this.time11TextBox.Text = "حضور ندارند";
             this.time11TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.time11TextBox.Leave += new System.EventHandler(this.time11TextBox_Leave);
             // 
             // time10Label
             // 
@@ -327,15 +306,13 @@
             // 
             // time10TextBox
             // 
-            this.time10TextBox.BackColor = System.Drawing.Color.Red;
+            this.time10TextBox.BackColor = System.Drawing.SystemColors.Window;
             this.time10TextBox.Location = new System.Drawing.Point(171, 369);
             this.time10TextBox.MaxLength = 20;
             this.time10TextBox.Name = "time10TextBox";
             this.time10TextBox.Size = new System.Drawing.Size(73, 30);
             this.time10TextBox.TabIndex = 24;
-            this.time10TextBox.Text = "حضور ندارند";
             this.time10TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.time10TextBox.Leave += new System.EventHandler(this.time10TextBox_Leave);
             // 
             // time9Label
             // 
@@ -348,13 +325,12 @@
             // 
             // time9TextBox
             // 
-            this.time9TextBox.BackColor = System.Drawing.Color.Red;
+            this.time9TextBox.BackColor = System.Drawing.SystemColors.Window;
             this.time9TextBox.Location = new System.Drawing.Point(92, 369);
             this.time9TextBox.MaxLength = 20;
             this.time9TextBox.Name = "time9TextBox";
             this.time9TextBox.Size = new System.Drawing.Size(73, 30);
             this.time9TextBox.TabIndex = 22;
-            this.time9TextBox.Text = "حضور ندارند";
             this.time9TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.time9TextBox.Leave += new System.EventHandler(this.time9TextBox_Leave);
             // 
@@ -390,15 +366,13 @@
             // 
             // time18TextBox
             // 
-            this.time18TextBox.BackColor = System.Drawing.Color.Red;
+            this.time18TextBox.BackColor = System.Drawing.SystemColors.Window;
             this.time18TextBox.Location = new System.Drawing.Point(171, 529);
             this.time18TextBox.MaxLength = 20;
             this.time18TextBox.Name = "time18TextBox";
             this.time18TextBox.Size = new System.Drawing.Size(73, 30);
             this.time18TextBox.TabIndex = 18;
-            this.time18TextBox.Text = "حضور ندارند";
             this.time18TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.time18TextBox.Leave += new System.EventHandler(this.time18TextBox_Leave);
             // 
             // nextMounthButton
             // 
@@ -502,7 +476,6 @@
             // time8checkBox
             // 
             this.time8checkBox.AutoSize = true;
-            this.time8checkBox.Enabled = false;
             this.time8checkBox.Location = new System.Drawing.Point(42, 405);
             this.time8checkBox.Name = "time8checkBox";
             this.time8checkBox.Size = new System.Drawing.Size(15, 14);
@@ -513,7 +486,6 @@
             // time9checkBox
             // 
             this.time9checkBox.AutoSize = true;
-            this.time9checkBox.Enabled = false;
             this.time9checkBox.Location = new System.Drawing.Point(122, 405);
             this.time9checkBox.Name = "time9checkBox";
             this.time9checkBox.Size = new System.Drawing.Size(15, 14);
@@ -524,7 +496,6 @@
             // time10checkBox
             // 
             this.time10checkBox.AutoSize = true;
-            this.time10checkBox.Enabled = false;
             this.time10checkBox.Location = new System.Drawing.Point(201, 405);
             this.time10checkBox.Name = "time10checkBox";
             this.time10checkBox.Size = new System.Drawing.Size(15, 14);
@@ -535,7 +506,6 @@
             // time11checkBox
             // 
             this.time11checkBox.AutoSize = true;
-            this.time11checkBox.Enabled = false;
             this.time11checkBox.Location = new System.Drawing.Point(279, 405);
             this.time11checkBox.Name = "time11checkBox";
             this.time11checkBox.Size = new System.Drawing.Size(15, 14);
@@ -546,7 +516,6 @@
             // time15checkBox
             // 
             this.time15checkBox.AutoSize = true;
-            this.time15checkBox.Enabled = false;
             this.time15checkBox.Location = new System.Drawing.Point(279, 483);
             this.time15checkBox.Name = "time15checkBox";
             this.time15checkBox.Size = new System.Drawing.Size(15, 14);
@@ -557,7 +526,6 @@
             // time14checkBox
             // 
             this.time14checkBox.AutoSize = true;
-            this.time14checkBox.Enabled = false;
             this.time14checkBox.Location = new System.Drawing.Point(201, 483);
             this.time14checkBox.Name = "time14checkBox";
             this.time14checkBox.Size = new System.Drawing.Size(15, 14);
@@ -568,7 +536,6 @@
             // time13checkBox
             // 
             this.time13checkBox.AutoSize = true;
-            this.time13checkBox.Enabled = false;
             this.time13checkBox.Location = new System.Drawing.Point(122, 483);
             this.time13checkBox.Name = "time13checkBox";
             this.time13checkBox.Size = new System.Drawing.Size(15, 14);
@@ -579,7 +546,6 @@
             // time12checkBox
             // 
             this.time12checkBox.AutoSize = true;
-            this.time12checkBox.Enabled = false;
             this.time12checkBox.Location = new System.Drawing.Point(42, 483);
             this.time12checkBox.Name = "time12checkBox";
             this.time12checkBox.Size = new System.Drawing.Size(15, 14);
@@ -590,7 +556,6 @@
             // time19checkBox
             // 
             this.time19checkBox.AutoSize = true;
-            this.time19checkBox.Enabled = false;
             this.time19checkBox.Location = new System.Drawing.Point(279, 565);
             this.time19checkBox.Name = "time19checkBox";
             this.time19checkBox.Size = new System.Drawing.Size(15, 14);
@@ -601,7 +566,6 @@
             // time18checkBox
             // 
             this.time18checkBox.AutoSize = true;
-            this.time18checkBox.Enabled = false;
             this.time18checkBox.Location = new System.Drawing.Point(201, 565);
             this.time18checkBox.Name = "time18checkBox";
             this.time18checkBox.Size = new System.Drawing.Size(15, 14);
@@ -612,7 +576,6 @@
             // time17checkBox
             // 
             this.time17checkBox.AutoSize = true;
-            this.time17checkBox.Enabled = false;
             this.time17checkBox.Location = new System.Drawing.Point(122, 565);
             this.time17checkBox.Name = "time17checkBox";
             this.time17checkBox.Size = new System.Drawing.Size(15, 14);
@@ -623,7 +586,6 @@
             // time16checkBox
             // 
             this.time16checkBox.AutoSize = true;
-            this.time16checkBox.Enabled = false;
             this.time16checkBox.Location = new System.Drawing.Point(42, 565);
             this.time16checkBox.Name = "time16checkBox";
             this.time16checkBox.Size = new System.Drawing.Size(15, 14);
@@ -634,7 +596,6 @@
             // time21checkBox
             // 
             this.time21checkBox.AutoSize = true;
-            this.time21checkBox.Enabled = false;
             this.time21checkBox.Location = new System.Drawing.Point(122, 648);
             this.time21checkBox.Name = "time21checkBox";
             this.time21checkBox.Size = new System.Drawing.Size(15, 14);
@@ -645,7 +606,6 @@
             // time20checkBox
             // 
             this.time20checkBox.AutoSize = true;
-            this.time20checkBox.Enabled = false;
             this.time20checkBox.Location = new System.Drawing.Point(42, 648);
             this.time20checkBox.Name = "time20checkBox";
             this.time20checkBox.Size = new System.Drawing.Size(15, 14);
@@ -662,6 +622,7 @@
             this.saveButton.TabIndex = 62;
             this.saveButton.Text = "ذخیره";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // exitButton
             // 

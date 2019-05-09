@@ -7,12 +7,12 @@
             InitializeComponent();
         }
 
-        private ChangePasswrod changePasswrod;
+        private ChangePasswrodForm changePasswrod;
         private void changePasswordToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             if ((changePasswrod==null)||(changePasswrod.IsDisposed))
             {
-                changePasswrod = new ChangePasswrod
+                changePasswrod = new ChangePasswrodForm
                 {
                     MdiParent = this
                 };
@@ -38,28 +38,37 @@
 
             if (Infrastructure.Utility.AuthenticatedUser.FirstName == string.Empty)
             {
-                welcomeToolStripStatusLabel.Text =
-                    $"Welcome { Infrastructure.Utility.AuthenticatedUser.Username }!";
+                if (Infrastructure.Utility.AuthenticatedUser.LastName == string.Empty)
+                {
+                    welcomeToolStripStatusLabel.Text =
+                     $"خوش آمدید { Infrastructure.Utility.AuthenticatedUser.Username }!";
+                }
+
+                else
+                {
+                    welcomeToolStripStatusLabel.Text =
+                        $"خوش آمدید { Infrastructure.Utility.AuthenticatedUser.FirstName }!";
+                }
             }
             else
             {
                 welcomeToolStripStatusLabel.Text =
-                    $"Welcome { Infrastructure.Utility.AuthenticatedUser.FirstName }!";
+                    $"خوش آمدید { Infrastructure.Utility.AuthenticatedUser.FirstName } {Infrastructure.Utility.AuthenticatedUser.LastName}!";
             }
         }
 
-        private UpdateProfileForm updateProfileForm;
+        //private UpdateProfileForm updateProfileForm;
         private void UpdateToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            if ((updateProfileForm == null) || (updateProfileForm.IsDisposed))
-            {
-                updateProfileForm = new UpdateProfileForm
-                {
-                    MdiParent = this
-                };
+            //if ((updateProfileForm == null) || (updateProfileForm.IsDisposed))
+            //{
+            //    //updateProfileForm = new UpdateProfileForm
+            //    //{
+            //    //    MdiParent = this
+            //    //};
 
-                updateProfileForm.Show();
-            }
+            //    updateProfileForm.Show();
+            //}
         }
 
         private void exitToolStripMenuItem_Click(object sender, System.EventArgs e)
@@ -85,7 +94,7 @@
             {
                 usersList = new UsersListForm();
 
-                usersList.ShowDialog();
+                usersList.Show();
             }
         }
 
@@ -95,19 +104,10 @@
             Infrastructure.Utility.RegisterForm.Show();
         }
 
-        private AttendanceSearch attendanceSearch;
         private void renameDoctorToolStripMenuItem_Click(object sender, System.EventArgs e)
-        {
-            if ((attendanceSearch == null) || (attendanceSearch.IsDisposed))
-            {
-                attendanceSearch = new AttendanceSearch();
+        {           
 
-                attendanceSearch.ShowDialog();
-            }
-
-            attendanceSearch.Dispose();
-
-            attendanceSearch = null;
+            Infrastructure.Utility.AttendanceSearch.Show();
         }
 
         private void settingToolStripMenuItem_Click(object sender, System.EventArgs e)
@@ -125,19 +125,25 @@
 
         }
 
-        //private NewDoctor newDoctor;
         private void addDoctorToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            //    if ((newDoctor == null) || (newDoctor.IsDisposed))
-            //    {
-            //        newDoctor = new NewDoctor();
 
-            //        newDoctor.ShowDialog();
-            //    }
 
-            //    newDoctor.Dispose();
+            Infrastructure.Utility.RegisterDoctorForm.ResetForm();
 
-            //    newDoctor = null;
+            Infrastructure.Utility.RegisterDoctorForm.Show();
+        }
+
+        private void وروداطلاعاتبیمارToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            Infrastructure.Utility.RegisterPatientForm.ResetForm();
+
+            Infrastructure.Utility.RegisterPatientForm.Show();
+        }
+
+        private void exitHideButton_Click(object sender, System.EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

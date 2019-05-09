@@ -9,47 +9,39 @@ namespace MyApplication
             InitializeComponent();
         }
 
-        private void ebutton_Click(object sender, System.EventArgs e)
-        {
-            Close();
-        }
-        private void searchButton_Click(object sender, System.EventArgs e)
-        {
-            Search();
-        }
 
         private void Search()
         {
             Models.DatabaseContext databaseContext = null;
-        // search
+            // search
             try
             {
                 databaseContext =
                     new Models.DatabaseContext();
 
-                fullNameTextBox.Text =
-                    fullNameTextBox.Text.Trim();
+                searchTextBox.Text =
+                    searchTextBox.Text.Trim();
 
-                while (fullNameTextBox.Text.Contains("  "))
+                while (searchTextBox.Text.Contains("  "))
                 {
-                    fullNameTextBox.Text =
-                        fullNameTextBox.Text.Replace("  ", " ");
+                    searchTextBox.Text =
+                        searchTextBox.Text.Replace("  ", " ");
                 }
 
                 System.Collections.Generic.List<Models.User> users = null;
 
-                if (fullNameTextBox.Text==string.Empty)
+                if (searchTextBox.Text == string.Empty)
                 {
                     users =
                         databaseContext.Users
-                        .OrderBy(current => current.FirstName)
+                        .OrderBy(current => current.LastName)
                         .ToList();
                 }
                 else
                 {
                     users =
                         databaseContext.Users
-                        .Where(current => current.FirstName.Contains(fullNameTextBox.Text))
+                        .Where(current => current.FirstName.Contains(searchTextBox.Text))
                         .OrderBy(current => current.FirstName)
                         .ToList();
                 }
@@ -83,9 +75,9 @@ namespace MyApplication
             Models.User selectedUser =
                 usersListListBox.SelectedItem as Models.User;
 
-            if (selectedUser!=null)
+            if (selectedUser != null)
             {
-                Admin.UpdateProfileForm updateProfile = new Admin.UpdateProfileForm
+                Admin.UpdateAllUserProfileForm updateProfile = new Admin.UpdateAllUserProfileForm
                 {
                     SelectUser = selectedUser
                 };
@@ -96,87 +88,23 @@ namespace MyApplication
             }
         }
 
-        private void deleteButton_Click(object sender, System.EventArgs e)
+        private void UsersListForm_Load(object sender, System.EventArgs e)
         {
-            if (usersListListBox.SelectedItems.Count==0)
-            {
-                System.Windows.Forms.MessageBox.Show("You Did Not Select Anu Users For Deleting!");
 
-                return;
-            }
+        }
+        private void searchButton_Click(object sender, System.EventArgs e)
+        {
+            Search();
+        }
 
-            Models.DatabaseContext databaseContext = null;
-            try
-            {
-                databaseContext =
-                    new Models.DatabaseContext();
+        private void usersListListBox_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
 
-                foreach (var selectedItem in usersListListBox.SelectedItems)
-                {
-                    Models.User selectUser = selectedItem as Models.User;
+        }
 
-                    if (selectUser!=null)
-                    {
-                        Models.User foundeduser =
-                            databaseContext.Users
-                            .Where(current => current.Id == selectUser.Id)
-                            .FirstOrDefault();
-
-                        if (foundeduser!=null)
-                        {
-                            if (foundeduser.IsAdmin==false)
-                            {
-                                if (string.Compare(foundeduser.Username,
-                                    Infrastructure.Utility.AuthenticatedUser.Username,ignoreCase:true)!=0)
-                                {
-                                    databaseContext.Users.Remove(foundeduser);
-
-                                    databaseContext.SaveChanges();
-
-                                    System.Windows.Forms.MessageBox.Show($"{foundeduser.FirstName} Is Deleted");
-                                }
-                                else
-                                {
-                                    System.Windows.Forms.MessageBox.Show($"{foundeduser.FirstName} Not Found in Database !");
-                                }
-
-                            }
-                            else
-                            {
-                                System.Windows.Forms.MessageBox.Show($"{foundeduser.FirstName} User Is Admin And Can Not Deleted!");
-                            }
-                        }
-                        else
-                        {
-                            System.Windows.Forms.MessageBox.Show($"{foundeduser.FirstName} User Befor This Has Deleted!");
-                        }
-                    }
-                    else
-                    {
-                        System.Windows.Forms.MessageBox.Show("You Did Not Select Any Users For Deleting!");
-
-                        return;
-                    }
-
-                    Search();
-                }
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-
-                return;
-            }
-            finally
-            {
-                if (databaseContext != null)
-                {
-                    databaseContext.Dispose();
-
-                    databaseContext = null;
-                }
-            }
-
+        private void exitButton_Click(object sender, System.EventArgs e)
+        {
+            Close();
         }
     }
 }

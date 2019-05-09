@@ -2,9 +2,9 @@
 
 namespace MyApplication
 {
-    public partial class ChangePasswrod : Infrastructure.BaseForm
+    public partial class ChangePasswrodForm : Infrastructure.BaseForm
     {
-        public ChangePasswrod()
+        public ChangePasswrodForm()
         {
             InitializeComponent();
         }

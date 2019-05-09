@@ -14,10 +14,10 @@
 
 		public System.Data.Entity.DbSet<User> Users { get; set; }
 
-        public System.Data.Entity.DbSet<Person> Person { get; set; }
-
         public System.Data.Entity.DbSet<Doctors> Doctor { get; set; }
 
         public System.Data.Entity.DbSet<Reservations> Reservation { get; set; }
+
+        public System.Data.Entity.DbSet<Patients> Patient { get; set; }
 	}
 }

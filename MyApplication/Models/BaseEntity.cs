@@ -4,11 +4,11 @@
 	{
 		public BaseEntity() : base()
 		{
-			Id = System.Guid.NewGuid();
+            
 		}
 
 		// **********
-		public System.Guid Id { get; set; }
+		public string Id { get; set; }
 		// **********
 	}
 }

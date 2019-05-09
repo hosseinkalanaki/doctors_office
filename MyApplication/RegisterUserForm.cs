@@ -2,12 +2,19 @@
 
 namespace MyApplication
 {
-    public partial class RegisterForm : Infrastructure.BaseForm
+    public partial class RegisterUserForm : Infrastructure.BaseForm
     {
-        public RegisterForm()
+        public RegisterUserForm()
         {
             InitializeComponent();
         }
+
+        public void InitializeUserId()
+        {
+
+        }
+
+        private System.Drawing.Color TextBoxBackColor;
 
         private void ResetButton_Click(object sender, System.EventArgs e)
         {
@@ -39,17 +46,15 @@ namespace MyApplication
 
         private void ExitButton_Click(object sender, System.EventArgs e)
         {
-            Close();
+            Hide();
         }
 
         private void RegisterButton_Click(object sender, System.EventArgs e)
         {
             //clear space input 
             if (string.IsNullOrWhiteSpace(usernameTextBox.Text) ||
-                string.IsNullOrWhiteSpace(passwordTextBox.Text)||
-                string.IsNullOrWhiteSpace(confirmPasswordTextBox.Text)||
-                string.IsNullOrWhiteSpace(firstNameTextBox.Text)||
-                string.IsNullOrWhiteSpace(lastNameTextBox.Text)
+                string.IsNullOrWhiteSpace(passwordTextBox.Text) ||
+                string.IsNullOrWhiteSpace(confirmPasswordTextBox.Text)
                 )
 
             {
@@ -73,13 +78,17 @@ namespace MyApplication
                 if (usernameTextBox.Text == string.Empty)
                 {
                     usernameTextBox.Focus();
+
+                    usernameTextBox.BackColor = System.Drawing.Color.Red;
                 }
 
                 //cheking null password textbox
 
-                if (passwordTextBox.Text==string.Empty)
+                if (passwordTextBox.Text == string.Empty)
                 {
                     passwordTextBox.Focus();
+
+                    passwordTextBox.BackColor = System.Drawing.Color.Red;
                 }
 
                 //cheking null confirm password textbox
@@ -87,22 +96,9 @@ namespace MyApplication
                 if (confirmPasswordTextBox.Text == string.Empty)
                 {
                     confirmPasswordTextBox.Focus();
+
+                    confirmPasswordTextBox.BackColor = System.Drawing.Color.Red;
                 }
-
-                //cheking null firstname textbox
-
-                if (firstNameTextBox.Text == string.Empty)
-                {
-                    firstNameTextBox.Focus();
-                }
-
-                //cheking null lastname textbox
-
-                if (lastNameTextBox.Text == string.Empty)
-                {
-                    lastNameTextBox.Focus();
-                }
-
 
                 return;
             }
@@ -132,7 +128,7 @@ namespace MyApplication
 
             //cheking password confirm
 
-            if (passwordTextBox.Text!=confirmPasswordTextBox.Text)
+            if (passwordTextBox.Text != confirmPasswordTextBox.Text)
             {
                 if (errorMessages != string.Empty)
                 {
@@ -169,16 +165,32 @@ namespace MyApplication
 
                     usernameTextBox.Focus();
 
+                    usernameTextBox.BackColor = System.Drawing.Color.Red;
+
                     return;
                 }
 
+                bool isMarried = marridCheckBox.Checked;
+
+                bool isMan = maleRadioButton.Checked;
+
                 user = new Models.User
                 {
-                    
+                    Id = userCodeTextBox.Text,
                     Password = passwordTextBox.Text,
                     Username = usernameTextBox.Text,
+                    IsActive = false,
 
-                    IsActive = true,
+                    FirstName = firstNameTextBox.Text,
+                    LastName = lastNameTextBox.Text,
+                    Age = ageTextBox.Text,
+                    Address = addressTextBox.Text,
+                    Mobile = mobileTextBox.Text,
+                    Phone = phoneTextBox.Text,
+                    PostalCode = postalCodeTextBox.Text,
+                    IsMarried = isMarried,
+                    IsMan = isMan,
+                    Description = descriptionTextBox.Text,
                 };
 
                 databaseContext.Users.Add(user);
@@ -187,11 +199,29 @@ namespace MyApplication
 
                 System.Windows.Forms.MessageBox.Show("Registration Done!");
 
+                Infrastructure.Utility.EndUserId = userCodeTextBox.Text;
+
+                int userNumber = System.Convert.ToInt32(userCodeTextBox.Text);
+
+                userNumber++;
+
+                userCodeTextBox.Text = userNumber.ToString();
+
                 ResetForm();
             }
-            catch (System.Exception ex)
+            catch (System.Data.Entity.Validation.DbEntityValidationException ex)
             {
-                System.Windows.Forms.MessageBox.Show("Error: " + ex.Message);
+                foreach (var eve in ex.EntityValidationErrors)
+                {
+                    System.Windows.Forms.MessageBox.Show($"Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
+                        eve.Entry.Entity.GetType().Name);
+                    foreach (var ve in eve.ValidationErrors)
+                    {
+                        System.Windows.Forms.MessageBox.Show($"- Property: \"{0}\", Error: \"{1}\"",
+                            ve.PropertyName);
+                    }
+                }
+                return;
             }
             finally
             {
@@ -203,11 +233,96 @@ namespace MyApplication
             }
         }
 
-        private void LoginButton_Click(object sender, System.EventArgs e)
+        private void usernameTextBox_Enter(object sender, System.EventArgs e)
         {
-            this.Hide();
+            usernameTextBox.BackColor = TextBoxBackColor;
+        }
 
-            Infrastructure.Utility.LoginForm.Show();
+        private void RegisterForm_Load(object sender, System.EventArgs e)
+        {
+            int newUserNumber;
+
+            #region first open 
+            if (Infrastructure.Utility.EndUserId == string.Empty || Infrastructure.Utility.EndUserId == null)
+            {
+                Models.DatabaseContext databaseContext = null;
+                try
+                {
+                    databaseContext = new Models.DatabaseContext();
+
+                    System.Collections.Generic.List<Models.User> endUser = null;
+
+                    endUser =
+                        databaseContext.Users
+                        .OrderBy(current => current.Id)
+                        .ToList();
+
+                    newUserNumber = endUser.Count();
+
+
+                    Infrastructure.Utility.EndUserId = newUserNumber.ToString();
+
+                }
+                catch (System.Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message);
+
+                    return;
+                }
+                finally
+                {
+                    if (databaseContext != null)
+                    {
+                        databaseContext.Dispose();
+
+                        databaseContext = null;
+                    }
+                }
+
+            }
+
+            #endregion/first open
+
+            #region next open
+            else
+            {
+                newUserNumber = System.Convert.ToInt32(Infrastructure.Utility.EndUserId);
+            }
+
+            #endregion/next open
+
+            newUserNumber++;
+
+            userCodeTextBox.Text = newUserNumber.ToString();
+
+            TextBoxBackColor = usernameTextBox.BackColor;
+        }
+
+        private void passwordTextBox_Enter(object sender, System.EventArgs e)
+        {
+
+            passwordTextBox.BackColor = TextBoxBackColor;
+        }
+
+        private void confirmPasswordTextBox_Enter(object sender, System.EventArgs e)
+        {
+            confirmPasswordTextBox.BackColor = TextBoxBackColor;
+        }
+
+        private void marridCheckBox_CheckedChanged(object sender, System.EventArgs e)
+        {
+            if (marridCheckBox.Checked == true)
+            {
+                singleCheckBox.Checked = false;
+            }
+        }
+
+        private void singleCheckBox_CheckedChanged(object sender, System.EventArgs e)
+        {
+            if (singleCheckBox.Checked == true)
+            {
+                marridCheckBox.Checked = false;
+            }
         }
     }
 }

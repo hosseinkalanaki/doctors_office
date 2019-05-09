@@ -1,6 +1,6 @@
 ﻿namespace MyApplication
 {
-    partial class RegisterForm
+    partial class RegisterUserForm
     {
         /// <summary>
         /// Required designer variable.
@@ -53,6 +53,8 @@
             this.descriptionTextBox = new Hkx.Windows.Form.TextBox();
             this.descriptionLabel = new Hkx.Windows.Form.Label();
             this.personGroupBox = new Hkx.Windows.Form.GroupBox();
+            this.userCodeTextBox = new Hkx.Windows.Form.TextBox();
+            this.userCodeLabel = new Hkx.Windows.Form.Label();
             this.singleCheckBox = new Hkx.Windows.Form.CheckBox();
             this.marridCheckBox = new Hkx.Windows.Form.CheckBox();
             this.usersGroupBox = new Hkx.Windows.Form.GroupBox();
@@ -69,17 +71,18 @@
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Location = new System.Drawing.Point(6, 29);
+            this.usernameTextBox.Location = new System.Drawing.Point(578, 29);
             this.usernameTextBox.MaxLength = 20;
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(200, 30);
+            this.usernameTextBox.Size = new System.Drawing.Size(181, 30);
             this.usernameTextBox.TabIndex = 1;
+            this.usernameTextBox.Enter += new System.EventHandler(this.usernameTextBox_Enter);
             // 
             // usernameLabel
             // 
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.usernameLabel.Location = new System.Drawing.Point(238, 29);
+            this.usernameLabel.Location = new System.Drawing.Point(765, 29);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(68, 27);
             this.usernameLabel.TabIndex = 0;
@@ -89,7 +92,7 @@
             // 
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.passwordLabel.Location = new System.Drawing.Point(261, 65);
+            this.passwordLabel.Location = new System.Drawing.Point(503, 29);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(45, 27);
             this.passwordLabel.TabIndex = 2;
@@ -99,7 +102,7 @@
             // 
             this.confirmPasswordLabel.AutoSize = true;
             this.confirmPasswordLabel.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.confirmPasswordLabel.Location = new System.Drawing.Point(212, 101);
+            this.confirmPasswordLabel.Location = new System.Drawing.Point(201, 29);
             this.confirmPasswordLabel.Name = "confirmPasswordLabel";
             this.confirmPasswordLabel.Size = new System.Drawing.Size(94, 27);
             this.confirmPasswordLabel.TabIndex = 4;
@@ -107,7 +110,7 @@
             // 
             // firstNameTextBox
             // 
-            this.firstNameTextBox.Location = new System.Drawing.Point(6, 33);
+            this.firstNameTextBox.Location = new System.Drawing.Point(6, 73);
             this.firstNameTextBox.MaxLength = 20;
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(200, 34);
@@ -117,7 +120,7 @@
             // 
             this.firtNameLabel.AutoSize = true;
             this.firtNameLabel.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.firtNameLabel.Location = new System.Drawing.Point(272, 36);
+            this.firtNameLabel.Location = new System.Drawing.Point(272, 76);
             this.firtNameLabel.Name = "firtNameLabel";
             this.firtNameLabel.Size = new System.Drawing.Size(34, 27);
             this.firtNameLabel.TabIndex = 0;
@@ -125,7 +128,7 @@
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Location = new System.Drawing.Point(6, 73);
+            this.lastNameTextBox.Location = new System.Drawing.Point(6, 113);
             this.lastNameTextBox.MaxLength = 20;
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(200, 34);
@@ -135,7 +138,7 @@
             // 
             this.lastNameLabel.AutoSize = true;
             this.lastNameLabel.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.lastNameLabel.Location = new System.Drawing.Point(231, 76);
+            this.lastNameLabel.Location = new System.Drawing.Point(231, 116);
             this.lastNameLabel.Name = "lastNameLabel";
             this.lastNameLabel.Size = new System.Drawing.Size(75, 27);
             this.lastNameLabel.TabIndex = 2;
@@ -143,7 +146,7 @@
             // 
             // ageTextBox
             // 
-            this.ageTextBox.Location = new System.Drawing.Point(6, 159);
+            this.ageTextBox.Location = new System.Drawing.Point(6, 199);
             this.ageTextBox.MaxLength = 20;
             this.ageTextBox.Name = "ageTextBox";
             this.ageTextBox.Size = new System.Drawing.Size(200, 34);
@@ -153,7 +156,7 @@
             // 
             this.ageLabel.AutoSize = true;
             this.ageLabel.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.ageLabel.Location = new System.Drawing.Point(267, 162);
+            this.ageLabel.Location = new System.Drawing.Point(267, 202);
             this.ageLabel.Name = "ageLabel";
             this.ageLabel.Size = new System.Drawing.Size(39, 27);
             this.ageLabel.TabIndex = 7;
@@ -163,7 +166,7 @@
             // 
             this.genderLabel.AutoSize = true;
             this.genderLabel.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.genderLabel.Location = new System.Drawing.Point(252, 124);
+            this.genderLabel.Location = new System.Drawing.Point(252, 164);
             this.genderLabel.Name = "genderLabel";
             this.genderLabel.Size = new System.Drawing.Size(54, 27);
             this.genderLabel.TabIndex = 4;
@@ -173,7 +176,7 @@
             // 
             this.maleRadioButton.AutoSize = true;
             this.maleRadioButton.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.maleRadioButton.Location = new System.Drawing.Point(161, 122);
+            this.maleRadioButton.Location = new System.Drawing.Point(161, 162);
             this.maleRadioButton.Name = "maleRadioButton";
             this.maleRadioButton.Size = new System.Drawing.Size(45, 31);
             this.maleRadioButton.TabIndex = 5;
@@ -184,7 +187,7 @@
             // 
             this.femaleRadioButton.AutoSize = true;
             this.femaleRadioButton.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.femaleRadioButton.Location = new System.Drawing.Point(110, 122);
+            this.femaleRadioButton.Location = new System.Drawing.Point(110, 162);
             this.femaleRadioButton.Name = "femaleRadioButton";
             this.femaleRadioButton.Size = new System.Drawing.Size(45, 31);
             this.femaleRadioButton.TabIndex = 6;
@@ -195,7 +198,7 @@
             // 
             this.maritalStatusLabel.AutoSize = true;
             this.maritalStatusLabel.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.maritalStatusLabel.Location = new System.Drawing.Point(221, 202);
+            this.maritalStatusLabel.Location = new System.Drawing.Point(221, 242);
             this.maritalStatusLabel.Name = "maritalStatusLabel";
             this.maritalStatusLabel.Size = new System.Drawing.Size(85, 27);
             this.maritalStatusLabel.TabIndex = 9;
@@ -295,6 +298,8 @@
             // 
             // personGroupBox
             // 
+            this.personGroupBox.Controls.Add(this.userCodeTextBox);
+            this.personGroupBox.Controls.Add(this.userCodeLabel);
             this.personGroupBox.Controls.Add(this.singleCheckBox);
             this.personGroupBox.Controls.Add(this.marridCheckBox);
             this.personGroupBox.Controls.Add(this.firstNameTextBox);
@@ -310,30 +315,51 @@
             this.personGroupBox.Font = new System.Drawing.Font("B Kamran", 14F);
             this.personGroupBox.Location = new System.Drawing.Point(12, 12);
             this.personGroupBox.Name = "personGroupBox";
-            this.personGroupBox.Size = new System.Drawing.Size(312, 252);
+            this.personGroupBox.Size = new System.Drawing.Size(312, 314);
             this.personGroupBox.TabIndex = 0;
             this.personGroupBox.TabStop = false;
             this.personGroupBox.Text = "مشخصات فردی";
             // 
+            // userCodeTextBox
+            // 
+            this.userCodeTextBox.Enabled = false;
+            this.userCodeTextBox.Location = new System.Drawing.Point(6, 33);
+            this.userCodeTextBox.MaxLength = 20;
+            this.userCodeTextBox.Name = "userCodeTextBox";
+            this.userCodeTextBox.Size = new System.Drawing.Size(200, 34);
+            this.userCodeTextBox.TabIndex = 13;
+            // 
+            // userCodeLabel
+            // 
+            this.userCodeLabel.AutoSize = true;
+            this.userCodeLabel.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.userCodeLabel.Location = new System.Drawing.Point(257, 36);
+            this.userCodeLabel.Name = "userCodeLabel";
+            this.userCodeLabel.Size = new System.Drawing.Size(47, 27);
+            this.userCodeLabel.TabIndex = 12;
+            this.userCodeLabel.Text = "کد کاربر:";
+            // 
             // singleCheckBox
             // 
             this.singleCheckBox.AutoSize = true;
-            this.singleCheckBox.Location = new System.Drawing.Point(90, 201);
+            this.singleCheckBox.Location = new System.Drawing.Point(90, 241);
             this.singleCheckBox.Name = "singleCheckBox";
             this.singleCheckBox.Size = new System.Drawing.Size(50, 31);
             this.singleCheckBox.TabIndex = 11;
             this.singleCheckBox.Text = "مجرد";
             this.singleCheckBox.UseVisualStyleBackColor = true;
+            this.singleCheckBox.CheckedChanged += new System.EventHandler(this.singleCheckBox_CheckedChanged);
             // 
             // marridCheckBox
             // 
             this.marridCheckBox.AutoSize = true;
-            this.marridCheckBox.Location = new System.Drawing.Point(146, 201);
+            this.marridCheckBox.Location = new System.Drawing.Point(146, 241);
             this.marridCheckBox.Name = "marridCheckBox";
             this.marridCheckBox.Size = new System.Drawing.Size(60, 31);
             this.marridCheckBox.TabIndex = 10;
             this.marridCheckBox.Text = "متاهل";
             this.marridCheckBox.UseVisualStyleBackColor = true;
+            this.marridCheckBox.CheckedChanged += new System.EventHandler(this.marridCheckBox_CheckedChanged);
             // 
             // usersGroupBox
             // 
@@ -343,30 +369,32 @@
             this.usersGroupBox.Controls.Add(this.passwordLabel);
             this.usersGroupBox.Controls.Add(this.confirmPasswordLabel);
             this.usersGroupBox.Controls.Add(this.usernameTextBox);
-            this.usersGroupBox.Location = new System.Drawing.Point(12, 270);
+            this.usersGroupBox.Location = new System.Drawing.Point(12, 332);
             this.usersGroupBox.Name = "usersGroupBox";
-            this.usersGroupBox.Size = new System.Drawing.Size(312, 153);
+            this.usersGroupBox.Size = new System.Drawing.Size(839, 84);
             this.usersGroupBox.TabIndex = 1;
             this.usersGroupBox.TabStop = false;
             this.usersGroupBox.Text = "اطلاعات کاربری";
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(6, 65);
+            this.passwordTextBox.Location = new System.Drawing.Point(316, 29);
             this.passwordTextBox.MaxLength = 40;
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(200, 30);
+            this.passwordTextBox.Size = new System.Drawing.Size(181, 30);
             this.passwordTextBox.TabIndex = 3;
             this.passwordTextBox.UseSystemPasswordChar = true;
+            this.passwordTextBox.Enter += new System.EventHandler(this.passwordTextBox_Enter);
             // 
             // confirmPasswordTextBox
             // 
-            this.confirmPasswordTextBox.Location = new System.Drawing.Point(6, 101);
+            this.confirmPasswordTextBox.Location = new System.Drawing.Point(6, 29);
             this.confirmPasswordTextBox.MaxLength = 40;
             this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
-            this.confirmPasswordTextBox.Size = new System.Drawing.Size(200, 30);
+            this.confirmPasswordTextBox.Size = new System.Drawing.Size(189, 30);
             this.confirmPasswordTextBox.TabIndex = 5;
             this.confirmPasswordTextBox.UseSystemPasswordChar = true;
+            this.confirmPasswordTextBox.Enter += new System.EventHandler(this.confirmPasswordTextBox_Enter);
             // 
             // completedGroupBox
             // 
@@ -391,7 +419,7 @@
             // 
             this.exitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.exitButton.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.exitButton.Location = new System.Drawing.Point(627, 350);
+            this.exitButton.Location = new System.Drawing.Point(489, 422);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(66, 39);
             this.exitButton.TabIndex = 5;
@@ -402,7 +430,7 @@
             // registerButton
             // 
             this.registerButton.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.registerButton.Location = new System.Drawing.Point(483, 350);
+            this.registerButton.Location = new System.Drawing.Point(282, 422);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(66, 39);
             this.registerButton.TabIndex = 3;
@@ -413,7 +441,7 @@
             // resetButton
             // 
             this.resetButton.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.resetButton.Location = new System.Drawing.Point(555, 350);
+            this.resetButton.Location = new System.Drawing.Point(383, 422);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(66, 39);
             this.resetButton.TabIndex = 4;
@@ -421,14 +449,14 @@
             this.resetButton.UseVisualStyleBackColor = true;
             this.resetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
-            // RegisterForm
+            // RegisterUserForm
             // 
             this.AcceptButton = this.registerButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.CancelButton = this.exitButton;
-            this.ClientSize = new System.Drawing.Size(867, 434);
+            this.ClientSize = new System.Drawing.Size(867, 476);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.exitButton);
@@ -436,10 +464,11 @@
             this.Controls.Add(this.usersGroupBox);
             this.Controls.Add(this.personGroupBox);
             this.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
-            this.MaximumSize = new System.Drawing.Size(883, 473);
+            this.MaximumSize = new System.Drawing.Size(883, 515);
             this.MinimumSize = new System.Drawing.Size(883, 473);
-            this.Name = "RegisterForm";
+            this.Name = "RegisterUserForm";
             this.Text = "ثبت اطلاعات کاربران ";
+            this.Load += new System.EventHandler(this.RegisterForm_Load);
             this.personGroupBox.ResumeLayout(false);
             this.personGroupBox.PerformLayout();
             this.usersGroupBox.ResumeLayout(false);
@@ -485,5 +514,7 @@
         private Hkx.Windows.Form.PasswordTextBox confirmPasswordTextBox;
         private Hkx.Windows.Form.CheckBox marridCheckBox;
         private Hkx.Windows.Form.CheckBox singleCheckBox;
+        private Hkx.Windows.Form.TextBox userCodeTextBox;
+        private Hkx.Windows.Form.Label userCodeLabel;
     }
 }

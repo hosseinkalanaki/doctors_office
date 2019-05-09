@@ -10,7 +10,7 @@
             (maximumLength: 50)]
 
         [System.ComponentModel.DataAnnotations.Required
-            (AllowEmptyStrings = false)]
+            (AllowEmptyStrings = true)]
 
         public string Expertise { get; set; }
 

@@ -11,18 +11,12 @@
         [System.ComponentModel.DataAnnotations.StringLength
             (maximumLength: 50)]
 
-        [System.ComponentModel.DataAnnotations.Required
-            (AllowEmptyStrings = false)]
-
         public string FirstName { get; set; }
         // **********
 
         // **********
         [System.ComponentModel.DataAnnotations.StringLength
             (maximumLength: 50)]
-
-        [System.ComponentModel.DataAnnotations.Required
-            (AllowEmptyStrings = false)]
 
         public string LastName { get; set; }
         // **********
@@ -31,10 +25,7 @@
         [System.ComponentModel.DataAnnotations.StringLength
            (maximumLength: 3)]
 
-        [System.ComponentModel.DataAnnotations.Required
-           (AllowEmptyStrings = false)]
-
-        public string Age  { get; set; }
+        public string Age { get; set; }
         // **********
 
         // **********
@@ -100,7 +91,7 @@
         {
             get
             {
-                string result = FirstName + LastName;
+                string result = FirstName +" " + LastName;
 
                 return result;
             }

@@ -16,7 +16,7 @@
 
         // **********
         [System.ComponentModel.DataAnnotations.Required
-            (AllowEmptyStrings = false)]
+            (AllowEmptyStrings = true)]
 
         [System.ComponentModel.DataAnnotations.StringLength
             (maximumLength: 20, MinimumLength = 6)]
@@ -28,7 +28,7 @@
 
         // **********
         [System.ComponentModel.DataAnnotations.Required
-            (AllowEmptyStrings = false)]
+            (AllowEmptyStrings = true)]
 
         [System.ComponentModel.DataAnnotations.StringLength
             (maximumLength: 40, MinimumLength = 8)]
@@ -64,6 +64,6 @@
                 return result;
             }
         }
-
+        //***********
     }
 }

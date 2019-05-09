@@ -1,6 +1,6 @@
 ﻿namespace MyApplication
 {
-    partial class UpdateProfileForm
+    partial class RegisterDoctorForm
     {
         /// <summary>
         /// Required designer variable.
@@ -55,12 +55,16 @@
             this.registerButton = new Hkx.Windows.Form.Button2();
             this.resetButton = new Hkx.Windows.Form.Button2();
             this.exitButton = new Hkx.Windows.Form.Button2();
+            this.expertiseLabel = new Hkx.Windows.Form.Label();
+            this.expertiseTextBox = new Hkx.Windows.Form.TextBox();
             this.personGroupBox.SuspendLayout();
             this.completedGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // personGroupBox
             // 
+            this.personGroupBox.Controls.Add(this.expertiseLabel);
+            this.personGroupBox.Controls.Add(this.expertiseTextBox);
             this.personGroupBox.Controls.Add(this.singleCheckBox);
             this.personGroupBox.Controls.Add(this.marridCheckBox);
             this.personGroupBox.Controls.Add(this.firstNameTextBox);
@@ -76,7 +80,7 @@
             this.personGroupBox.Font = new System.Drawing.Font("B Kamran", 14F);
             this.personGroupBox.Location = new System.Drawing.Point(12, 12);
             this.personGroupBox.Name = "personGroupBox";
-            this.personGroupBox.Size = new System.Drawing.Size(312, 252);
+            this.personGroupBox.Size = new System.Drawing.Size(312, 283);
             this.personGroupBox.TabIndex = 1;
             this.personGroupBox.TabStop = false;
             this.personGroupBox.Text = "مشخصات فردی";
@@ -110,6 +114,7 @@
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(200, 34);
             this.firstNameTextBox.TabIndex = 1;
+            this.firstNameTextBox.Enter += new System.EventHandler(this.firstNameTextBox_Enter);
             // 
             // firtNameLabel
             // 
@@ -138,6 +143,7 @@
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(200, 34);
             this.lastNameTextBox.TabIndex = 3;
+            this.lastNameTextBox.Enter += new System.EventHandler(this.lastNameTextBox_Enter);
             // 
             // genderLabel
             // 
@@ -172,7 +178,7 @@
             // ageTextBox
             // 
             this.ageTextBox.Location = new System.Drawing.Point(6, 159);
-            this.ageTextBox.MaxLength = 3;
+            this.ageTextBox.MaxLength = 20;
             this.ageTextBox.Name = "ageTextBox";
             this.ageTextBox.Size = new System.Drawing.Size(200, 34);
             this.ageTextBox.TabIndex = 8;
@@ -213,8 +219,8 @@
             this.completedGroupBox.Controls.Add(this.phoneTextBox);
             this.completedGroupBox.Location = new System.Drawing.Point(330, 12);
             this.completedGroupBox.Name = "completedGroupBox";
-            this.completedGroupBox.Size = new System.Drawing.Size(521, 338);
-            this.completedGroupBox.TabIndex = 12;
+            this.completedGroupBox.Size = new System.Drawing.Size(521, 314);
+            this.completedGroupBox.TabIndex = 3;
             this.completedGroupBox.TabStop = false;
             this.completedGroupBox.Text = "اطاعات تکمیلی";
             // 
@@ -251,7 +257,7 @@
             // descriptionTextBox
             // 
             this.descriptionTextBox.Location = new System.Drawing.Point(6, 214);
-            this.descriptionTextBox.MaxLength = 500;
+            this.descriptionTextBox.MaxLength = 20;
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(409, 94);
@@ -270,7 +276,7 @@
             // postalCodeTextBox
             // 
             this.postalCodeTextBox.Location = new System.Drawing.Point(215, 178);
-            this.postalCodeTextBox.MaxLength = 10;
+            this.postalCodeTextBox.MaxLength = 20;
             this.postalCodeTextBox.Name = "postalCodeTextBox";
             this.postalCodeTextBox.Size = new System.Drawing.Size(200, 30);
             this.postalCodeTextBox.TabIndex = 7;
@@ -288,7 +294,7 @@
             // mobileTextBox
             // 
             this.mobileTextBox.Location = new System.Drawing.Point(215, 142);
-            this.mobileTextBox.MaxLength = 11;
+            this.mobileTextBox.MaxLength = 20;
             this.mobileTextBox.Name = "mobileTextBox";
             this.mobileTextBox.Size = new System.Drawing.Size(200, 30);
             this.mobileTextBox.TabIndex = 5;
@@ -296,7 +302,7 @@
             // addressTextBox
             // 
             this.addressTextBox.Location = new System.Drawing.Point(6, 29);
-            this.addressTextBox.MaxLength = 500;
+            this.addressTextBox.MaxLength = 20;
             this.addressTextBox.Multiline = true;
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(409, 71);
@@ -305,7 +311,7 @@
             // phoneTextBox
             // 
             this.phoneTextBox.Location = new System.Drawing.Point(215, 106);
-            this.phoneTextBox.MaxLength = 11;
+            this.phoneTextBox.MaxLength = 20;
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(200, 30);
             this.phoneTextBox.TabIndex = 3;
@@ -313,21 +319,21 @@
             // registerButton
             // 
             this.registerButton.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.registerButton.Location = new System.Drawing.Point(61, 290);
+            this.registerButton.Location = new System.Drawing.Point(64, 301);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(66, 39);
-            this.registerButton.TabIndex = 13;
+            this.registerButton.TabIndex = 6;
             this.registerButton.Text = "ذخیره";
             this.registerButton.UseVisualStyleBackColor = true;
-            this.registerButton.Click += new System.EventHandler(this.SaveButton_Click);
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // resetButton
             // 
             this.resetButton.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.resetButton.Location = new System.Drawing.Point(133, 290);
+            this.resetButton.Location = new System.Drawing.Point(136, 301);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(66, 39);
-            this.resetButton.TabIndex = 14;
+            this.resetButton.TabIndex = 7;
             this.resetButton.Text = "ورود مجدد";
             this.resetButton.UseVisualStyleBackColor = true;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
@@ -336,31 +342,45 @@
             // 
             this.exitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.exitButton.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.exitButton.Location = new System.Drawing.Point(205, 290);
+            this.exitButton.Location = new System.Drawing.Point(208, 301);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(66, 39);
-            this.exitButton.TabIndex = 15;
+            this.exitButton.TabIndex = 8;
             this.exitButton.Text = "خروج";
             this.exitButton.UseVisualStyleBackColor = true;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // UpdateProfileForm
+            // expertiseLabel
             // 
-            this.AcceptButton = this.registerButton;
+            this.expertiseLabel.AutoSize = true;
+            this.expertiseLabel.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.expertiseLabel.Location = new System.Drawing.Point(253, 241);
+            this.expertiseLabel.Name = "expertiseLabel";
+            this.expertiseLabel.Size = new System.Drawing.Size(53, 27);
+            this.expertiseLabel.TabIndex = 12;
+            this.expertiseLabel.Text = "تخصص :";
+            // 
+            // expertiseTextBox
+            // 
+            this.expertiseTextBox.Location = new System.Drawing.Point(6, 238);
+            this.expertiseTextBox.MaxLength = 20;
+            this.expertiseTextBox.Name = "expertiseTextBox";
+            this.expertiseTextBox.Size = new System.Drawing.Size(200, 34);
+            this.expertiseTextBox.TabIndex = 13;
+            // 
+            // RegisterDoctorForm
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.CancelButton = this.exitButton;
-            this.ClientSize = new System.Drawing.Size(859, 361);
+            this.ClientSize = new System.Drawing.Size(863, 352);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.completedGroupBox);
             this.Controls.Add(this.personGroupBox);
-            this.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
-            this.Name = "UpdateProfileForm";
-            this.Text = "ویرایش اطلاعات";
-            this.Load += new System.EventHandler(this.UpdateProfileForm_Load);
+            this.Name = "RegisterDoctorForm";
+            this.Text = "ورود اطلاعات دکتر جدید";
+            this.Load += new System.EventHandler(this.RegisterDoctorForm_Load);
             this.personGroupBox.ResumeLayout(false);
             this.personGroupBox.PerformLayout();
             this.completedGroupBox.ResumeLayout(false);
@@ -398,5 +418,7 @@
         private Hkx.Windows.Form.Button2 registerButton;
         private Hkx.Windows.Form.Button2 resetButton;
         private Hkx.Windows.Form.Button2 exitButton;
+        private Hkx.Windows.Form.Label expertiseLabel;
+        private Hkx.Windows.Form.TextBox expertiseTextBox;
     }
 }

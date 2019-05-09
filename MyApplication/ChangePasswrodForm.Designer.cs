@@ -1,6 +1,6 @@
 ﻿namespace MyApplication
 {
-    partial class ChangePasswrod
+    partial class ChangePasswrodForm
     {
         /// <summary>
         /// Required designer variable.

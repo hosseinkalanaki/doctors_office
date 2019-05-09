@@ -34,13 +34,15 @@ namespace MyApplication
                 {
                     Models.User adminUser = new Models.User
                     {
+                        Id = "1",
+
                         IsAdmin = true,
                         IsActive = true,
 
-                        Username = "Admin1",
+                        Username = "hosseinkalanaki",
                         Password = "123456789",
                         FirstName = "hossein",
-                        LastName="kalanaki",
+                        LastName = "kalanaki",
                     };
 
                     databaseContext.Users.Add(adminUser);
@@ -48,12 +50,21 @@ namespace MyApplication
                     databaseContext.SaveChanges();
                 }
             }
-            catch (System.Exception ex)
+            catch (System.Data.Entity.Validation.DbEntityValidationException ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-
+                foreach (var eve in ex.EntityValidationErrors)
+                {
+                    System.Windows.Forms.MessageBox.Show($"Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
+                        eve.Entry.Entity.GetType().Name);
+                    foreach (var ve in eve.ValidationErrors)
+                    {
+                        System.Windows.Forms.MessageBox.Show($"- Property: \"{0}\", Error: \"{1}\"",
+                            ve.PropertyName);
+                    }
+                }
                 return;
             }
+        
             finally
             {
                 if (databaseContext != null)

@@ -37,6 +37,9 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.بیمارانToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.پزشکانToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
             this.registeryUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doctorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addDoctorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -120,6 +123,9 @@
             // 
             this.adminToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usersListToolStripMenuItem,
+            this.بیمارانToolStripMenuItem,
+            this.پزشکانToolStripMenuItem,
+            this.toolStripMenuItem4,
             this.registeryUserToolStripMenuItem});
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
             this.adminToolStripMenuItem.Size = new System.Drawing.Size(51, 31);
@@ -129,8 +135,25 @@
             // 
             this.usersListToolStripMenuItem.Name = "usersListToolStripMenuItem";
             this.usersListToolStripMenuItem.Size = new System.Drawing.Size(150, 32);
-            this.usersListToolStripMenuItem.Text = "لیست کاربران";
+            this.usersListToolStripMenuItem.Text = "کاربران";
             this.usersListToolStripMenuItem.Click += new System.EventHandler(this.usersListToolStripMenuItem_Click);
+            // 
+            // بیمارانToolStripMenuItem
+            // 
+            this.بیمارانToolStripMenuItem.Name = "بیمارانToolStripMenuItem";
+            this.بیمارانToolStripMenuItem.Size = new System.Drawing.Size(150, 32);
+            this.بیمارانToolStripMenuItem.Text = "بیماران";
+            // 
+            // پزشکانToolStripMenuItem
+            // 
+            this.پزشکانToolStripMenuItem.Name = "پزشکانToolStripMenuItem";
+            this.پزشکانToolStripMenuItem.Size = new System.Drawing.Size(150, 32);
+            this.پزشکانToolStripMenuItem.Text = "پزشکان";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(147, 6);
             // 
             // registeryUserToolStripMenuItem
             // 
@@ -179,6 +202,7 @@
             this.وروداطلاعاتبیمارToolStripMenuItem.Name = "وروداطلاعاتبیمارToolStripMenuItem";
             this.وروداطلاعاتبیمارToolStripMenuItem.Size = new System.Drawing.Size(189, 32);
             this.وروداطلاعاتبیمارToolStripMenuItem.Text = "ورود اطلاعات بیمار";
+            this.وروداطلاعاتبیمارToolStripMenuItem.Click += new System.EventHandler(this.وروداطلاعاتبیمارToolStripMenuItem_Click);
             // 
             // رزروبیمارToolStripMenuItem
             // 
@@ -275,5 +299,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem مشاهدهوقتبیمارToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem وقتدهیToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem بیمارانToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem پزشکانToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
     }
 }
