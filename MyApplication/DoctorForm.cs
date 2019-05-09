@@ -169,17 +169,17 @@ namespace MyApplication
             }
         }
 
-        private void exitButton_Click(object sender, System.EventArgs e)
-        {
-            Close();
-        }
-
         private void deleteCheckBox_CheckedChanged(object sender, System.EventArgs e)
         {
             if (deleteCheckBox.Checked == true)
             {
                 System.Windows.Forms.MessageBox.Show("با فعال کردن این گزینه پس از سیو کردن صفحه این کاربر از سامانه حذف می شود.");
             }
+        }
+
+        private void exitButton_Click(object sender, System.EventArgs e)
+        {
+            Hide();
         }
     }
 }

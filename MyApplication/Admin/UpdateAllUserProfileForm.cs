@@ -11,6 +11,25 @@ namespace MyApplication.Admin
 
         public Models.User SelectUser { get; set; }
 
+        public void ResetForm()
+        {
+            firstNameTextBox.Text = string.Empty;
+            lastNameTextBox.Text = string.Empty;
+            marridCheckBox.Checked = false;
+            singleCheckBox.Checked = false;
+            ageTextBox.Text = string.Empty;
+            maleRadioButton.Checked = false;
+            femaleRadioButton.Checked = false;
+            isActiveCheckBox.Checked = false;
+            isAdminCheckBox.Checked = false;
+            deleteCheckBox.Checked = false;
+            addressTextBox.Text = string.Empty;
+            phoneTextBox.Text = string.Empty;
+            mobileTextBox.Text = string.Empty;
+            postalCodeTextBox.Text = string.Empty;
+            descriptionTextBox.Text = string.Empty;
+        }
+
         private void UpdateProfileForm_Load(object sender, System.EventArgs e)
         {
             Models.DatabaseContext databaseContext = null;
@@ -181,6 +200,11 @@ namespace MyApplication.Admin
             {
                 System.Windows.Forms.MessageBox.Show("با فعال کردن این گزینه پس از سیو کردن صفحه این کاربر از سامانه حذف می شود.");
             }
+        }
+
+        private void resetButton_Click(object sender, System.EventArgs e)
+        {
+            ResetForm();
         }
     }
 }

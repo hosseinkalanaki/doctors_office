@@ -57,18 +57,18 @@
             }
         }
 
-        //private UpdateProfileForm updateProfileForm;
+        private UpdateProfileForm updateProfileForm;
         private void UpdateToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            //if ((updateProfileForm == null) || (updateProfileForm.IsDisposed))
-            //{
-            //    //updateProfileForm = new UpdateProfileForm
-            //    //{
-            //    //    MdiParent = this
-            //    //};
+            if ((updateProfileForm==null)||(updateProfileForm.IsDisposed))
+            {
+                updateProfileForm = new UpdateProfileForm
+                {
+                    MdiParent = this
+                };
 
-            //    updateProfileForm.Show();
-            //}
+                updateProfileForm.Show();
+            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, System.EventArgs e)

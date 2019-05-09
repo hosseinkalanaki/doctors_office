@@ -86,6 +86,18 @@
     <Compile Include="DoctorForm.Designer.cs">
       <DependentUpon>DoctorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DoctorsListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorsListForm.Designer.cs">
+      <DependentUpon>DoctorsListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditePatientInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditePatientInformationForm.Designer.cs">
+      <DependentUpon>EditePatientInformationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Infrastructure\MountChange.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -114,6 +126,24 @@
     <Compile Include="Models\Reservations.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Infrastructure\PersianDate.cs" />
+    <Compile Include="PatientInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientInformationForm.Designer.cs">
+      <DependentUpon>PatientInformationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientsListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientsListForm.Designer.cs">
+      <DependentUpon>PatientsListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientsReservedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientsReservedForm.Designer.cs">
+      <DependentUpon>PatientsReservedForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegisterPatientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +170,30 @@
     <Compile Include="Admin\UsersListForm.Designer.cs">
       <DependentUpon>UsersListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReservationForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReservationForm1.Designer.cs">
+      <DependentUpon>ReservationForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAllDoctorsProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateAllDoctorsProfileForm.Designer.cs">
+      <DependentUpon>UpdateAllDoctorsProfileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePatientProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatePatientProfileForm.Designer.cs">
+      <DependentUpon>UpdatePatientProfileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateProfileForm.Designer.cs">
+      <DependentUpon>UpdateProfileForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin\UpdateAllUserProfileForm.resx">
       <DependentUpon>UpdateAllUserProfileForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +209,9 @@
     <EmbeddedResource Include="DoctorForm.resx">
       <DependentUpon>DoctorForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DoctorsListForm.resx">
+      <DependentUpon>DoctorsListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Infrastructure\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +220,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientInformationForm.resx">
+      <DependentUpon>PatientInformationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientsListForm.resx">
+      <DependentUpon>PatientsListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterPatientForm.resx">
       <DependentUpon>RegisterPatientForm.cs</DependentUpon>
@@ -184,6 +247,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\UsersListForm.resx">
       <DependentUpon>UsersListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateAllDoctorsProfileForm.resx">
+      <DependentUpon>UpdateAllDoctorsProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatePatientProfileForm.resx">
+      <DependentUpon>UpdatePatientProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateProfileForm.resx">
+      <DependentUpon>UpdateProfileForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
