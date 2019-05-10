@@ -30,22 +30,43 @@ namespace MyApplication
 
                 System.Collections.Generic.List<Models.User> users = null;
 
-                if (searchTextBox.Text == string.Empty)
+                if (showInformationCheckBox.Checked == true)
                 {
-                    users =
-                        databaseContext.Users
-                        .OrderBy(current => current.LastName)
-                        .ToList();
+                    if (searchTextBox.Text == string.Empty)
+                    {
+                        users =
+                            databaseContext.Users
+                            .OrderBy(current => current.LastName)
+                            .ToList();
+                    }
+                    else
+                    {
+                        users =
+                            databaseContext.Users
+                            .Where(current => current.FirstName.Contains(searchTextBox.Text))
+                            .OrderBy(current => current.FirstName)
+                            .ToList();
+                    }
                 }
                 else
                 {
-                    users =
-                        databaseContext.Users
-                        .Where(current => current.FirstName.Contains(searchTextBox.Text))
-                        .OrderBy(current => current.FirstName)
-                        .ToList();
+                    if (searchTextBox.Text == string.Empty)
+                    {
+                        users =
+                            databaseContext.Users
+                            .Where(current=>current.IsDelete.ToString().Contains("true") )
+                            .OrderBy(current=>current.FirstName)
+                            .ToList();
+                    }
+                    else
+                    {
+                        users = databaseContext.Users
+                            .Where(current => current.FirstName.Contains(searchTextBox.Text))
+                            .Where(current => current.IsDelete.ToString().Contains("true"))
+                            .OrderBy(current => current.FirstName)
+                            .ToList();
+                    }
                 }
-
                 usersListListBox.ValueMember = "Id";
 
                 usersListListBox.DisplayMember = "DisplayName";

@@ -152,7 +152,7 @@ namespace MyApplication.Admin
                     }
                     if (singleCheckBox.Checked==true)
                     {
-                        foundeduser.IsMarried = true;
+                        foundeduser.IsMarried = false;
                     }
                     foundeduser.Age = ageTextBox.Text;
                     foundeduser.IsAdmin = isAdminCheckBox.Checked;

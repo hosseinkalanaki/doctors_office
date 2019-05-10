@@ -32,6 +32,7 @@
             this.searchTextBox = new Hkx.Windows.Form.TextBox();
             this.searchButton = new Hkx.Windows.Form.Button2();
             this.exitButton = new Hkx.Windows.Form.Button2();
+            this.showInformationCheckBox = new Hkx.Windows.Form.CheckBox();
             this.SuspendLayout();
             // 
             // usersListListBox
@@ -76,11 +77,22 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // showInformationCheckBox
+            // 
+            this.showInformationCheckBox.AutoSize = true;
+            this.showInformationCheckBox.Location = new System.Drawing.Point(405, 306);
+            this.showInformationCheckBox.Name = "showInformationCheckBox";
+            this.showInformationCheckBox.Size = new System.Drawing.Size(67, 26);
+            this.showInformationCheckBox.TabIndex = 67;
+            this.showInformationCheckBox.Text = "Show";
+            this.showInformationCheckBox.UseVisualStyleBackColor = true;
+            // 
             // UsersListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 335);
+            this.Controls.Add(this.showInformationCheckBox);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.searchTextBox);
@@ -102,5 +114,6 @@
         private Hkx.Windows.Form.TextBox searchTextBox;
         private Hkx.Windows.Form.Button2 searchButton;
         private Hkx.Windows.Form.Button2 exitButton;
+        private Hkx.Windows.Form.CheckBox showInformationCheckBox;
     }
 }

@@ -6,6 +6,8 @@
         {
         }
 
+        public bool IsDelete { get; set; }
+
         // **********
         public bool IsActive { get; set; }
         // **********

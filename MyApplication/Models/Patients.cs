@@ -7,6 +7,8 @@
 
         }
 
+        public bool IsDelete { get; set; }
+
         [System.ComponentModel.DataAnnotations.StringLength
             (maximumLength: 50)]
 
