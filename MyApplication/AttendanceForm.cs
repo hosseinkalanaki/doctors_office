@@ -20,7 +20,7 @@ namespace MyApplication
 
 		private Models.Reservations VisitDateDoctor;
 
-		#endregion /public fielda
+		#endregion /public field
 
 		#region Calender Function
 		private static string checkchange(string day, string mounth, string year)
@@ -99,7 +99,6 @@ namespace MyApplication
 		{
 			if (patientsName == string.Empty || patientsName == "حضور ندارند")
 			{
-				timeTextBox.Enabled = false;
 
 				timeTextBox.Text = "حضور ندارند";
 
@@ -107,15 +106,12 @@ namespace MyApplication
 
 				timeTextBox.ForeColor = System.Drawing.Color.Black;
 
-				timeCheckBox.Enabled = true;
-
 				timeCheckBox.Checked = false;
 			}
 			else
 			{
 				if (patientsName == "حضور دارند")
 				{
-					timeTextBox.Enabled = true;
 
 					timeTextBox.Text = patientsName;
 
@@ -123,13 +119,10 @@ namespace MyApplication
 
 					timeTextBox.ForeColor = System.Drawing.Color.Green;
 
-					timeCheckBox.Enabled = true;
-
 					timeCheckBox.Checked = true;
 				}
 				else
 				{
-					timeTextBox.Enabled = false;
 
 					timeTextBox.Text = patientsName;
 
@@ -169,8 +162,6 @@ namespace MyApplication
 		{
 			textBox.Text = "حضور ندارند";
 
-			textBox.Enabled = false;
-
 			textBox.BackColor = System.Drawing.Color.Red;
 
 			textBox.ForeColor = System.Drawing.Color.Black;
@@ -190,13 +181,13 @@ namespace MyApplication
 				databaseContext = new Models.DatabaseContext();
 
 
-				Models.Reservations foundedUser =
+				Models.Reservations foundedDoctor =
 					databaseContext.Reservation
 					.Where(current => string.Compare(current.doctorId, doctor, true) == 0 &&
 					string.Compare(current.DateVisit, date, true) == 0)
 					.FirstOrDefault();
 
-				if (foundedUser == null)
+				if (foundedDoctor == null)
 				{
 					SetFirstTime(time8TextBox, time8checkBox);
 					SetFirstTime(time9TextBox, time9checkBox);
@@ -213,12 +204,16 @@ namespace MyApplication
 					SetFirstTime(time20TextBox, time20checkBox);
 					SetFirstTime(time21TextBox, time21checkBox);
 
-					return;
+                    VisitDateDoctor.DateVisit = date;
+
+                    return;
 				}
 
-				VisitDateDoctor = foundedUser;
+				VisitDateDoctor = foundedDoctor;
 
-				CheckTime(foundedUser);
+                VisitDateDoctor.DateVisit = date;
+
+				CheckTime(foundedDoctor);
 
 			}
 			catch (System.Exception ex)
@@ -244,7 +239,6 @@ namespace MyApplication
 		{
 			if (CheckBox.Checked == true)
 			{
-				TextBox.Enabled = true;
 
 				TextBox.Text = "حضور دارند";
 
@@ -255,7 +249,6 @@ namespace MyApplication
 			}
 			else
 			{
-				TextBox.Enabled = false;
 
 				TextBox.Text = "حضور ندارند";
 
@@ -298,20 +291,20 @@ namespace MyApplication
 			#region else
 			else
 			{
-				if (VisitDateDoctor.Time8 == time8TextBox.Text &&
-			   VisitDateDoctor.Time9 == time9TextBox.Text &&
-			   VisitDateDoctor.Time10 == time10TextBox.Text &&
-			   VisitDateDoctor.Time11 == time11TextBox.Text &&
-			   VisitDateDoctor.Time12 == time12TextBox.Text &&
-			   VisitDateDoctor.Time13 == time13TextBox.Text &&
-			   VisitDateDoctor.Time14 == time14TextBox.Text &&
-			   VisitDateDoctor.Time15 == time15TextBox.Text &&
-			   VisitDateDoctor.Time16 == time16TextBox.Text &&
-			   VisitDateDoctor.Time17 == time17TextBox.Text &&
-			   VisitDateDoctor.Time18 == time18TextBox.Text &&
-			   VisitDateDoctor.Time19 == time19TextBox.Text &&
-			   VisitDateDoctor.Time20 == time20TextBox.Text &&
-			   VisitDateDoctor.Time21 == time21TextBox.Text)
+				if (VisitDateDoctor.Time8 == time8checkBox.Checked &&
+			   VisitDateDoctor.Time9 == time9checkBox.Checked &&
+			   VisitDateDoctor.Time10 == time10checkBox.Checked &&
+			   VisitDateDoctor.Time11 == time11checkBox.Checked &&
+			   VisitDateDoctor.Time12 == time12checkBox.Checked &&
+			   VisitDateDoctor.Time13 == time13checkBox.Checked &&
+			   VisitDateDoctor.Time14 == time14checkBox.Checked &&
+			   VisitDateDoctor.Time15 == time15checkBox.Checked &&
+			   VisitDateDoctor.Time16 == time16checkBox.Checked &&
+			   VisitDateDoctor.Time17 == time17checkBox.Checked &&
+			   VisitDateDoctor.Time18 == time18checkBox.Checked &&
+			   VisitDateDoctor.Time19 == time19checkBox.Checked &&
+			   VisitDateDoctor.Time20 == time20checkBox.Checked &&
+			   VisitDateDoctor.Time21 == time21checkBox.Checked)
 				{
 					DatabaseChange = false;
 
@@ -323,86 +316,6 @@ namespace MyApplication
 			DatabaseChange = true;
 
 			return;
-		}
-
-		public void SearchLeaveTextBox(System.Windows.Forms.TextBox TextBox)
-		{
-			Models.Patients SelectPatient;
-
-			Models.DatabaseContext databaseContext = null;
-
-			try
-			{
-				databaseContext = new Models.DatabaseContext();
-
-				System.Collections.Generic.List<Models.Patients> Patient = null;
-
-				Patient =
-					databaseContext.Patient
-					.Where(current => current.FirstName.Contains(TextBox.Text))
-					.OrderBy(current => current.FirstName)
-					.ToList();
-
-				if (Patient.Count == 0)
-				{
-					Patient =
-						databaseContext.Patient
-						.Where(current => current.LastName.Contains(TextBox.Text))
-						.OrderBy(current => current.LastName)
-						.ToList();
-
-					if (Patient.Count == 0)
-					{
-						Patient =
-							 databaseContext.Patient
-							 .Where(current => current.Mobile.Contains(TextBox.Text))
-							 .OrderBy(current => current.Mobile)
-							 .ToList();
-
-						if (Patient.Count == 0)
-						{
-							Patient =
-								databaseContext.Patient
-								.Where(current => current.Phone.Contains(TextBox.Text))
-								.OrderBy(current => current.Phone)
-								.ToList();
-							if (Patient.Count == 0)
-							{
-								System.Windows.Forms.MessageBox.Show("بیماری با این مشخصات وجود ندارد لطفاً ابتدا اطلاعات بیمار را وارد کنید");
-
-								TextBox.Text = "حضور دارند";
-
-								return;
-							}
-						}
-					}
-				}
-
-				//SelectPatientForm form = new SelectPatientForm();
-
-				//form.DataSet = Patient;
-
-				//form.ShowDialog();
-
-				//SelectPatient = form.SelectPatients;
-
-				//TextBox.Text = SelectPatient.DisplayName;
-			}
-			catch (System.Exception ex)
-			{
-				System.Windows.Forms.MessageBox.Show(ex.Message);
-
-				return;
-			}
-			finally
-			{
-				if (databaseContext != null)
-				{
-					databaseContext.Dispose();
-
-					databaseContext = null;
-				}
-			}
 		}
 
 		#endregion / Change Public Field/Event Function
@@ -614,7 +527,7 @@ namespace MyApplication
 
 		private void exitButton_Click(object sender, System.EventArgs e)
 		{
-			Close();
+			Hide();
 		}
 
 		#region CheckBox Code
@@ -790,16 +703,5 @@ namespace MyApplication
 
 			System.Windows.Forms.MessageBox.Show("تغییری رخ نداده است ؟");
 		}
-
-		private void time8TextBox_Leave(object sender, System.EventArgs e)
-		{
-			SearchLeaveTextBox(time8TextBox);
-		}
-
-		private void time9TextBox_Leave(object sender, System.EventArgs e)
-		{
-
-			SearchLeaveTextBox(time9TextBox);
-		}
-	}
+    }
 }

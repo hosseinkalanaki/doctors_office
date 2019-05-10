@@ -162,7 +162,6 @@
             this.time8TextBox.Size = new System.Drawing.Size(74, 30);
             this.time8TextBox.TabIndex = 40;
             this.time8TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.time8TextBox.Leave += new System.EventHandler(this.time8TextBox_Leave);
             // 
             // time19Label
             // 
@@ -332,7 +331,6 @@
             this.time9TextBox.Size = new System.Drawing.Size(73, 30);
             this.time9TextBox.TabIndex = 22;
             this.time9TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.time9TextBox.Leave += new System.EventHandler(this.time9TextBox_Leave);
             // 
             // doctorNameLabel
             // 
@@ -636,7 +634,7 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // Attendance
+            // AttendanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -698,7 +696,7 @@
             this.Controls.Add(this.dayLabel);
             this.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.MinimumSize = new System.Drawing.Size(361, 690);
-            this.Name = "Attendance";
+            this.Name = "AttendanceForm";
             this.Text = "attendance";
             this.Load += new System.EventHandler(this.attendance_Load);
             this.ResumeLayout(false);
