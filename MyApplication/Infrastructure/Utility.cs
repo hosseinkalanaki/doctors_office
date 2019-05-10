@@ -12,7 +12,7 @@ namespace Infrastructure
 
         public static string EndUserId { get; set; }
 
-        public static string EndAttendanceId { get; set; }
+        public static string EndDoctorId { get; set; }
 
         public static string EndPatientId { get; set; }
 

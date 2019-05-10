@@ -2,9 +2,9 @@
 
 namespace MyApplication
 {
-    public partial class UpdateAllDoctorsProfileForm : Infrastructure.BaseForm
+    public partial class UpdateDoctorsProfileForm : Infrastructure.BaseForm
     {
-        public UpdateAllDoctorsProfileForm()
+        public UpdateDoctorsProfileForm()
         {
             InitializeComponent();
         }
@@ -51,9 +51,9 @@ namespace MyApplication
                 }
 
                 patientCodeTextBox.Text = foundedDoctor.Id;
-                firstNameTextBox.Text = Selected.FirstName;
-                lastNameTextBox.Text = Selectedpatient.LastName;
-                if (foundedPatient.IsMan == true)
+                firstNameTextBox.Text = foundedDoctor.FirstName;
+                lastNameTextBox.Text = foundedDoctor.LastName;
+                if (foundedDoctor.IsMan == true)
                 {
                     maleRadioButton.Checked = true;
                     femaleRadioButton.Checked = false;
@@ -63,7 +63,7 @@ namespace MyApplication
                     maleRadioButton.Checked = false;
                     femaleRadioButton.Checked = true;
                 }
-                if (foundedPatient.IsMarried == true)
+                if (foundedDoctor.IsMarried == true)
                 {
                     marridCheckBox.Checked = true;
                     singleCheckBox.Checked = false;
@@ -73,12 +73,13 @@ namespace MyApplication
                     marridCheckBox.Checked = false;
                     singleCheckBox.Checked = true;
                 }
-                ageTextBox.Text = foundedPatient.Age;
-                addressTextBox.Text = foundedPatient.Address;
-                phoneTextBox.Text = foundedPatient.Phone;
-                mobileTextBox.Text = foundedPatient.Mobile;
-                postalCodeTextBox.Text = foundedPatient.PostalCode;
-                descriptionTextBox.Text = foundedPatient.Description;
+                ageTextBox.Text = foundedDoctor.Age;
+                expertiseTextBox.Text = foundedDoctor.Expertise;
+                addressTextBox.Text = foundedDoctor.Address;
+                phoneTextBox.Text = foundedDoctor.Phone;
+                mobileTextBox.Text = foundedDoctor.Mobile;
+                postalCodeTextBox.Text = foundedDoctor.PostalCode;
+                descriptionTextBox.Text = foundedDoctor.Description;
             }
             catch (System.Exception ex)
             {
@@ -98,7 +99,7 @@ namespace MyApplication
 
         }
 
-        private void registerButton_Click(object sender, System.EventArgs e)
+        private void registerButton_Click_1(object sender, System.EventArgs e)
         {
             if (deleteCheckBox.Checked == true)
             {
@@ -111,12 +112,12 @@ namespace MyApplication
                 databaseContext =
                     new Models.DatabaseContext();
 
-                Models.Patients foundedPatient =
-                    databaseContext.Patient
+                Models.Doctors foundedDoctor =
+                    databaseContext.Doctor
                     .Where(current => current.Id == patientCodeTextBox.Text)
                     .FirstOrDefault();
 
-                if (foundedPatient == null)
+                if (foundedDoctor == null)
                 {
                     System.Windows.Forms.MessageBox.Show("There Is No Such A User Anymore!");
 
@@ -125,37 +126,38 @@ namespace MyApplication
 
                 if (deleteCheckBox.Checked == true)
                 {
-                    databaseContext.Patient.Remove(foundedPatient);
+                    databaseContext.Doctor.Remove(foundedDoctor);
                     databaseContext.SaveChanges();
 
                     Close();
                 }
                 else
                 {
-                    foundedPatient.FirstName = firstNameTextBox.Text;
-                    foundedPatient.LastName = lastNameTextBox.Text;
+                    foundedDoctor.FirstName = firstNameTextBox.Text;
+                    foundedDoctor.LastName = lastNameTextBox.Text;
                     if (maleRadioButton.Checked == true)
                     {
-                        foundedPatient.IsMan = true;
+                        foundedDoctor.IsMan = true;
                     }
                     if (femaleRadioButton.Checked == true)
                     {
-                        foundedPatient.IsMan = false;
+                        foundedDoctor.IsMan = false;
                     }
                     if (marridCheckBox.Checked == true)
                     {
-                        foundedPatient.IsMarried = true;
+                        foundedDoctor.IsMarried = true;
                     }
                     if (singleCheckBox.Checked == true)
                     {
-                        foundedPatient.IsMarried = false;
+                        foundedDoctor.IsMarried = false;
                     }
-                    foundedPatient.Age = ageTextBox.Text;
-                    foundedPatient.Address = addressTextBox.Text;
-                    foundedPatient.Phone = phoneTextBox.Text;
-                    foundedPatient.Mobile = mobileTextBox.Text;
-                    foundedPatient.PostalCode = postalCodeTextBox.Text;
-                    foundedPatient.Description = descriptionTextBox.Text;
+                    foundedDoctor.Age = ageTextBox.Text;
+                    foundedDoctor.Expertise = expertiseTextBox.Text;
+                    foundedDoctor.Address = addressTextBox.Text;
+                    foundedDoctor.Phone = phoneTextBox.Text;
+                    foundedDoctor.Mobile = mobileTextBox.Text;
+                    foundedDoctor.PostalCode = postalCodeTextBox.Text;
+                    foundedDoctor.Description = descriptionTextBox.Text;
 
                     databaseContext.SaveChanges();
 
@@ -183,12 +185,12 @@ namespace MyApplication
             }
         }
 
-        private void exitButton_Click_1(object sender, System.EventArgs e)
+        private void exitButton_Click(object sender, System.EventArgs e)
         {
-            Close();
+            Hide();
         }
 
-        private void deleteCheckBox_CheckedChanged_1(object sender, System.EventArgs e)
+        private void deleteCheckBox_CheckedChanged(object sender, System.EventArgs e)
         {
             if (deleteCheckBox.Checked == true)
             {
@@ -196,13 +198,9 @@ namespace MyApplication
             }
         }
 
-        private void resetButton_Click_1(object sender, System.EventArgs e)
+        private void resetButton_Click(object sender, System.EventArgs e)
         {
             ResetForm();
         }
-
-
-
-        
     }
 }

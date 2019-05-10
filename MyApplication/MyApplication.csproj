@@ -176,11 +176,11 @@
     <Compile Include="ReservationForm1.Designer.cs">
       <DependentUpon>ReservationForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateAllDoctorsProfileForm.cs">
+    <Compile Include="UpdateDoctorsProfileForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateAllDoctorsProfileForm.Designer.cs">
-      <DependentUpon>UpdateAllDoctorsProfileForm.cs</DependentUpon>
+    <Compile Include="UpdateDoctorsProfileForm.Designer.cs">
+      <DependentUpon>UpdateDoctorsProfileForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdatePatientProfileForm.cs">
       <SubType>Form</SubType>
@@ -248,8 +248,8 @@
     <EmbeddedResource Include="Admin\UsersListForm.resx">
       <DependentUpon>UsersListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateAllDoctorsProfileForm.resx">
-      <DependentUpon>UpdateAllDoctorsProfileForm.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateDoctorsProfileForm.resx">
+      <DependentUpon>UpdateDoctorsProfileForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatePatientProfileForm.resx">
       <DependentUpon>UpdatePatientProfileForm.cs</DependentUpon>

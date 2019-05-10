@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.personGroupBox = new Hkx.Windows.Form.GroupBox();
+            this.expertiseLabel = new Hkx.Windows.Form.Label();
+            this.expertiseTextBox = new Hkx.Windows.Form.TextBox();
             this.singleCheckBox = new Hkx.Windows.Form.CheckBox();
             this.marridCheckBox = new Hkx.Windows.Form.CheckBox();
             this.firstNameTextBox = new Hkx.Windows.Form.TextBox();
@@ -55,14 +57,16 @@
             this.registerButton = new Hkx.Windows.Form.Button2();
             this.resetButton = new Hkx.Windows.Form.Button2();
             this.exitButton = new Hkx.Windows.Form.Button2();
-            this.expertiseLabel = new Hkx.Windows.Form.Label();
-            this.expertiseTextBox = new Hkx.Windows.Form.TextBox();
+            this.codeDoctorTextBox = new Hkx.Windows.Form.TextBox();
+            this.codeDoctorLabel = new Hkx.Windows.Form.Label();
             this.personGroupBox.SuspendLayout();
             this.completedGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // personGroupBox
             // 
+            this.personGroupBox.Controls.Add(this.codeDoctorTextBox);
+            this.personGroupBox.Controls.Add(this.codeDoctorLabel);
             this.personGroupBox.Controls.Add(this.expertiseLabel);
             this.personGroupBox.Controls.Add(this.expertiseTextBox);
             this.personGroupBox.Controls.Add(this.singleCheckBox);
@@ -80,15 +84,33 @@
             this.personGroupBox.Font = new System.Drawing.Font("B Kamran", 14F);
             this.personGroupBox.Location = new System.Drawing.Point(12, 12);
             this.personGroupBox.Name = "personGroupBox";
-            this.personGroupBox.Size = new System.Drawing.Size(312, 283);
+            this.personGroupBox.Size = new System.Drawing.Size(312, 314);
             this.personGroupBox.TabIndex = 1;
             this.personGroupBox.TabStop = false;
             this.personGroupBox.Text = "مشخصات فردی";
             // 
+            // expertiseLabel
+            // 
+            this.expertiseLabel.AutoSize = true;
+            this.expertiseLabel.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.expertiseLabel.Location = new System.Drawing.Point(253, 277);
+            this.expertiseLabel.Name = "expertiseLabel";
+            this.expertiseLabel.Size = new System.Drawing.Size(53, 27);
+            this.expertiseLabel.TabIndex = 12;
+            this.expertiseLabel.Text = "تخصص :";
+            // 
+            // expertiseTextBox
+            // 
+            this.expertiseTextBox.Location = new System.Drawing.Point(6, 274);
+            this.expertiseTextBox.MaxLength = 20;
+            this.expertiseTextBox.Name = "expertiseTextBox";
+            this.expertiseTextBox.Size = new System.Drawing.Size(200, 34);
+            this.expertiseTextBox.TabIndex = 13;
+            // 
             // singleCheckBox
             // 
             this.singleCheckBox.AutoSize = true;
-            this.singleCheckBox.Location = new System.Drawing.Point(90, 201);
+            this.singleCheckBox.Location = new System.Drawing.Point(90, 237);
             this.singleCheckBox.Name = "singleCheckBox";
             this.singleCheckBox.Size = new System.Drawing.Size(50, 31);
             this.singleCheckBox.TabIndex = 11;
@@ -99,7 +121,7 @@
             // marridCheckBox
             // 
             this.marridCheckBox.AutoSize = true;
-            this.marridCheckBox.Location = new System.Drawing.Point(146, 201);
+            this.marridCheckBox.Location = new System.Drawing.Point(146, 237);
             this.marridCheckBox.Name = "marridCheckBox";
             this.marridCheckBox.Size = new System.Drawing.Size(60, 31);
             this.marridCheckBox.TabIndex = 10;
@@ -109,7 +131,7 @@
             // 
             // firstNameTextBox
             // 
-            this.firstNameTextBox.Location = new System.Drawing.Point(6, 33);
+            this.firstNameTextBox.Location = new System.Drawing.Point(6, 69);
             this.firstNameTextBox.MaxLength = 20;
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(200, 34);
@@ -120,7 +142,7 @@
             // 
             this.firtNameLabel.AutoSize = true;
             this.firtNameLabel.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.firtNameLabel.Location = new System.Drawing.Point(272, 36);
+            this.firtNameLabel.Location = new System.Drawing.Point(272, 72);
             this.firtNameLabel.Name = "firtNameLabel";
             this.firtNameLabel.Size = new System.Drawing.Size(34, 27);
             this.firtNameLabel.TabIndex = 0;
@@ -130,7 +152,7 @@
             // 
             this.lastNameLabel.AutoSize = true;
             this.lastNameLabel.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.lastNameLabel.Location = new System.Drawing.Point(231, 76);
+            this.lastNameLabel.Location = new System.Drawing.Point(231, 112);
             this.lastNameLabel.Name = "lastNameLabel";
             this.lastNameLabel.Size = new System.Drawing.Size(75, 27);
             this.lastNameLabel.TabIndex = 2;
@@ -138,7 +160,7 @@
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Location = new System.Drawing.Point(6, 73);
+            this.lastNameTextBox.Location = new System.Drawing.Point(6, 109);
             this.lastNameTextBox.MaxLength = 20;
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(200, 34);
@@ -149,7 +171,7 @@
             // 
             this.genderLabel.AutoSize = true;
             this.genderLabel.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.genderLabel.Location = new System.Drawing.Point(252, 124);
+            this.genderLabel.Location = new System.Drawing.Point(252, 160);
             this.genderLabel.Name = "genderLabel";
             this.genderLabel.Size = new System.Drawing.Size(54, 27);
             this.genderLabel.TabIndex = 4;
@@ -159,7 +181,7 @@
             // 
             this.ageLabel.AutoSize = true;
             this.ageLabel.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.ageLabel.Location = new System.Drawing.Point(267, 162);
+            this.ageLabel.Location = new System.Drawing.Point(267, 198);
             this.ageLabel.Name = "ageLabel";
             this.ageLabel.Size = new System.Drawing.Size(39, 27);
             this.ageLabel.TabIndex = 7;
@@ -169,7 +191,7 @@
             // 
             this.maritalStatusLabel.AutoSize = true;
             this.maritalStatusLabel.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.maritalStatusLabel.Location = new System.Drawing.Point(221, 202);
+            this.maritalStatusLabel.Location = new System.Drawing.Point(221, 238);
             this.maritalStatusLabel.Name = "maritalStatusLabel";
             this.maritalStatusLabel.Size = new System.Drawing.Size(85, 27);
             this.maritalStatusLabel.TabIndex = 9;
@@ -177,7 +199,7 @@
             // 
             // ageTextBox
             // 
-            this.ageTextBox.Location = new System.Drawing.Point(6, 159);
+            this.ageTextBox.Location = new System.Drawing.Point(6, 195);
             this.ageTextBox.MaxLength = 20;
             this.ageTextBox.Name = "ageTextBox";
             this.ageTextBox.Size = new System.Drawing.Size(200, 34);
@@ -187,7 +209,7 @@
             // 
             this.maleRadioButton.AutoSize = true;
             this.maleRadioButton.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.maleRadioButton.Location = new System.Drawing.Point(161, 122);
+            this.maleRadioButton.Location = new System.Drawing.Point(161, 158);
             this.maleRadioButton.Name = "maleRadioButton";
             this.maleRadioButton.Size = new System.Drawing.Size(45, 31);
             this.maleRadioButton.TabIndex = 5;
@@ -198,7 +220,7 @@
             // 
             this.femaleRadioButton.AutoSize = true;
             this.femaleRadioButton.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.femaleRadioButton.Location = new System.Drawing.Point(110, 122);
+            this.femaleRadioButton.Location = new System.Drawing.Point(110, 158);
             this.femaleRadioButton.Name = "femaleRadioButton";
             this.femaleRadioButton.Size = new System.Drawing.Size(45, 31);
             this.femaleRadioButton.TabIndex = 6;
@@ -319,7 +341,7 @@
             // registerButton
             // 
             this.registerButton.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.registerButton.Location = new System.Drawing.Point(64, 301);
+            this.registerButton.Location = new System.Drawing.Point(292, 332);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(66, 39);
             this.registerButton.TabIndex = 6;
@@ -330,7 +352,7 @@
             // resetButton
             // 
             this.resetButton.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.resetButton.Location = new System.Drawing.Point(136, 301);
+            this.resetButton.Location = new System.Drawing.Point(364, 332);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(66, 39);
             this.resetButton.TabIndex = 7;
@@ -342,7 +364,7 @@
             // 
             this.exitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.exitButton.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.exitButton.Location = new System.Drawing.Point(208, 301);
+            this.exitButton.Location = new System.Drawing.Point(436, 332);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(66, 39);
             this.exitButton.TabIndex = 8;
@@ -350,29 +372,30 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // expertiseLabel
+            // codeDoctorTextBox
             // 
-            this.expertiseLabel.AutoSize = true;
-            this.expertiseLabel.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.expertiseLabel.Location = new System.Drawing.Point(253, 241);
-            this.expertiseLabel.Name = "expertiseLabel";
-            this.expertiseLabel.Size = new System.Drawing.Size(53, 27);
-            this.expertiseLabel.TabIndex = 12;
-            this.expertiseLabel.Text = "تخصص :";
+            this.codeDoctorTextBox.Enabled = false;
+            this.codeDoctorTextBox.Location = new System.Drawing.Point(6, 29);
+            this.codeDoctorTextBox.MaxLength = 20;
+            this.codeDoctorTextBox.Name = "codeDoctorTextBox";
+            this.codeDoctorTextBox.Size = new System.Drawing.Size(200, 34);
+            this.codeDoctorTextBox.TabIndex = 15;
             // 
-            // expertiseTextBox
+            // codeDoctorLabel
             // 
-            this.expertiseTextBox.Location = new System.Drawing.Point(6, 238);
-            this.expertiseTextBox.MaxLength = 20;
-            this.expertiseTextBox.Name = "expertiseTextBox";
-            this.expertiseTextBox.Size = new System.Drawing.Size(200, 34);
-            this.expertiseTextBox.TabIndex = 13;
+            this.codeDoctorLabel.AutoSize = true;
+            this.codeDoctorLabel.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.codeDoctorLabel.Location = new System.Drawing.Point(272, 32);
+            this.codeDoctorLabel.Name = "codeDoctorLabel";
+            this.codeDoctorLabel.Size = new System.Drawing.Size(24, 27);
+            this.codeDoctorLabel.TabIndex = 14;
+            this.codeDoctorLabel.Text = "کد:";
             // 
             // RegisterDoctorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(863, 352);
+            this.ClientSize = new System.Drawing.Size(863, 393);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.exitButton);
@@ -420,5 +443,7 @@
         private Hkx.Windows.Form.Button2 exitButton;
         private Hkx.Windows.Form.Label expertiseLabel;
         private Hkx.Windows.Form.TextBox expertiseTextBox;
+        private Hkx.Windows.Form.TextBox codeDoctorTextBox;
+        private Hkx.Windows.Form.Label codeDoctorLabel;
     }
 }

@@ -10,7 +10,7 @@
         private ChangePasswrodForm changePasswrod;
         private void changePasswordToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            if ((changePasswrod==null)||(changePasswrod.IsDisposed))
+            if ((changePasswrod == null) || (changePasswrod.IsDisposed))
             {
                 changePasswrod = new ChangePasswrodForm
                 {
@@ -60,7 +60,7 @@
         private UpdateProfileForm updateProfileForm;
         private void UpdateToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            if ((updateProfileForm==null)||(updateProfileForm.IsDisposed))
+            if ((updateProfileForm == null) || (updateProfileForm.IsDisposed))
             {
                 updateProfileForm = new UpdateProfileForm
                 {
@@ -90,7 +90,7 @@
         private UsersListForm usersList;
         private void usersListToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            if ((usersList==null)||(usersList.IsDisposed))
+            if ((usersList == null) || (usersList.IsDisposed))
             {
                 usersList = new UsersListForm();
 
@@ -105,7 +105,7 @@
         }
 
         private void renameDoctorToolStripMenuItem_Click(object sender, System.EventArgs e)
-        {           
+        {
 
             Infrastructure.Utility.AttendanceSearch.Show();
         }
@@ -117,7 +117,12 @@
 
         private void رزروبیمارToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
+            if ((patientList == null) || (patientList.IsDisposed))
+            {
+                patientList = new PatientsListForm();
+            }
 
+            patientList.Show();
         }
 
         private void وقتدهیهToolStripMenuItem_Click(object sender, System.EventArgs e)
@@ -144,6 +149,28 @@
         private void exitHideButton_Click(object sender, System.EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private PatientsListForm patientList;
+
+        private void بیمارانToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if ((patientList == null) || (patientList.IsDisposed))
+            {
+                patientList = new PatientsListForm();
+            }
+
+            patientList.Show();
+        }
+
+        private DoctorsListForm doctorList;
+        private void پزشکانToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if ((doctorList == null) || (doctorList.IsDisposed))
+            {
+                doctorList = new DoctorsListForm();
+            }
+            doctorList.Show();
         }
     }
 }

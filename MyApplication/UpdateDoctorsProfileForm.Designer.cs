@@ -1,6 +1,6 @@
 ﻿namespace MyApplication
 {
-    partial class UpdateAllDoctorsProfileForm
+    partial class UpdateDoctorsProfileForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +34,7 @@
             this.patientCodeLabel = new Hkx.Windows.Form.Label();
             this.typeOfDiseaseLabel = new Hkx.Windows.Form.Label();
             this.singleCheckBox = new Hkx.Windows.Form.CheckBox();
-            this.typeOfDiseaseTextBox = new Hkx.Windows.Form.TextBox();
+            this.expertiseTextBox = new Hkx.Windows.Form.TextBox();
             this.marridCheckBox = new Hkx.Windows.Form.CheckBox();
             this.firstNameTextBox = new Hkx.Windows.Form.TextBox();
             this.firtNameLabel = new Hkx.Windows.Form.Label();
@@ -73,6 +73,7 @@
             this.deleteCheckBox.TabIndex = 23;
             this.deleteCheckBox.Text = "حذف";
             this.deleteCheckBox.UseVisualStyleBackColor = true;
+            this.deleteCheckBox.CheckedChanged += new System.EventHandler(this.deleteCheckBox_CheckedChanged);
             // 
             // personGroupBox
             // 
@@ -80,7 +81,7 @@
             this.personGroupBox.Controls.Add(this.patientCodeLabel);
             this.personGroupBox.Controls.Add(this.typeOfDiseaseLabel);
             this.personGroupBox.Controls.Add(this.singleCheckBox);
-            this.personGroupBox.Controls.Add(this.typeOfDiseaseTextBox);
+            this.personGroupBox.Controls.Add(this.expertiseTextBox);
             this.personGroupBox.Controls.Add(this.marridCheckBox);
             this.personGroupBox.Controls.Add(this.firstNameTextBox);
             this.personGroupBox.Controls.Add(this.firtNameLabel);
@@ -123,11 +124,11 @@
             // 
             this.typeOfDiseaseLabel.AutoSize = true;
             this.typeOfDiseaseLabel.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.typeOfDiseaseLabel.Location = new System.Drawing.Point(235, 277);
+            this.typeOfDiseaseLabel.Location = new System.Drawing.Point(253, 277);
             this.typeOfDiseaseLabel.Name = "typeOfDiseaseLabel";
-            this.typeOfDiseaseLabel.Size = new System.Drawing.Size(71, 27);
+            this.typeOfDiseaseLabel.Size = new System.Drawing.Size(53, 27);
             this.typeOfDiseaseLabel.TabIndex = 0;
-            this.typeOfDiseaseLabel.Text = "نوع بیماری :";
+            this.typeOfDiseaseLabel.Text = "تخصص :";
             // 
             // singleCheckBox
             // 
@@ -139,13 +140,13 @@
             this.singleCheckBox.Text = "مجرد";
             this.singleCheckBox.UseVisualStyleBackColor = true;
             // 
-            // typeOfDiseaseTextBox
+            // expertiseTextBox
             // 
-            this.typeOfDiseaseTextBox.Location = new System.Drawing.Point(6, 274);
-            this.typeOfDiseaseTextBox.MaxLength = 20;
-            this.typeOfDiseaseTextBox.Name = "typeOfDiseaseTextBox";
-            this.typeOfDiseaseTextBox.Size = new System.Drawing.Size(200, 34);
-            this.typeOfDiseaseTextBox.TabIndex = 1;
+            this.expertiseTextBox.Location = new System.Drawing.Point(6, 274);
+            this.expertiseTextBox.MaxLength = 20;
+            this.expertiseTextBox.Name = "expertiseTextBox";
+            this.expertiseTextBox.Size = new System.Drawing.Size(200, 34);
+            this.expertiseTextBox.TabIndex = 1;
             // 
             // marridCheckBox
             // 
@@ -315,6 +316,7 @@
             this.registerButton.TabIndex = 20;
             this.registerButton.Text = "ذخیره";
             this.registerButton.UseVisualStyleBackColor = true;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click_1);
             // 
             // descriptionTextBox
             // 
@@ -334,6 +336,7 @@
             this.resetButton.TabIndex = 21;
             this.resetButton.Text = "ورود مجدد";
             this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // exitButton
             // 
@@ -345,6 +348,7 @@
             this.exitButton.TabIndex = 22;
             this.exitButton.Text = "خروج";
             this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // completedGroupBox
             // 
@@ -395,7 +399,7 @@
             this.mobileLabel.TabIndex = 4;
             this.mobileLabel.Text = "تلفن همراه  :";
             // 
-            // UpdateAllDoctorsProfileForm
+            // UpdateDoctorsProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -408,8 +412,8 @@
             this.Controls.Add(this.completedGroupBox);
             this.MaximumSize = new System.Drawing.Size(881, 422);
             this.MinimumSize = new System.Drawing.Size(881, 422);
-            this.Name = "UpdateAllDoctorsProfileForm";
-            this.Text = "UpdateAllDoctorsProfileForm";
+            this.Name = "UpdateDoctorsProfileForm";
+            this.Text = "ویرایش اطلاعات پزشک";
             this.Load += new System.EventHandler(this.UpdateAllDoctorsProfileForm_Load);
             this.personGroupBox.ResumeLayout(false);
             this.personGroupBox.PerformLayout();
@@ -428,7 +432,7 @@
         private Hkx.Windows.Form.Label patientCodeLabel;
         private Hkx.Windows.Form.Label typeOfDiseaseLabel;
         private Hkx.Windows.Form.CheckBox singleCheckBox;
-        private Hkx.Windows.Form.TextBox typeOfDiseaseTextBox;
+        private Hkx.Windows.Form.TextBox expertiseTextBox;
         private Hkx.Windows.Form.CheckBox marridCheckBox;
         private Hkx.Windows.Form.TextBox firstNameTextBox;
         private Hkx.Windows.Form.Label firtNameLabel;

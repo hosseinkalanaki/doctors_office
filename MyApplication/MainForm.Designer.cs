@@ -47,8 +47,6 @@
             this.بیمارToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.وروداطلاعاتبیمارToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.رزروبیمارToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ویرایشاطلاعاتبیمارToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.مشاهدهوقتبیمارToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.وقتدهیToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
@@ -143,12 +141,14 @@
             this.بیمارانToolStripMenuItem.Name = "بیمارانToolStripMenuItem";
             this.بیمارانToolStripMenuItem.Size = new System.Drawing.Size(150, 32);
             this.بیمارانToolStripMenuItem.Text = "بیماران";
+            this.بیمارانToolStripMenuItem.Click += new System.EventHandler(this.بیمارانToolStripMenuItem_Click);
             // 
             // پزشکانToolStripMenuItem
             // 
             this.پزشکانToolStripMenuItem.Name = "پزشکانToolStripMenuItem";
             this.پزشکانToolStripMenuItem.Size = new System.Drawing.Size(150, 32);
             this.پزشکانToolStripMenuItem.Text = "پزشکان";
+            this.پزشکانToolStripMenuItem.Click += new System.EventHandler(this.پزشکانToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
@@ -190,8 +190,6 @@
             this.بیمارToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.وروداطلاعاتبیمارToolStripMenuItem,
             this.رزروبیمارToolStripMenuItem,
-            this.ویرایشاطلاعاتبیمارToolStripMenuItem,
-            this.toolStripMenuItem2,
             this.مشاهدهوقتبیمارToolStripMenuItem});
             this.بیمارToolStripMenuItem.Name = "بیمارToolStripMenuItem";
             this.بیمارToolStripMenuItem.Size = new System.Drawing.Size(44, 31);
@@ -207,20 +205,9 @@
             // رزروبیمارToolStripMenuItem
             // 
             this.رزروبیمارToolStripMenuItem.Name = "رزروبیمارToolStripMenuItem";
-            this.رزروبیمارToolStripMenuItem.Size = new System.Drawing.Size(189, 32);
-            this.رزروبیمارToolStripMenuItem.Text = "مشاهده اطلاعات بیمار";
+            this.رزروبیمارToolStripMenuItem.Size = new System.Drawing.Size(178, 32);
+            this.رزروبیمارToolStripMenuItem.Text = "اطلاعات بیمار";
             this.رزروبیمارToolStripMenuItem.Click += new System.EventHandler(this.رزروبیمارToolStripMenuItem_Click);
-            // 
-            // ویرایشاطلاعاتبیمارToolStripMenuItem
-            // 
-            this.ویرایشاطلاعاتبیمارToolStripMenuItem.Name = "ویرایشاطلاعاتبیمارToolStripMenuItem";
-            this.ویرایشاطلاعاتبیمارToolStripMenuItem.Size = new System.Drawing.Size(189, 32);
-            this.ویرایشاطلاعاتبیمارToolStripMenuItem.Text = "ویرایش اطلاعات بیمار";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(186, 6);
             // 
             // مشاهدهوقتبیمارToolStripMenuItem
             // 
@@ -295,8 +282,6 @@
         private System.Windows.Forms.ToolStripMenuItem بیمارToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem وروداطلاعاتبیمارToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem رزروبیمارToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ویرایشاطلاعاتبیمارToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem مشاهدهوقتبیمارToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem وقتدهیToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem بیمارانToolStripMenuItem;

@@ -57,6 +57,8 @@
             this.ageTextBox = new Hkx.Windows.Form.TextBox();
             this.maleRadioButton = new Hkx.Windows.Form.RadioButton();
             this.femaleRadioButton = new Hkx.Windows.Form.RadioButton();
+            this.codePatientTextBox = new Hkx.Windows.Form.TextBox();
+            this.codePatientLabel = new Hkx.Windows.Form.Label();
             this.completedGroupBox.SuspendLayout();
             this.personGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +67,7 @@
             // 
             this.typeOfDiseaseLabel.AutoSize = true;
             this.typeOfDiseaseLabel.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.typeOfDiseaseLabel.Location = new System.Drawing.Point(235, 241);
+            this.typeOfDiseaseLabel.Location = new System.Drawing.Point(235, 277);
             this.typeOfDiseaseLabel.Name = "typeOfDiseaseLabel";
             this.typeOfDiseaseLabel.Size = new System.Drawing.Size(71, 27);
             this.typeOfDiseaseLabel.TabIndex = 0;
@@ -73,7 +75,7 @@
             // 
             // typeOfDiseaseTextBox
             // 
-            this.typeOfDiseaseTextBox.Location = new System.Drawing.Point(6, 238);
+            this.typeOfDiseaseTextBox.Location = new System.Drawing.Point(6, 274);
             this.typeOfDiseaseTextBox.MaxLength = 20;
             this.typeOfDiseaseTextBox.Name = "typeOfDiseaseTextBox";
             this.typeOfDiseaseTextBox.Size = new System.Drawing.Size(200, 34);
@@ -82,7 +84,7 @@
             // registerButton
             // 
             this.registerButton.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.registerButton.Location = new System.Drawing.Point(83, 299);
+            this.registerButton.Location = new System.Drawing.Point(283, 332);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(66, 39);
             this.registerButton.TabIndex = 9;
@@ -93,7 +95,7 @@
             // resetButton
             // 
             this.resetButton.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.resetButton.Location = new System.Drawing.Point(155, 299);
+            this.resetButton.Location = new System.Drawing.Point(355, 332);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(66, 39);
             this.resetButton.TabIndex = 10;
@@ -105,7 +107,7 @@
             // 
             this.exitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.exitButton.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.exitButton.Location = new System.Drawing.Point(227, 299);
+            this.exitButton.Location = new System.Drawing.Point(427, 332);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(66, 39);
             this.exitButton.TabIndex = 11;
@@ -226,6 +228,8 @@
             // 
             // personGroupBox
             // 
+            this.personGroupBox.Controls.Add(this.codePatientTextBox);
+            this.personGroupBox.Controls.Add(this.codePatientLabel);
             this.personGroupBox.Controls.Add(this.typeOfDiseaseLabel);
             this.personGroupBox.Controls.Add(this.singleCheckBox);
             this.personGroupBox.Controls.Add(this.typeOfDiseaseTextBox);
@@ -243,7 +247,7 @@
             this.personGroupBox.Font = new System.Drawing.Font("B Kamran", 14F);
             this.personGroupBox.Location = new System.Drawing.Point(12, 12);
             this.personGroupBox.Name = "personGroupBox";
-            this.personGroupBox.Size = new System.Drawing.Size(312, 281);
+            this.personGroupBox.Size = new System.Drawing.Size(312, 314);
             this.personGroupBox.TabIndex = 6;
             this.personGroupBox.TabStop = false;
             this.personGroupBox.Text = "مشخصات فردی";
@@ -251,7 +255,7 @@
             // singleCheckBox
             // 
             this.singleCheckBox.AutoSize = true;
-            this.singleCheckBox.Location = new System.Drawing.Point(90, 201);
+            this.singleCheckBox.Location = new System.Drawing.Point(90, 237);
             this.singleCheckBox.Name = "singleCheckBox";
             this.singleCheckBox.Size = new System.Drawing.Size(50, 31);
             this.singleCheckBox.TabIndex = 11;
@@ -262,7 +266,7 @@
             // marridCheckBox
             // 
             this.marridCheckBox.AutoSize = true;
-            this.marridCheckBox.Location = new System.Drawing.Point(146, 201);
+            this.marridCheckBox.Location = new System.Drawing.Point(146, 237);
             this.marridCheckBox.Name = "marridCheckBox";
             this.marridCheckBox.Size = new System.Drawing.Size(60, 31);
             this.marridCheckBox.TabIndex = 10;
@@ -272,7 +276,7 @@
             // 
             // firstNameTextBox
             // 
-            this.firstNameTextBox.Location = new System.Drawing.Point(6, 33);
+            this.firstNameTextBox.Location = new System.Drawing.Point(6, 69);
             this.firstNameTextBox.MaxLength = 20;
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(200, 34);
@@ -283,7 +287,7 @@
             // 
             this.firtNameLabel.AutoSize = true;
             this.firtNameLabel.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.firtNameLabel.Location = new System.Drawing.Point(272, 36);
+            this.firtNameLabel.Location = new System.Drawing.Point(272, 72);
             this.firtNameLabel.Name = "firtNameLabel";
             this.firtNameLabel.Size = new System.Drawing.Size(34, 27);
             this.firtNameLabel.TabIndex = 0;
@@ -293,7 +297,7 @@
             // 
             this.lastNameLabel.AutoSize = true;
             this.lastNameLabel.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.lastNameLabel.Location = new System.Drawing.Point(231, 76);
+            this.lastNameLabel.Location = new System.Drawing.Point(231, 112);
             this.lastNameLabel.Name = "lastNameLabel";
             this.lastNameLabel.Size = new System.Drawing.Size(75, 27);
             this.lastNameLabel.TabIndex = 2;
@@ -301,7 +305,7 @@
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Location = new System.Drawing.Point(6, 73);
+            this.lastNameTextBox.Location = new System.Drawing.Point(6, 109);
             this.lastNameTextBox.MaxLength = 20;
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(200, 34);
@@ -312,7 +316,7 @@
             // 
             this.genderLabel.AutoSize = true;
             this.genderLabel.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.genderLabel.Location = new System.Drawing.Point(252, 124);
+            this.genderLabel.Location = new System.Drawing.Point(252, 160);
             this.genderLabel.Name = "genderLabel";
             this.genderLabel.Size = new System.Drawing.Size(54, 27);
             this.genderLabel.TabIndex = 4;
@@ -322,7 +326,7 @@
             // 
             this.ageLabel.AutoSize = true;
             this.ageLabel.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.ageLabel.Location = new System.Drawing.Point(267, 162);
+            this.ageLabel.Location = new System.Drawing.Point(267, 198);
             this.ageLabel.Name = "ageLabel";
             this.ageLabel.Size = new System.Drawing.Size(39, 27);
             this.ageLabel.TabIndex = 7;
@@ -332,7 +336,7 @@
             // 
             this.maritalStatusLabel.AutoSize = true;
             this.maritalStatusLabel.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.maritalStatusLabel.Location = new System.Drawing.Point(221, 202);
+            this.maritalStatusLabel.Location = new System.Drawing.Point(221, 238);
             this.maritalStatusLabel.Name = "maritalStatusLabel";
             this.maritalStatusLabel.Size = new System.Drawing.Size(85, 27);
             this.maritalStatusLabel.TabIndex = 9;
@@ -340,7 +344,7 @@
             // 
             // ageTextBox
             // 
-            this.ageTextBox.Location = new System.Drawing.Point(6, 159);
+            this.ageTextBox.Location = new System.Drawing.Point(6, 195);
             this.ageTextBox.MaxLength = 20;
             this.ageTextBox.Name = "ageTextBox";
             this.ageTextBox.Size = new System.Drawing.Size(200, 34);
@@ -350,7 +354,7 @@
             // 
             this.maleRadioButton.AutoSize = true;
             this.maleRadioButton.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.maleRadioButton.Location = new System.Drawing.Point(161, 122);
+            this.maleRadioButton.Location = new System.Drawing.Point(161, 158);
             this.maleRadioButton.Name = "maleRadioButton";
             this.maleRadioButton.Size = new System.Drawing.Size(45, 31);
             this.maleRadioButton.TabIndex = 5;
@@ -361,23 +365,44 @@
             // 
             this.femaleRadioButton.AutoSize = true;
             this.femaleRadioButton.Font = new System.Drawing.Font("B Kamran", 14F);
-            this.femaleRadioButton.Location = new System.Drawing.Point(110, 122);
+            this.femaleRadioButton.Location = new System.Drawing.Point(110, 158);
             this.femaleRadioButton.Name = "femaleRadioButton";
             this.femaleRadioButton.Size = new System.Drawing.Size(45, 31);
             this.femaleRadioButton.TabIndex = 6;
             this.femaleRadioButton.Text = "زن";
             this.femaleRadioButton.UseVisualStyleBackColor = true;
             // 
+            // codePatientTextBox
+            // 
+            this.codePatientTextBox.Enabled = false;
+            this.codePatientTextBox.Location = new System.Drawing.Point(6, 29);
+            this.codePatientTextBox.MaxLength = 20;
+            this.codePatientTextBox.Name = "codePatientTextBox";
+            this.codePatientTextBox.Size = new System.Drawing.Size(200, 34);
+            this.codePatientTextBox.TabIndex = 13;
+            // 
+            // codePatientLabel
+            // 
+            this.codePatientLabel.AutoSize = true;
+            this.codePatientLabel.Font = new System.Drawing.Font("B Kamran", 14F);
+            this.codePatientLabel.Location = new System.Drawing.Point(277, 32);
+            this.codePatientLabel.Name = "codePatientLabel";
+            this.codePatientLabel.Size = new System.Drawing.Size(29, 27);
+            this.codePatientLabel.TabIndex = 12;
+            this.codePatientLabel.Text = "کد :";
+            // 
             // RegisterPatientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 348);
+            this.ClientSize = new System.Drawing.Size(865, 382);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.completedGroupBox);
             this.Controls.Add(this.personGroupBox);
+            this.MaximumSize = new System.Drawing.Size(881, 421);
+            this.MinimumSize = new System.Drawing.Size(881, 421);
             this.Name = "RegisterPatientForm";
             this.Text = "ورود اطلاعات بیمار";
             this.Load += new System.EventHandler(this.RegisterPatientForm_Load);
@@ -419,5 +444,7 @@
         private Hkx.Windows.Form.TextBox ageTextBox;
         private Hkx.Windows.Form.RadioButton maleRadioButton;
         private Hkx.Windows.Form.RadioButton femaleRadioButton;
+        private Hkx.Windows.Form.TextBox codePatientTextBox;
+        private Hkx.Windows.Form.Label codePatientLabel;
     }
 }

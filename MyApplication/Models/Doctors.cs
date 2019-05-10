@@ -14,5 +14,7 @@
 
         public string Expertise { get; set; }
 
+        public bool IsDelete { get; set; }
+
     }
 }

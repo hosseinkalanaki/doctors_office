@@ -9,7 +9,7 @@ namespace MyApplication
             InitializeComponent();
         }
 
-        public Models.User Selectedpatient { get; set; }
+        public Models.Patients Selectedpatient { get; set; }
 
         public void ResetForm()
         {
@@ -74,6 +74,7 @@ namespace MyApplication
                     singleCheckBox.Checked = true;
                 }
                 ageTextBox.Text = foundedPatient.Age;
+                typeOfDiseaseTextBox.Text = foundedPatient.Disease;
                 addressTextBox.Text = foundedPatient.Address;
                 phoneTextBox.Text = foundedPatient.Phone;
                 mobileTextBox.Text = foundedPatient.Mobile;
@@ -151,6 +152,7 @@ namespace MyApplication
                         foundedPatient.IsMarried = false;
                     }
                     foundedPatient.Age = ageTextBox.Text;
+                    foundedPatient.Disease = typeOfDiseaseTextBox.Text;
                     foundedPatient.Address = addressTextBox.Text;
                     foundedPatient.Phone = phoneTextBox.Text;
                     foundedPatient.Mobile = mobileTextBox.Text;

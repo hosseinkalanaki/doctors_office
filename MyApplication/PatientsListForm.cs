@@ -53,7 +53,7 @@ namespace MyApplication
                     {
                         patients =
                             databaseContext.Patient
-                            .Where(current => current.IsDelete.ToString().Contains("true"))
+                            .Where(current => current.IsDelete.ToString().Contains("false"))
                             .OrderBy(current => current.FirstName)
                             .ToList();
                     }
@@ -62,7 +62,7 @@ namespace MyApplication
                         patients =
                             databaseContext.Patient
                             .Where(current => current.FirstName.Contains(searchTextBox.Text))
-                            .Where(current => current.IsDelete.ToString().Contains("true"))
+                            .Where(current => current.IsDelete.ToString().Contains("false"))
                             .OrderBy(current => current.FirstName)
                             .ToList();
                     }
@@ -100,7 +100,7 @@ namespace MyApplication
             {
                 UpdatePatientProfileForm updateProfile = new UpdatePatientProfileForm
                 {
-                    Selectedpatient = selectedpatient
+                    Selectedpatient = selectedpatient,
                 };
 
                 updateProfile.ShowDialog();
@@ -111,6 +111,11 @@ namespace MyApplication
         private void searchButton_Click(object sender, System.EventArgs e)
         {
             Search();
+        }
+
+        private void exitButton_Click(object sender, System.EventArgs e)
+        {
+            Hide();
         }
     }
 }
